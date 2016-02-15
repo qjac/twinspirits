@@ -1,0 +1,518 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>WP Splash Page - Version 1.2</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="OptimalDevs">
+	<meta name="copyright" content="OptimalDevs">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2013-06-13T00:00:00+02:00">
+	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	<link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
+	<script src="assets/js/google-code-prettify/prettify.js"></script>
+
+	
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/script.js"></script>
+	
+	<style>
+		html{background-color:#EEEEEE;color:#383838;}
+		::-moz-selection{background:#333636;color:#00DFFC;}
+		::selection{background:#333636;color:#00DFFC;}
+		#documenter_sidebar #documenter_logo{background-image:url();}
+		a{color:#008C9E;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #, #);
+			  background-image: -ms-linear-gradient(top, #, #);
+			  background-image: -webkit-gradient(linear, 0 0, 0 %, from(#343838), to(#));
+			  background-image: -webkit-linear-gradient(top, #, #);
+			  background-image: -o-linear-gradient(top, #, #);
+			  background-image: linear-gradient(top, #, #);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#', endColorstr='#', GradientType=0);
+			  border-color: # # #bfbfbf;
+			  color:#;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: # # #bfbfbf;
+		  background-color: #;
+		}
+		hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#343838;color:#FFFFFF;}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #494F4F;-moz-text-shadow:1px 1px 0px #494F4F;text-shadow:1px 1px 0px #494F4F;}
+		#documenter_sidebar ul{border-top:1px solid #212424;}
+		#documenter_sidebar ul a{border-top:1px solid #494F4F;border-bottom:1px solid #212424;color:#FFFFFF;}
+		#documenter_sidebar ul a:hover{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_sidebar ul a.current{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body>
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+				
+			<li><a href="#how_to_install" title="How To Install">How To Install</a></li>
+			<li><a href="#general_settings" title="General Settings">General Settings</a></li>
+			<li><a href="#youtube_video" title="YouTube Video">YouTube Video</a></li>
+			<li><a href="#templates" title="Templates">Templates</a>
+				<ul>
+					<li><a href="#templates_api_advanced_customization">API - Advanced Customization.</a>
+					<li><a href="#templates_age_validation">Age Validation</a>
+					<li><a href="#templates_checkbox_opt_in">Checkbox Opt-In</a>
+				</ul>
+			</li>
+			<li><a href="#notes" title="Notes">Notes</a></li>
+
+		</ul>
+		<div id="documenter_copyright">Copyright OptimalDevs 2013<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v2.0</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover">
+	<h1>WP Splash Page</h1>
+	<h2>Version 1.2</h2>
+	<div id="documenter_buttons">
+		<a href="http://wordpress.org/support/plugin/wp-splash-page" class="btn btn-primary btn-large">Support Forums</a> 
+	</div>
+	<hr>
+	<ul>
+	
+	<li>latest Update: 17/08/2015</li>
+	<li>By: OptimalDevs</li>
+	
+	</ul>
+	<p>A fast and easy way to use a splash page.
+
+Support Forums: http://wordpress.org/support/plugin/wp-splash-page</p>
+	</section>
+	
+	<section id="how_to_install">
+	<div class="page-header"><h3>How To Install</h3><hr class="notop"></div>
+<ol>
+	<li>
+		Upload the &quot;wp-splash-page&quot; folder to your WordPress plugin directory ( /wp-content/plugins ). You can also zip the contents of this folder and use the built in WordPress plugin installer to use the zip you just created.</li>
+	<li>
+		Activate the plugin.</li>
+	<li>
+		Continue on to the settings page to set up your Splash Page.</li>
+</ol>
+</section>
+<section id="general_settings">
+	<div class="page-header"><h3>General Settings</h3><hr class="notop"></div>
+<p>	When you install the plugin, the Splash Page <strong>is disabled</strong>, you must go to &quot;Settings -&gt; WP Splash Page&quot; and activate the &quot;Enable Splash Page&quot; option. Though before that, you probably want to <strong>set some options</strong>.</p>
+<ul>	<li>		<strong>Show on all pages and posts</strong>: If you disable this option, Splash Page will only be displayed in your home page.</li>
+	<li>		<strong>Days until the splash screen shows again</strong>: Switch to 0 this option for show the Splash Page once and not do it again until you finish the session (closing the browser).</li>
+	<li>		<strong>Show on mobile browsers</strong>: if you turn this off, Splash Page will not display on mobile devices (including tablets).</li>
+	<li>		<strong>Template</strong>: You can use the template we provide or <a href="#templates">create your own template</a>.</li>
+</ul>
+<p>	<strong>Note</strong>: Each time you save the Splash Page options, the &quot;counters&quot; are reset, meaning that the Splash Page is displayed again to all users.</p>
+</section>
+<section id="youtube_video">
+	<div class="page-header"><h3>YouTube Video</h3><hr class="notop"></div>
+<p>	You can embed a YouTube video if you wish in the Splash Page, for example a teaser of your new project.</p>
+<ol>
+	<li>		<strong>Get the video ID</strong>: You can get the ID from the last part of the video url. In &quot;http://www.youtube.com/watch?v=<strong>Q8Tiz6INF7I</strong>&quot; the ID is &quot;<strong>Q8Tiz6INF7I</strong>&quot;.</li>
+	<li>		<strong>Introduce the ID</strong>: Go to &quot;Settings -&gt; WP Splash Page&quot; and introduce the YouTube Video ID in the video section.</li>
+	<li>		<strong>Save changes</strong>.</li>
+</ol>
+</section>
+<section id="templates">
+	<div class="page-header"><h3>Templates</h3><hr class="notop"></div>
+<p>
+	If you are an advanced user and you want create your own template and style for the splash page follow the next steps.</p>
+<ol>
+	<li>
+		<strong>Create a new folder</strong> in the &quot;wp-splash-page/templates&quot; directory with the name chosen for the template.</li>
+	<li>
+		<strong>Inside this folder create a file named as &quot;splash-page.php&quot;</strong>. This is the only file loaded when the plugin generates the splash screen.&nbsp;So you can make your own html page and embed custom styles.</li>
+	<li>
+		<strong>Active this new template</strong> in the plugin options page.</li>
+</ol>
+<p>
+	Also you can copy &amp; paste the default template folder and edit its content.</p>
+<hr>
+<h4 id="templates_api_advanced_customization">API - Advanced Customization.</h4>
+<p>
+	You can use the stored information about the configuration chosen in the plugin options like the text color and title or the ID of the video. All this within a php array that you can access by typing:</p>
+<pre class="prettyprint lang-php linenums">
+&lt;?php echo $this-&gt;settings[&#39;id_option&#39;]; ?&gt;</pre>
+<p>
+	Instead of &quot;<strong>id_option</strong>&quot; you must type one of the following indices:</p>
+<div>
+	<table border="1" cellpadding="1" cellspacing="5" style="width: 700px;">
+		<thead>
+			<tr>
+				<th scope="col">
+					ID</th>
+				<th scope="col">
+					TYPE</th>
+				<th scope="col">
+					DESCRIPTION</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					template_url</td>
+				<td>
+					String</td>
+				<td>
+					Absolute url to current template directory</td>
+			</tr>
+			<tr>
+				<td>
+					title</td>
+				<td>
+					String</td>
+				<td>
+					The title</td>
+			</tr>
+			<tr>
+				<td>
+					page_title</td>
+				<td>
+					String</td>
+				<td>
+					Title of the page, the &lt;title&gt; tag</td>
+			</tr>
+			<tr>
+				<td>
+					title</td>
+				<td>
+					String</td>
+				<td>
+					The title</td>
+			</tr>
+			<tr>
+				<td>
+					title_color</td>
+				<td>
+					Hexadecimal</td>
+				<td>
+					Title color</td>
+			</tr>
+			<tr>
+				<td>
+					text</td>
+				<td>
+					String</td>
+				<td>
+					The text</td>
+			</tr>
+			<tr>
+				<td>
+					text_color</td>
+				<td>
+					Hexadecimal</td>
+				<td>
+					Text color</td>
+			</tr>
+			<tr>
+				<td>
+					continue_button_text</td>
+				<td>
+					String</td>
+				<td>
+					Text inside continue button</td>
+			</tr>
+			<tr>
+				<td>
+					current_url</td>
+				<td>
+					String</td>
+				<td>
+					Link to current page</td>
+			</tr>
+			<tr>
+				<td>
+					continue_button_text_color</td>
+				<td>
+					Hexadecimal</td>
+				<td>
+					Color text inside continue button</td>
+			</tr>
+			<tr>
+				<td>
+					continue_button_bg_color</td>
+				<td>
+					Hexadecimal</td>
+				<td>
+					Continue button background color</td>
+			</tr>
+			<tr>
+				<td>
+					youtube_id</td>
+				<td>
+					String</td>
+				<td>
+					The video ID from YouTube</td>
+			</tr>
+			<tr>
+				<td>
+					video_width</td>
+				<td>
+					Integer</td>
+				<td>
+					Video width</td>
+			</tr>
+			<tr>
+				<td>
+					video_height</td>
+				<td>
+					Integer</td>
+				<td>
+					Video height</td>
+			</tr>
+			<tr>
+				<td>
+					image_url</td>
+				<td>
+					String</td>
+				<td>
+					The background-image url</td>
+			</tr>
+			<tr>
+				<td>
+					center_image</td>
+				<td>
+					String</td>
+				<td>
+					Posible values: &quot;left top&quot; or &quot;center center&quot;</td>
+			</tr>
+			<tr>
+				<td>
+					repeat_image</td>
+				<td>
+					String</td>
+				<td>
+					Posible values: &quot;repeat&quot; or &quot;no-repeat&quot;</td>
+			</tr>
+			<tr>
+				<td>
+					enable_age_confirmation</td>
+				<td>
+					Bool</td>
+				<td>
+					Age validation: 1 = ON | 0 = OFF</td>
+			</tr>
+			<tr>
+				<td>
+					min_age</td>
+				<td>
+					Integer</td>
+				<td>
+					The minimum age required (in years)</td>
+			</tr>
+			<tr>
+				<td>
+					reject_text</td>
+				<td>
+					String</td>
+				<td>
+					The text shown when a user is rejected because he is underage</td>
+			</tr>
+			<tr>
+				<td>
+					enable_opt_in</td>
+				<td>
+					Bool</td>
+				<td>
+					Checkbox Opt-in: 1 = ON | 0 = OFF</td>
+			</tr>
+			<tr>
+				<td>
+					opt_in_text</td>
+				<td>
+					String</td>
+				<td>
+					Text for the checkbox opt-in label</td>
+			</tr>
+			<tr>
+				<td>
+					opt_in_reject_text</td>
+				<td>
+					String</td>
+				<td>
+					The text shown when a user is rejected because he didn&#39;t check the checkbox</td>
+			</tr>
+			<tr>
+				<td>
+					template</td>
+				<td>
+					String</td>
+				<td>
+					Name of the chosen template, the name of the current folder</td>
+			</tr>
+			<tr>
+				<td>
+					show_on_mobile</td>
+				<td>
+					Bool</td>
+				<td>
+					Show on Mobile &amp; Tablets: 1 = ON | 0 = OFF&nbsp;</td>
+			</tr>
+			<tr>
+				<td>
+					show_in_all</td>
+				<td>
+					Bool</td>
+				<td>
+					Show on all pages: 1 = ON | 0 = Only displayed in homepage.</td>
+			</tr>
+			<tr>
+				<td>
+					expiration_time</td>
+				<td>
+					Integer</td>
+				<td>
+					Cookie expiration in days</td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="info">
+		All hex values ​​are composed of 3 or 6 numbers.</p>
+	<p class="info">
+		<strong>Important:&nbsp;</strong>You should use the <em>$this-&gt;current_url</em>&nbsp;property&nbsp;to generate the link of continue button.</p>
+	<p>
+		<strong>Example of Use</strong>:</p>
+</div>
+<pre class="prettyprint lang-html linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+
+    &lt;!-- === Page Title === --&gt;
+	&lt;title&gt;&lt;?php echo esc_html( $this-&gt;settings[&#39;page_title&#39;] ); ?&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;!-- === Text === --&gt;
+	&lt;p &gt;&lt;?php echo $this-&gt;settings[&#39;text&#39;]; ?&gt;&lt;/p&gt;
+    &lt;!-- == Continue Button --&gt;
+    &lt;a href=&quot;&lt;?php echo esc_url( $this-&gt;current_url ) ?&gt;&quot;&gt;&lt;?php echo esc_html( $this-&gt;settings[&#39;continue_button_text&#39;] ); ?&gt;&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<hr>
+<h4 id="templates_age_validation">Age Validation</h4>
+<p>
+	In order that your template supports the age validation system you must follow the next steps.</p>
+<ul>
+	<li>
+		Check that <em>$this-&gt;settings[&#39;enable_age_confirmation&#39;] )</em> is set to <strong>TRUE </strong>and if so you must show a form with day, month and year options. Also the inputs must have a specific name. Please use the next code as base:</li>
+</ul>
+<pre class="prettyprint lang-html linenums">
+&lt;?php if( $this-&gt;settings[&#39;enable_age_confirmation&#39;] ): ?&gt;
+
+     &lt;!-- === Age Verification Form === --&gt;
+     &lt;form method=&quot;POST&quot;&gt;
+          &lt;input type=&quot;number&quot; name=&quot;wpsp-month&quot; min=&quot;1&quot; max=&quot;12&quot; size=&quot;2&quot; maxlength=&quot;2&quot; value=&quot;&lt;?php echo esc_attr( date(&#39;m&#39;) );?&gt;&quot; placeholder=&quot;mm&quot; required=&quot;required&quot; /&gt;
+          &lt;input type=&quot;number&quot; name=&quot;wpsp-day&quot; min=&quot;1&quot; max=&quot;31&quot; size=&quot;2&quot; maxlength=&quot;2&quot; value=&quot;&lt;?php echo esc_attr( date(&#39;d&#39;) );?&gt;&quot; placeholder=&quot;dd&quot; required=&quot;required&quot; /&gt;
+          &lt;input type=&quot;number&quot; name=&quot;wpsp-year&quot; min=&quot;1&quot; max=&quot;9999&quot; size=&quot;4&quot; maxlength=&quot;4&quot; value=&quot;&lt;?php echo esc_attr( date(&#39;Y&#39;) );?&gt;&quot; placeholder=&quot;yyyy&quot; required=&quot;required&quot; /&gt;
+          &lt;?php wp_nonce_field( WP_SPLASH_PAGE_AGE_FORM_NONCE, &#39;age-nonce&#39; ); ?&gt;
+          &lt;input type=&quot;submit&quot; value=&quot;&lt;?php echo esc_attr( $this-&gt;settings[&#39;continue_button_text&#39;] ); ?&gt;&quot; /&gt;
+     &lt;/form&gt;
+
+&lt;?php else: ?&gt;
+
+     &lt;!-- === Continue Button === --&gt;
+     &lt;a href=&quot;&lt;?php echo esc_url( $this-&gt;current_url ); ?&gt;&quot; &gt;&lt;?php echo esc_html( $this-&gt;settings[&#39;continue_button_text&#39;] ); ?&gt;&lt;/a&gt;
+
+&lt;?php endif; ?&gt;</pre>
+<ul>
+	<li>
+		Check that<em> $this-&gt;minor</em> is set to <strong>TRUE </strong>and if so show the reject text or your own html.</li>
+</ul>
+<pre class="prettyprint lang-html linenums">
+&lt;?php if( $this-&gt;minor ): ?&gt;
+
+     &lt;!-- === Text when a user is underage === --&gt;
+     &lt;p&gt;&lt;?php echo esc_html( $this-&gt;settings[&#39;reject_text&#39;] ); ?&gt;&lt;/p&gt;
+
+&lt;?php else: ?&gt;
+
+     &lt;!-- === Your code, including the age verification form  === --&gt;
+
+&lt;?php endif; ?&gt;</pre>
+<hr>
+<h4 id="templates_checkbox_opt_in">Checkbox Opt-In</h4>
+<p>
+	In order that your template supports the checkbox opt-in system you must follow the next steps.</p>
+<ul>
+	<li>
+		Check that&nbsp;<em>$this-&gt;settings[&#39;enable_opt_in&#39;] )</em>&nbsp;is set to&nbsp;<strong>TRUE&nbsp;</strong>and if so you must show a form with a checkbox. Also the input must have a specific name. Please use the next code as base:</li>
+</ul>
+<pre class="prettyprint lang-html linenums">
+&lt;?php if( $this-&gt;settings[&#39;<em>enable_opt_in</em>&#39;] ): ?&gt;
+
+     <span style="font-family: Arial, Verdana, sans-serif;">&lt;!-- === Opt-In Form === --&gt;</span>
+
+     &lt;form method=&quot;POST&quot;&gt;
+<span style="font-family: Arial, Verdana, sans-serif;">                        &lt;input type=&quot;checkbox&quot; id=&quot;opt-in-checkbox&quot; name=&quot;opt-in-checkbox&quot; value=&quot;1&quot; /&gt;
+</span><span style="font-family: Arial, Verdana, sans-serif;">                        </span><span style="font-family: Arial, Verdana, sans-serif;">&lt;label for=&quot;opt-in-checkbox&quot;&gt;&lt;?php echo esc_html( $this-&gt;settings[&#39;opt_in_text&#39;] ); ?&gt;&lt;/label&gt;
+</span><span style="font-family: Arial, Verdana, sans-serif;">                        </span><span style="font-family: Arial, Verdana, sans-serif;">&lt;?php wp_nonce_field( WP_SPLASH_PAGE_FORM_NONCE, &#39;wpsp-nonce&#39; ); ?&gt;
+</span><span style="font-family: Arial, Verdana, sans-serif;">                        </span><span style="font-family: Arial, Verdana, sans-serif;">&lt;input type=&quot;submit&quot; value=&quot;&lt;?php echo esc_attr( $this-&gt;settings[&#39;continue_button_text&#39;] ); ?&gt;&quot; /&gt;</span><span style="font-family: Arial, Verdana, sans-serif;">
+</span><span style="font-family: Arial, Verdana, sans-serif;">            &lt;/form&gt;
+
+&lt;?php else: ?&gt;
+
+            &lt;!-- === Continue Button === --&gt;
+            &lt;a href=&quot;&lt;?php echo esc_url( $this-&gt;current_url ); ?&gt;&quot; &gt;&lt;?php echo esc_html( $this-&gt;settings[&#39;continue_button_text&#39;] ); ?&gt;&lt;/a&gt;
+
+&lt;?php endif; ?&gt;</span></pre>
+<ul>
+	<li>
+		Check that<em>&nbsp;$this-&gt;</em>opt_in_rejected&nbsp;is set to&nbsp;<strong>TRUE&nbsp;</strong>and if so show the reject text or your own html.</li>
+</ul>
+<pre class="prettyprint lang-html linenums">
+&lt;?php if( $this-&gt;opt_in_rejected&nbsp;): ?&gt;
+
+     &lt;!-- === Text when a user didn&#39;t check the checkbox opt-in === --&gt;
+     &lt;p&gt;&lt;?php echo esc_html( $this-&gt;settings[&#39;opt_in_reject_text&#39;] ); ?&gt;&lt;/p&gt;
+
+&lt;?php else: ?&gt;
+
+     &lt;!-- === Your code, including the checkbox opt-in form  === --&gt;
+
+&lt;?php endif; ?&gt;</pre>
+</section>
+<section id="notes">
+	<div class="page-header"><h3>Notes</h3><hr class="notop"></div>
+<ul>
+	<li>
+		Bots can&#39;t see the splash page. Instead, they go directly to the original page. This way you won&#39;t lose ranking and visibility in search engines.</li>
+	<li>
+		The &quot;Full Window Video&quot; template does not support the age validation. So you must not enable the feature with this template.</li>
+	<li>
+		The &quot;Full Window Video&quot; template does not support the checkbox opt-in. So you must not enable the feature with this template.</li>
+	<li>
+		If you use the &quot;Full Window Video&quot; template we recommend turn off the splash page in mobile devices (Show on mobile browsers). Some issues can be experimented in old versions of Android and iOS with the YouTube API.</li>
+</ul>
+</section>
+
+	</div>
+</body>
+</html>
