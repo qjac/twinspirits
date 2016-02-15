@@ -1,0 +1,47 @@
+//
+// Initialization partial
+//
+// To make it easier to use all variables and mixins in any Sass file in this
+// theme, each .scss file has a @import "init" declaration. And this _init.scss
+// file is in charge of importing all the other partials needed for the theme.
+//
+// This initialization partial is organized in this way:
+// - First we set any shared Sass variables.
+// - Last we define our custom mixins for this theme.
+//
+
+// Function for converting a px based font-size to rem.
+@function rem($size) {
+  $remSize: $size / 16px;
+  // Default font size on html element is 100%, equivalent to rem(16px);
+  @return #{$remSize}rem;
+}
+
+// =============================================================================
+// Variables
+// =============================================================================
+
+//
+// Font faces, stacks and sizes.
+//
+
+$base-font-size:   16px; // The font size set on the root html element.
+$base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
+
+//
+// Colors
+//
+$red: #d14f53;
+$gray: #3c3c42;
+
+// =============================================================================
+// Partials to be shared with all .scss files.
+// =============================================================================
+
+// Media Queries
+@import "media-queries";
+
+// Now we add our custom helper mixins/classes.
+@import "mixins";
+@import "classes";
+

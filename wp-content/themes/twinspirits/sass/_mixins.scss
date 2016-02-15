@@ -1,0 +1,119 @@
+// @file
+// Custom sass mixins
+//
+// Define the custom mixins for your project here.
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
+
+// Makes an element visually hidden, but accessible.
+// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+// Makes an element visually hidden by default, but visible when focused.
+@mixin element-focusable {
+  @include element-invisible;
+
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
+
+// Clearfix
+
+@mixin clearfix {
+  display: inline-block;
+  display: block;
+  &:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+// Hide text
+
+@mixin hide-text {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+// Replace text with svg, use a png fallback.
+// https://gist.github.com/brianmcallister/5065262
+
+// $img - Image name to use, no extension.
+
+@mixin replace-text-with-svg($img) {
+  @include hide-text;
+
+  $png: '#{$img}.png';
+
+  // @include size(image-width($png), image-height($png));
+  width: image-width($png);
+  height: image-height($png);
+
+  @include svg-background($img);
+  display: block;
+}
+
+// Set an svg background image with a png fallback.
+
+// $img - Image name without an extension.
+
+@mixin svg-background($img) {
+  $png: '#{$img}.png';
+  $svg: '#{$img}.svg';
+
+  background-image: image-url($png);
+  background-image: none, image-url($svg);
+  background-repeat: no-repeat;
+}
+
+// Replace text with sprite image(s)
+
+@mixin sprite-replace-text($name) {
+  @include inline-block;
+  @include hide-text;
+  @include sprite($name);
+}
+
+// Set a 2x version of an image as a background image.
+
+// $img - Image path from images directory.
+
+@mixin background-2x($img) {
+  @include hdpi() {
+    background-image: url(#{$images}/$img);
+    background-size: cover;
+  }
+}
+
+@mixin rounded-corners($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -khtml-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin rounded($side, $radius) {
+  border-#{$side}-radius: $radius;
+  -moz-border-radius-#{$side}: $radius;
+  -webkit-border-#{$side}-radius: $radius;
+}
