@@ -1,0 +1,30 @@
+#site-header-menu {
+  background: $gray;
+  margin: 0;
+  width: 100%;
+
+  .main-navigation {
+    margin: 0;
+  }
+
+  ul#menu-main-menu {
+    width: rem(1200px);
+    margin: 0 auto;
+  }
+
+  a, a:hover {
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .sub-menu {
+    a, a:hover {
+      color: $gray;
+    }
+    .current-menu-item {
+      a, a:hover {
+        color: $red;
+      }
+    }
+  }
+}
