@@ -1,3 +1,10 @@
 body {
   background: white;
 }
+
+.entry-header {
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: rem(200px);
+}

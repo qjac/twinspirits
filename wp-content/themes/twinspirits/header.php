@@ -44,21 +44,6 @@
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentysixteen' ); ?></a>
 
 		<header id="masthead" class="site-header" role="banner">
-			<div class="site-header-main">
-				<div class="site-branding">
-					<?php if ( is_front_page() && is_home() ) : ?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php else : ?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php endif;
-
-					$description = get_bloginfo( 'description', 'display' );
-					if ( $description || is_customize_preview() ) : ?>
-						<p class="site-description"><?php echo $description; ?></p>
-					<?php endif; ?>
-				</div><!-- .site-branding -->
-			</div><!-- .site-header-main -->
-
 			<?php if ( get_header_image() ) : ?>
 				<?php
 					/**

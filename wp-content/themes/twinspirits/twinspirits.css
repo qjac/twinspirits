@@ -13,49 +13,100 @@
 Base Styles
 Normalized styles, typography and base-level page/element styling.
 */
+/* line 2, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_normalize.scss */
+body:not(.custom-background-image):before {
+  height: 0;
+  width: 0; }
+
+/* line 6, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_normalize.scss */
+.site {
+  margin: 0; }
+
+/* line 9, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_normalize.scss */
+.site-header {
+  padding: 0; }
+
 /* line 1, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 body {
   background: white; }
+
+/* line 5, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+.entry-header {
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: 12.5rem; }
 
 /* line 1, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_menus.scss */
 #site-header-menu {
   background: #3c3c42;
   margin: 0;
-  width: 100%; }
+  height: 6.5rem; }
   /* line 6, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_menus.scss */
   #site-header-menu .main-navigation {
     margin: 0; }
   /* line 10, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_menus.scss */
   #site-header-menu ul#menu-main-menu {
-    width: 75rem;
+    width: 56.875rem;
     margin: 0 auto; }
   /* line 15, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_menus.scss */
   #site-header-menu a, #site-header-menu a:hover {
     color: white;
-    text-transform: uppercase; }
-  /* line 21, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_menus.scss */
+    text-transform: uppercase;
+    padding: 0;
+    font-size: 0.9375rem; }
+    /* line 21, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_menus.scss */
+    #site-header-menu a:after, #site-header-menu a:hover:after {
+      content: "";
+      position: relative;
+      top: 0; }
+  /* line 29, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_menus.scss */
+  #site-header-menu li {
+    position: absolute;
+    top: 2.875rem; }
+    /* line 32, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_menus.scss */
+    #site-header-menu li li {
+      position: relative;
+      top: 0;
+      left: 0;
+      margin-right: 0; }
+  /* line 42, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_menus.scss */
+  #site-header-menu #menu-item-37 {
+    left: 27%; }
+  /* line 45, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_menus.scss */
+  #site-header-menu #menu-item-38 {
+    left: 35%; }
+  /* line 49, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_menus.scss */
+  #site-header-menu li#menu-item-27 {
+    position: absolute;
+    top: 0.9375rem;
+    left: 50%;
+    margin-left: -57px; }
+    /* line 54, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_menus.scss */
+    #site-header-menu li#menu-item-27 a {
+      overflow: hidden;
+      text-indent: 101%;
+      white-space: nowrap;
+      background-position-x: 0px;
+      background-position-y: 0px;
+      width: 114px;
+      height: 73px;
+      background: url('images/sprite.png'); }
+  /* line 64, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_menus.scss */
+  #site-header-menu li#menu-item-39 {
+    left: 56%; }
+  /* line 67, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_menus.scss */
+  #site-header-menu li#menu-item-26 {
+    left: 64%; }
+  /* line 70, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_menus.scss */
+  #site-header-menu li#menu-item-42 {
+    left: 69%; }
+  /* line 75, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_menus.scss */
   #site-header-menu .sub-menu a, #site-header-menu .sub-menu a:hover {
     color: #3c3c42; }
-  /* line 25, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_menus.scss */
+  /* line 79, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_menus.scss */
   #site-header-menu .sub-menu .current-menu-item a, #site-header-menu .sub-menu .current-menu-item a:hover {
     color: #d14f53; }
 
 /* Layout rules */
-/* line 1, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/layouts/_responsive.scss */
-body:not(.custom-background-image):before {
-  height: 0;
-  width: 0; }
-
-/* line 5, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/layouts/_responsive.scss */
-.site-branding {
-  display: none; }
-
-/* line 8, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/layouts/_responsive.scss */
-.site {
-  margin: 0; }
-
-/* line 11, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/layouts/_responsive.scss */
-.site-header {
-  padding: 0; }
-
 /* Component (SMACSS module) rules */

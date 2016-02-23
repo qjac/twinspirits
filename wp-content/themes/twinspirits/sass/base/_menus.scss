@@ -1,20 +1,74 @@
 #site-header-menu {
   background: $gray;
   margin: 0;
-  width: 100%;
+  height: rem(104px);
 
   .main-navigation {
     margin: 0;
   }
 
   ul#menu-main-menu {
-    width: rem(1200px);
+    width: rem(910px);
     margin: 0 auto;
   }
 
   a, a:hover {
     color: white;
     text-transform: uppercase;
+    padding: 0;
+    font-size: rem(15px);
+
+    &:after {
+      // normalize
+      content: "";
+      position: relative;
+      top: 0;
+    }
+  }
+
+  li {
+    position: absolute;
+    top: rem(46px);
+    li {
+      position: relative;
+      top: 0;
+      left: 0;
+      margin-right: 0;
+    }
+  }
+
+  #menu-item-36 {
+  }
+  #menu-item-37 {
+    left: 27%;
+  }
+  #menu-item-38 {
+    left: 35%;
+  }
+  // Home link - replace text with the logo.
+  li#menu-item-27 {
+    position: absolute;
+    top: rem(15px);
+    left: 50%;
+    margin-left: -57px;
+    a {
+      @include hide-text;
+      // Copied from _sprites.scss - not sure why the mixin won't work.
+      background-position-x: 0px;
+      background-position-y: 0px;
+      width: 114px;
+      height: 73px;
+      background: url('images/sprite.png');
+    }
+  }
+  li#menu-item-39 {
+    left: 56%;
+  }
+  li#menu-item-26 {
+    left: 64%;
+  }
+  li#menu-item-42 {
+    left: 69%;
   }
 
   .sub-menu {
