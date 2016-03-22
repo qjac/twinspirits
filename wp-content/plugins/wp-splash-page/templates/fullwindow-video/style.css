@@ -84,3 +84,11 @@ a {
 	z-index: 99999;
 	padding: 5px 10px;
 }
+
+/* CUSTOM */
+#wpsp-continue {
+	top: -170px;
+	position: relative;
+	font-size: 30px;
+	text-transform: uppercase;
+}
