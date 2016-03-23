@@ -25,6 +25,11 @@
 // Font faces, stacks and sizes.
 //
 
+$open-sans-condensed: 'Open Sans Condensed', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+$source-serif: 'Source Serif Pro', serif;
+$roboto-slab: 'Roboto Slab', serif;
+
 $base-font-size:   16px; // The font size set on the root html element.
 $base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
 
@@ -32,7 +37,8 @@ $base-line-height: 24px; // This line-height determines the basic unit of vertic
 // Colors
 //
 $red: #d14f53;
-$gray: #3c3c42;
+$gray-bg: #3c3c42;
+$gray-text: #3b3b41;
 
 // =============================================================================
 // Partials to be shared with all .scss files.

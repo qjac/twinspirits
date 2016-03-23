@@ -1,5 +1,10 @@
 #site-header-menu {
-  background: $gray;
+  .main-navigation {
+    font-family: $open-sans-condensed;
+    font-size: rem(15px);
+  }
+
+  background: $gray-bg;
   margin: 0;
   height: rem(104px);
 
@@ -15,7 +20,7 @@
   a, a:hover {
     color: white;
     text-transform: uppercase;
-    padding: 0;
+    padding: 0 30px 50px;
     font-size: rem(15px);
 
     &:after {
@@ -28,7 +33,7 @@
 
   li {
     position: absolute;
-    top: rem(46px);
+    top: rem(52px);
     li {
       position: relative;
       top: 0;
@@ -72,13 +77,33 @@
   }
 
   .sub-menu {
+    right: -10%;
+    position: absolute;
+    top: 52px;
+    width: 175px;
+
     a, a:hover {
-      color: $gray;
+      padding: 7px;
+      width: auto;
+      color: $gray-bg;
     }
     .current-menu-item {
       a, a:hover {
         color: $red;
       }
     }
+    a:hover {
+      color: $red;
+    }
+
+    li {
+      text-align: center;
+      border: none;
+      background: rgba(255, 255, 255, .75);
+    }
+
   }
+}
+.main-navigation ul ul:before, .main-navigation ul ul:after {
+  border-style: none;
 }

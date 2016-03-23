@@ -2,9 +2,32 @@ body {
   background: white;
 }
 
-.entry-header {
-  text-transform: uppercase;
-  color: white;
-  position: absolute;
-  top: rem(200px);
+.page-template-default  {
+  .entry-header h1 {
+    position: absolute;
+    top: rem(150px);
+    max-width: 400px;
+
+    text-transform: uppercase;
+    color: white;
+    font-family: $open-sans;
+    font-size: rem(95px);
+    line-height: rem(95px);
+    font-weight: bold;
+  }
+}
+
+.entry-content {
+  p {
+    font-family: $source-serif;
+    font-size: rem(15px);
+    line-height: rem(32px);
+    color: $gray-text;
+  }
+  blockquote, blockquote p {
+    color: $red;
+    font-family: $roboto-slab;
+    font-weight: bold;
+    font-size: rem(20px);
+  }
 }
