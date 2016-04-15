@@ -15,26 +15,19 @@ body {
   margin-bottom: rem(35px);
 }
 
-.page-template-default  {
-  &.has-featured-image .entry-header h1 {
-    position: absolute;
-    top: rem(150px);
-    max-width: 420px;
-    color: white;
-    font-size: rem(95px);
-    line-height: rem(95px);
-  }
-
-  .entry-header h1 {
-    text-transform: uppercase;
-    font-family: $open-sans;
-    font-weight: bold;
-    color: $red;
-    margin: rem(75px) 0 rem(70px);
-  }
-
+%interior-narrower {
+  max-width: rem(840px);
+  padding: 0 rem(20px);
+  margin: 0 auto;
 }
 
+.entry-header h1 {
+  text-transform: uppercase;
+  font-family: $open-sans;
+  font-weight: bold;
+  color: $red;
+  margin: rem(75px) 0 rem(70px);
+}
 .entry-content {
   p {
     font-family: $source-serif;
@@ -50,15 +43,42 @@ body {
   }
 }
 
+.page-template-default {
+  &.has-featured-image .entry-header h1 {
+    position: absolute;
+    top: rem(150px);
+    max-width: 420px;
+    color: white;
+    font-size: rem(95px);
+    line-height: rem(95px);
+  }
+}
+
+/* Spirits pages */
+.page-template-page-spirits {
+  .entry-header h1 {
+    color: $gold;
+  }
+  #primary.spirits {
+    @extend %interior-narrower;
+    margin: 0 auto;
+    .entry-header, .entry-content, .entry-footer {
+      margin: 0;
+    }
+  }
+}
+
 /* Team page */
 .page-id-10 {
+
   article {
     .entry-header, .entry-content, .entry-footer {
       margin: 0;
     }
-    max-width: rem(840px);
-    padding: 0 rem(20px);
-    margin: 0 auto;
+    @extend %interior-narrower;
+  }
+  img {
+    width: 365px;
   }
   h2, h3 {
     color: $red;
