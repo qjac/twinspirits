@@ -107,3 +107,14 @@
 .main-navigation ul ul:before, .main-navigation ul ul:after {
   border-style: none;
 }
+
+/* Homepage */
+.page-template-home-page-template {
+  #site-header-menu {
+    background: none;
+    height: 0;
+    position: relative;
+    top: 370px;
+    z-index: 10;
+  }
+}
