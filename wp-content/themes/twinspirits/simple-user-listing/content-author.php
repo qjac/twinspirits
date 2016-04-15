@@ -9,36 +9,20 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $user;
-
 $user_info = get_userdata( $user->ID );
-$num_posts = count_user_posts( $user->ID );
 ?>
-<div id="user-<?php echo $user->ID; ?>" class="author-block">
-	<?php echo get_avatar( $user->ID, 90 ); ?>
 
-	<h2>
-		<?php if ( $num_posts > 0 ) { 
 
-			printf( '<a href="%s" title="%s">%s</a> <span class="post-count"><span class="hyphen">-</span> %s</span>', 
+<div id="user-<?php echo $user->ID; ?>" class="six columns">
+  <?php echo get_avatar( $user->ID, 365 ); ?>
 
-				get_author_posts_url( $user->ID ),
-				sprintf( esc_attr__( 'Read posts by %s', 'simple-user-listing' ), $user_info->display_name ),
-				$user_info->display_name,
-				sprintf( _nx( '1 post', '%s posts', $num_posts, 'number of posts', 'simple-user-listing' ), $num_posts )
+  <h2><?php echo $user_info->display_name; ?></h2>
 
-			);
+  <?php
+  $title = get_the_author_meta( 'job_title', $user->ID );
+  if ($title) { echo '<h3>'; the_author_meta( 'job_title', $user->ID ); echo '</h3>'; }
+  ?>
 
-		?>	
-	<?php } else {
-			echo $user_info->display_name;
-		} ?>
-	</h2>
-
-	<?php
-		$title = get_the_author_meta( 'job_title', $user->ID );
-		if ($title) { echo '<h3>' . the_author_meta( 'job_title', $user->ID ) . '</h3>'; }
-	?>
-
-	<p><?php echo $user_info->description; ?></p>
+  <p><?php echo $user_info->description; ?></p>
 
 </div>

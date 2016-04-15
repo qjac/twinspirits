@@ -53,12 +53,31 @@ body {
 /* Team page */
 .page-id-10 {
   article {
-    .entry-header {
+    .entry-header, .entry-content, .entry-footer {
       margin: 0;
     }
-
-    max-width: rem(800px);
+    max-width: rem(840px);
+    padding: 0 rem(20px);
     margin: 0 auto;
+  }
+  h2, h3 {
+    color: $red;
+    font-size: rem(18px);
+  }
+  h2 {
+    font-family: $roboto-slab;
+    margin: rem(40px) 0 rem(12px);
+  }
+  h3 {
+    font-style: italic;
+    font-weight: normal;
+    margin: 0 0 rem(35px) 0;
+  }
+  .entry-content div p {
+    margin: 0;
+  }
+  .post-edit-link {
+    display: none;
   }
 }
 
