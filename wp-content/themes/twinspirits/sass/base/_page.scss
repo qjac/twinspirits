@@ -1,12 +1,22 @@
 body {
   background: white;
 }
+.site-content {
+  padding: 0;
+}
+.site-inner {
+  max-width: 1800px;
+}
+.no-sidebar .post-thumbnail img {
+  margin: 0;
+  width: 100%;
+}
 
 .page-template-default  {
   .entry-header h1 {
     position: absolute;
     top: rem(150px);
-    max-width: 400px;
+    max-width: 420px;
 
     text-transform: uppercase;
     color: white;
@@ -31,3 +41,4 @@ body {
     font-size: rem(20px);
   }
 }
+
