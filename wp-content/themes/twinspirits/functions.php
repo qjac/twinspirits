@@ -36,3 +36,12 @@ function twinspirits_if_featured_image_class($classes) {
   }
   return $classes;
 }
+
+/**
+ * Don't show the default Author search block with the user listing.
+ */
+function twinspirits_remove_search(){
+  global $simple_user_listing;
+  remove_action( 'simple_user_listing_before_loop', array( $simple_user_listing, 'add_search' ) );
+}
+add_action( 'wp_head', 'twinspirits_remove_search' );
