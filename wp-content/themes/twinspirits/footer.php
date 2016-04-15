@@ -27,7 +27,7 @@
 					?>
 				</nav><!-- .social-navigation -->
 			<?php endif; ?>
-
+			<p><small>&copy; <?php echo date('Y'); ?> Twin Spirits Distillery. All rights reserved.</small></p>
 		</footer><!-- .site-footer -->
 	</div><!-- .site-inner -->
 </div><!-- .site -->
