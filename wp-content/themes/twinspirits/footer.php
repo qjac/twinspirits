@@ -5,7 +5,7 @@
  * Contains the closing of the #content div and all content after
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
+ * @subpackage twinspirits
  * @since Twenty Sixteen 1.0
  */
 ?>
@@ -15,7 +15,7 @@
 		<footer id="colophon" class="site-footer" role="contentinfo">
 
 			<?php if ( has_nav_menu( 'social' ) ) : ?>
-				<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'twentysixteen' ); ?>">
+				<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'twinspirits' ); ?>">
 					<?php
 						wp_nav_menu( array(
 							'theme_location' => 'social',
@@ -27,7 +27,7 @@
 					?>
 				</nav><!-- .social-navigation -->
 			<?php endif; ?>
-			<p><small>&copy; <?php echo date('Y'); ?> Twin Spirits Distillery. All rights reserved.</small></p>
+			<p class="copyright">&copy; <?php echo date('Y'); ?> Twin Spirits Distillery. All rights reserved.</p>
 		</footer><!-- .site-footer -->
 	</div><!-- .site-inner -->
 </div><!-- .site -->

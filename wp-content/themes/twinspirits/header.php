@@ -19,6 +19,7 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:700|Source+Serif+Pro|Roboto+Slab:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	<?php wp_head(); ?>
 </head>
 

@@ -42,3 +42,48 @@ body {
   }
 }
 
+footer.site-footer {
+  p.copyright {
+    width: 100%;
+    text-align: center;
+    order: 2;
+    font-family: $open-sans-condensed;
+    font-size: rem(15px);
+    text-transform: uppercase;
+  }
+  .social-navigation {
+    margin: 0 auto rem(20px);
+    padding-top: rem(35px);
+    width: 70%;
+    border-top: 1px solid #9d9ea0;
+    .menu-social-links-footer-container {
+      text-align: center;
+    }
+    ul {
+      margin: 0;
+      display: inline-block;
+    }
+    li {
+      border-radius: 50%;
+      background: $red;
+      text-align: center;
+      a {
+        border: none;
+        border-radius: 0;
+        color: white;
+
+        &:hover,
+        &:hover:before,
+        &:focus:before {
+          color: white;
+        }
+
+        &[href*="vine.co"]:before {
+          font-family: FontAwesome;
+          content: "\f1ca";
+        }
+
+      }
+    }
+  }
+}
