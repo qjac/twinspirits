@@ -25,3 +25,14 @@ function twinspirits_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
   return $attr;
 }
 add_filter( 'wp_get_attachment_image_attributes', 'twinspirits_post_thumbnail_sizes_attr', 20 , 3 );
+
+/**
+ * Add a body class if there's a Featured Image.
+ */
+add_action('body_class', 'twinspirits_if_featured_image_class' );
+function twinspirits_if_featured_image_class($classes) {
+  if (has_post_thumbnail()) {
+    array_push($classes, 'has-featured-image');
+  }
+  return $classes;
+}

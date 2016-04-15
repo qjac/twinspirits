@@ -53,31 +53,44 @@ body {
   margin-bottom: 2.1875rem; }
 
 /* line 19, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
-.page-template-default .entry-header h1 {
+.page-template-default.has-featured-image .entry-header h1 {
   position: absolute;
   top: 9.375rem;
   max-width: 420px;
-  text-transform: uppercase;
   color: white;
-  font-family: 'Open Sans', sans-serif;
   font-size: 5.9375rem;
-  line-height: 5.9375rem;
-  font-weight: bold; }
+  line-height: 5.9375rem; }
+/* line 28, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+.page-template-default .entry-header h1 {
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: #d14f53;
+  margin: 4.6875rem 0 4.375rem; }
 
-/* line 34, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 39, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .entry-content p {
   font-family: 'Source Serif Pro', serif;
   font-size: 0.9375rem;
   line-height: 2rem;
   color: #3b3b41; }
-/* line 40, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 45, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .entry-content blockquote, .entry-content blockquote p {
   color: #d14f53;
   font-family: 'Roboto Slab', serif;
   font-weight: bold;
   font-size: 1.25rem; }
 
-/* line 49, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* Team page */
+/* line 55, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+.page-id-10 article {
+  max-width: 50rem;
+  margin: 0 auto; }
+  /* line 56, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+  .page-id-10 article .entry-header {
+    margin: 0; }
+
+/* line 66, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 footer.site-footer p.copyright {
   width: 100%;
   text-align: center;
@@ -86,33 +99,33 @@ footer.site-footer p.copyright {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 0.9375rem;
   text-transform: uppercase; }
-/* line 57, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 74, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 footer.site-footer .social-navigation {
   margin: 0 auto 1.25rem;
   padding-top: 2.1875rem;
   width: 70%;
   border-top: 1px solid #9d9ea0; }
-  /* line 62, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+  /* line 79, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
   footer.site-footer .social-navigation .menu-social-links-footer-container {
     text-align: center; }
-  /* line 65, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+  /* line 82, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
   footer.site-footer .social-navigation ul {
     margin: 0;
     display: inline-block; }
-  /* line 69, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+  /* line 86, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
   footer.site-footer .social-navigation li {
     border-radius: 50%;
     background: #d14f53;
     text-align: center; }
-    /* line 73, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+    /* line 90, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
     footer.site-footer .social-navigation li a {
       border: none;
       border-radius: 0;
       color: white; }
-      /* line 80, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+      /* line 97, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
       footer.site-footer .social-navigation li a:hover, footer.site-footer .social-navigation li a:hover:before, footer.site-footer .social-navigation li a:focus:before {
         color: white; }
-      /* line 84, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+      /* line 101, /Users/sarah/Sites/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
       footer.site-footer .social-navigation li a[href*="vine.co"]:before {
         font-family: FontAwesome;
         content: "\f1ca"; }
