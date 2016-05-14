@@ -51,6 +51,7 @@ body {
     color: white;
     font-size: rem(95px);
     line-height: rem(95px);
+    word-wrap: normal;
   }
 }
 
@@ -145,4 +146,10 @@ footer.site-footer {
       }
     }
   }
+}
+
+/* Splash */
+#wpsp-continue {
+  position: relative;
+  top: -160px;
 }
