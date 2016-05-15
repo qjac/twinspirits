@@ -52,7 +52,6 @@
     width: 100%;
 
     @media screen and (min-width: 44.375em) {
-      /* needs to be large-only*/
       width: rem(910px);
       margin: 0 auto;
     }
@@ -63,7 +62,8 @@
     text-transform: uppercase;
     font-size: rem(15px);
     text-align: center;
-    margin: auto 48px;
+    margin: auto 10px;
+    padding-right: 0;
 
     &:after {
       // normalize
@@ -74,17 +74,11 @@
   }
 
   // Home link - replace text with the logo.
-  // li#menu-item-27 {
-  //   a {
-  //     @include hide-text;
-  //     // Copied from _sprites.scss - not sure why the mixin won't work.
-  //     background-position-x: 0px;
-  //     background-position-y: 0px;
-  //     width: 114px;
-  //     height: 73px;
-  //     background: url('images/sprite.png');
-  //   }
-  // }
+  li#menu-item-27 {
+     a {
+       @include hide-text;
+     }
+  }
 
   .sub-menu {
     margin: 0;
@@ -112,15 +106,4 @@
 
 .main-navigation ul ul:before, .main-navigation ul ul:after {
   border-style: none;
-}
-
-/* Homepage */
-.page-template-home-page-template {
-  #site-header-menu {
-    background: none;
-    height: 0;
-    position: relative;
-    top: 370px;
-    z-index: 10;
-  }
 }
