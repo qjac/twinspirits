@@ -1,21 +1,46 @@
+.site-header-main {
+  background: $gray-bg;
+}
+
+//mobile only
+#menu-toggle {
+  color: white;
+  margin: 0 10px;
+  &:hover, &:focus {
+    color: $red;
+    border-color: white;
+    background: rgba(255, 255, 255, .75);
+  }
+
+  .toggled-on, .toggled-on:hover, .toggled-on:focus {
+    color: $red;
+    background: transparant;
+    border-color: $red;
+  }
+}
+
 #site-header-menu {
+  //background: $gray-bg;
+  margin: 0;
+  //height: rem(104px);
+  @media screen and (min-width: 44.375em) {
+      width: 100%;
+    }
+
   .main-navigation {
     font-family: $open-sans-condensed;
     font-size: rem(15px);
-  }
-
-  background: $gray-bg;
-  margin: 0;
-  //height: rem(104px);
-
-  .main-navigation {
     margin: 0;
   }
 
   ul#menu-main-menu {
-    /* needs to be large-only
-    width: rem(910px);
-    margin: 0 auto;*/
+    width: 100%;
+
+    @media screen and (min-width: 44.375em) {
+      /* needs to be large-only*/
+      width: rem(910px);
+      margin: 0 auto;
+    }
   }
 
   a, a:hover {
