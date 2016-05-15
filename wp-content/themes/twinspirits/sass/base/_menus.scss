@@ -34,10 +34,9 @@
       color: $red;
     }}
 
+//all menus. desktop only styles in media query
 #site-header-menu {
-  //background: $gray-bg;
   margin: 0;
-  //height: rem(104px);
   @media screen and (min-width: 44.375em) {
     width: 100%;
   }
@@ -45,15 +44,36 @@
   .main-navigation {
     font-family: $open-sans-condensed;
     font-size: rem(15px);
-    //margin: 0;
   }
 
   ul#menu-main-menu {
     width: 100%;
-
     @media screen and (min-width: 44.375em) {
       width: rem(910px);
-      margin: 0 auto;
+      margin: rem(10px) auto 0;
+      text-align: center;
+    }
+  }
+
+   .main-navigation .primary-menu > li {
+    @media screen and (min-width: 44.375em) {
+      float: none;
+      display: inline-flex;
+      width: 12%;
+      
+      // to make space for the logo which has a max-width of 210px 
+      &:nth-of-type(3) {
+        margin-right: rem(105px);
+      }
+      &:nth-of-type(4) {
+        margin-left: rem(105px);
+      }
+    }
+  }
+
+  .main-navigation > a, .main-navigation .menu-item-has-children > a {
+    @media screen and (min-width: 44.375em) {
+      padding: rem(10px) rem(2px);
     }
   }
 
@@ -63,7 +83,6 @@
     font-size: rem(15px);
     text-align: center;
     margin: auto 10px;
-    padding-right: 0;
 
     &:after {
       // normalize
@@ -91,7 +110,7 @@
     li {
       text-align: center;
       border: none;
-      //background: rgba(255, 255, 255, .75);
+      background: rgba(255, 255, 255, .75);
     }
 
   }
