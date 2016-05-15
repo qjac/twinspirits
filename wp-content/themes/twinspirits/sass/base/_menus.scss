@@ -5,12 +5,12 @@
 
 .custom-logo {
   position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translate(-50%, 0);
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
-//mobile nav only
+// Mobile nav only.
 .menu-toggle {
   box-sizing: border-box;
   color: white;
@@ -39,8 +39,8 @@
   margin: 0;
   //height: rem(104px);
   @media screen and (min-width: 44.375em) {
-      width: 100%;
-    }
+    width: 100%;
+  }
 
   .main-navigation {
     font-family: $open-sans-condensed;
@@ -71,13 +71,6 @@
       position: relative;
       top: 0;
     }
-  }
-
-  // Home link - replace text with the logo.
-  li#menu-item-27 {
-     a {
-       @include hide-text;
-     }
   }
 
   .sub-menu {
