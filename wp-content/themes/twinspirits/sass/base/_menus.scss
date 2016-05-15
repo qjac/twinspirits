@@ -1,23 +1,38 @@
 .site-header-main {
   background: $gray-bg;
+  min-height: 100px;
 }
 
-//mobile only
-#menu-toggle {
+.custom-logo {
+  position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+//mobile nav only
+.menu-toggle {
+  box-sizing: border-box;
   color: white;
-  margin: 0 10px;
+  margin: 30px 10px;
   &:hover, &:focus {
     color: $red;
     border-color: white;
     background: rgba(255, 255, 255, .75);
   }
+}
 
-  .toggled-on, .toggled-on:hover, .toggled-on:focus {
+.menu-toggle.toggled-on, .menu-toggle.toggled-on:hover, .menu-toggle.toggled-on:focus {
     color: $red;
-    background: transparant;
+    background: $gray-bg;
     border-color: $red;
   }
-}
+
+  .dropdown-toggle {
+    color: white;
+    &:hover, &:focus, &:active {
+      color: $red;
+    }}
 
 #site-header-menu {
   //background: $gray-bg;
@@ -30,7 +45,7 @@
   .main-navigation {
     font-family: $open-sans-condensed;
     font-size: rem(15px);
-    margin: 0;
+    //margin: 0;
   }
 
   ul#menu-main-menu {
@@ -47,6 +62,8 @@
     color: white;
     text-transform: uppercase;
     font-size: rem(15px);
+    text-align: center;
+    margin: auto 48px;
 
     &:after {
       // normalize
@@ -57,20 +74,21 @@
   }
 
   // Home link - replace text with the logo.
-  li#menu-item-27 {
-    a {
-      @include hide-text;
-      // Copied from _sprites.scss - not sure why the mixin won't work.
-      background-position-x: 0px;
-      background-position-y: 0px;
-      width: 114px;
-      height: 73px;
-      background: url('images/sprite.png');
-    }
-  }
+  // li#menu-item-27 {
+  //   a {
+  //     @include hide-text;
+  //     // Copied from _sprites.scss - not sure why the mixin won't work.
+  //     background-position-x: 0px;
+  //     background-position-y: 0px;
+  //     width: 114px;
+  //     height: 73px;
+  //     background: url('images/sprite.png');
+  //   }
+  // }
 
   .sub-menu {
-
+    margin: 0;
+    background: rgba(255, 255, 255, .75);
     a, a:hover {
       color: $gray-bg;
     }
@@ -86,11 +104,12 @@
     li {
       text-align: center;
       border: none;
-      background: rgba(255, 255, 255, .75);
+      //background: rgba(255, 255, 255, .75);
     }
 
   }
 }
+
 .main-navigation ul ul:before, .main-navigation ul ul:after {
   border-style: none;
 }
