@@ -33,6 +33,10 @@ function add_extra_fields( $user ) {
       <th><label for="job_title">Job Title</label></th>
       <td><input type="text" name="job_title" value="<?php echo esc_attr(get_the_author_meta( 'job_title', $user->ID )); ?>" class="regular-text" /></td>
     </tr>
+    <tr>
+      <th><label for="list_position">List position</label></th>
+      <td><input type="text" name="list_position" value="<?php echo esc_attr(get_the_author_meta( 'list_position', $user->ID )); ?>" class="regular-text" /></td>
+    </tr>
   </table>
   <?php
 }
@@ -45,4 +49,5 @@ add_action( 'edit_user_profile_update', 'save_extra_fields' );
 
 function save_extra_fields( $user_id ) {
   update_user_meta( $user_id,'job_title', sanitize_text_field( $_POST['job_title'] ) );
+  update_user_meta( $user_id,'list_position', sanitize_text_field( $_POST['list_position'] ) );
 }
