@@ -49,12 +49,16 @@ body {
 .page-template-default {
   &.has-featured-image .entry-header h1 {
     position: absolute;
-    top: rem(150px);
-    max-width: 420px;
+    //top: 10%;
     color: white;
-    font-size: rem(95px);
-    line-height: rem(95px);
     word-wrap: normal;
+
+    @media screen and (min-width: 56.875em) {
+      top: rem(150px);
+      max-width: 420px;
+      font-size: rem(95px);
+      line-height: rem(95px);
+    }
   }
 }
 

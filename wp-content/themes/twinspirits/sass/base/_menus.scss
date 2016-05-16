@@ -37,7 +37,7 @@
 //all menus. desktop only styles in media query
 #site-header-menu {
   margin: 0;
-  @media screen and (min-width: 44.375em) {
+  @media screen and (min-width: 56.875em) {
     width: 100%;
   }
 
@@ -48,7 +48,7 @@
 
   ul#menu-main-menu {
     width: 100%;
-    @media screen and (min-width: 44.375em) {
+    @media screen and (min-width: 56.875em) {
       width: rem(910px);
       margin: rem(10px) auto 0;
       text-align: center;
@@ -56,7 +56,7 @@
   }
 
    .main-navigation .primary-menu > li {
-    @media screen and (min-width: 44.375em) {
+    @media screen and (min-width: 56.875em) {
       float: none;
       display: inline-flex;
       width: 12%;
@@ -78,7 +78,7 @@
 
   .main-navigation > a,
   .main-navigation .menu-item-has-children > a {
-    @media screen and (min-width: 44.375em) {
+    @media screen and (min-width: 56.875em) {
       padding: rem(10px) rem(2px);
     }
   }
@@ -125,14 +125,14 @@
 
 .main-navigation li:hover > ul,
 .main-navigation li.focus > ul {
-    @media screen and (min-width: 44.375em) {
+    @media screen and (min-width: 56.875em) {
       left: -50%;
       right: -50%;
       top: 100%;
     }
 }
 .main-navigation ul ul {
-  @media screen and (min-width: 44.375em) {
+  @media screen and (min-width: 56.875em) {
       border-bottom: 0;
     }
 }
