@@ -60,6 +60,11 @@
       float: none;
       display: inline-flex;
       width: 12%;
+
+      > a {
+        padding: rem(36px) 0;
+        margin: 0 auto;
+      }
       
       // to make space for the logo which has a max-width of 210px 
       &:nth-of-type(3) {
@@ -71,13 +76,15 @@
     }
   }
 
-  .main-navigation > a, .main-navigation .menu-item-has-children > a {
+  .main-navigation > a,
+  .main-navigation .menu-item-has-children > a {
     @media screen and (min-width: 44.375em) {
       padding: rem(10px) rem(2px);
     }
   }
 
-  a, a:hover {
+  a, 
+  a:hover {
     color: white;
     text-transform: uppercase;
     font-size: rem(15px);
@@ -116,6 +123,19 @@
   }
 }
 
+.main-navigation li:hover > ul,
+.main-navigation li.focus > ul {
+    @media screen and (min-width: 44.375em) {
+      left: -50%;
+      right: -50%;
+      top: 100%;
+    }
+}
+.main-navigation ul ul {
+  @media screen and (min-width: 44.375em) {
+      border-bottom: 0;
+    }
+}
 .main-navigation ul ul:before, .main-navigation ul ul:after {
   border-style: none;
 }
