@@ -8,7 +8,8 @@ body {
   max-width: 1800px;
 }
 .post-thumbnail {
-  margin: 0 0 rem(62px) 0;
+  //margin: 0 0 rem(62px) 0;
+  margin: 0 0 2rem 0;
 }
 .no-sidebar .post-thumbnail img {
   margin: 0;
@@ -58,7 +59,7 @@ body {
   }
   &.has-featured-image .entry-header h1 {
     position: absolute;
-    bottom: 5%;
+    bottom: 15%;
     width: 75%;
     max-width: 16rem; //max-width to preserve line break for most titles
     margin: 0 7.6923%;
