@@ -12,10 +12,11 @@
 	<?php if (!is_front_page()) : ?>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php twentysixteen_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
 	<?php endif; ?>
 
-	<?php twentysixteen_post_thumbnail(); ?>
+	
 
 	<div class="entry-content">
 		<?php

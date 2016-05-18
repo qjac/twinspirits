@@ -32,6 +32,10 @@ body {
   margin: rem(75px) 0 rem(70px);
 }
 .entry-content {
+  @media screen and (min-width: 44.375em) {
+      margin-right: 7.6923%;
+      margin-left: 7.6923%;
+    }
   p {
     font-family: $source-serif;
     font-size: rem(15px);
@@ -47,17 +51,34 @@ body {
 }
 
 .page-template-default {
+  &.has-featured-image .entry-header {
+    margin: 0;
+    height: auto;
+    position: relative;
+  }
   &.has-featured-image .entry-header h1 {
     position: absolute;
-    //top: 10%;
+    bottom: 5%;
+    width: 75%;
+    max-width: 16rem; //max-width to preserve line break for most titles
+    margin: 0 7.6923%;
+    font-size: 3rem;
+    line-height: 3rem;
     color: white;
     word-wrap: normal;
 
+    @media screen and (min-width: 44.375em) {
+      font-size: 4.5rem;
+      line-height: 4.5rem;
+      width: 50%;
+      max-width: 24rem; //max-width to preserve line break for most titles
+    }
+
     @media screen and (min-width: 56.875em) {
-      top: rem(150px);
-      max-width: 420px;
-      font-size: rem(95px);
-      line-height: rem(95px);
+      margin: 0 15%;
+      font-size: 6rem;
+      line-height: 6rem;
+      max-width: 32rem; //max-width to preserve line break for most titles
     }
   }
 }
@@ -101,6 +122,7 @@ body {
     font-weight: normal;
     margin: 0 0 rem(35px) 0;
   }
+
   .entry-content div p {
     margin: 0;
   }
