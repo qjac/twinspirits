@@ -19,6 +19,8 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<?php wp_head(); ?>
+	<script type="text/javascript" src="/wp-content/themes/twinspirits/bower_components/js-cookie/src/js.cookie.js"></script>
+	<script type="text/javascript" src="/wp-content/themes/twinspirits/js/ts-age-verify.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:700|Source+Serif+Pro|Roboto+Slab:700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 </head>
@@ -86,3 +88,12 @@
 		</header><!-- .site-header -->
 
 		<div id="content" class="site-content">
+
+			<div id="age-verify">
+				<div>
+					<h2>You must be 21 years old to enter</h2>
+					<h3>please verify you are 21 years of age or older</h3>
+					<a href="" class="yes">Yes</a>
+					<a href="" class="no">No</a>
+				</div>
+			</div>
