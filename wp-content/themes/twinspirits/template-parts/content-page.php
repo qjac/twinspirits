@@ -14,9 +14,11 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php twentysixteen_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
-	<?php endif; ?>
+		<?php endif; ?>
 
-	
+	<?php if (is_front_page()) {
+		twentysixteen_post_thumbnail();
+	} ?>
 
 	<div class="entry-content">
 		<?php
