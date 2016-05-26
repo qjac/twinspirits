@@ -87,7 +87,8 @@ body {
 /* Spirits pages */
 .page-template-page-spirits {
   .entry-header h1 {
-    color: $gold;
+    color: $red;
+    margin-bottom: 0;
   }
   #primary.spirits {
     @extend %interior-narrower;
@@ -96,6 +97,18 @@ body {
       margin: 0;
     }
   }
+
+  .post-thumbnail img {
+    // Not ideal to set the width here - WP is serving an upsized image
+    // based on their responsive image CSS around the featured image.
+    // This should maybe not be a "featured image" but a field instead.
+    // But hey... it works.
+    width: 432px;
+    margin: 0 auto;
+  }
+
+  // @TODO Set h1 colors for each spirit here.
+
 }
 
 /* Team page */
