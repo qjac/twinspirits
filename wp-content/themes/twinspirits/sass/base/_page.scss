@@ -107,8 +107,33 @@ body {
     margin: 0 auto;
   }
 
-  // @TODO Set h1 colors for each spirit here.
-
+  // Every spirit is a special flower with its own header color.
+  // Fallback is the standard TSD red.
+  &.page-id-57 {
+    .entry-header h1 {
+      color: #d1308a; // Vodka
+    }
+  }
+  &.page-id-82 {
+    .entry-header h1 {
+      color: #73db49; // Gin
+    }
+  }
+  &.page-id-84 {
+    .entry-header h1 {
+      color: #00b5dd; // Rum
+    }
+  }
+  &.page-id-86 {
+    .entry-header h1 {
+      color: #ff4d63; // Whiskey
+    }
+  }
+  &.page-id-88 {
+    .entry-header h1 {
+      color: #262362; // Moonshine
+    }
+  }
 }
 
 /* Team page */
