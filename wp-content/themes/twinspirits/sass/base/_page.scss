@@ -147,9 +147,7 @@ body {
     }
     @extend %interior-narrower;
   }
-  img {
-    width: 365px;
-  }
+
   h2, h3 {
     color: $red;
     font-size: rem(18px);
