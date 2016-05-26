@@ -86,10 +86,7 @@ body {
 
 /* Spirits pages */
 .page-template-page-spirits {
-  .entry-header h1 {
-    color: $red;
-    margin-bottom: 0;
-  }
+
   #primary.spirits {
     @extend %interior-narrower;
     margin: 0 auto;
@@ -109,6 +106,11 @@ body {
 
   // Every spirit is a special flower with its own header color.
   // Fallback is the standard TSD red.
+  .entry-header h1 {
+    color: $red;
+    margin-bottom: 0;
+  }
+
   &.page-id-57 {
     .entry-header h1 {
       color: #d1308a; // Vodka
@@ -219,4 +221,32 @@ footer.site-footer {
       }
     }
   }
+}
+
+// Spirit listing
+.page-id-75 {
+  .entry-header h1 {
+    margin-bottom: 1.25em;
+  }
+
+  .page-list-ext .page-list-ext-item {
+    @media screen and (min-width: 56.875em) {
+      float: left;
+      clear: none;
+      width: 20%;
+    }
+  }
+
+  .page-list-ext .page-list-ext-title {
+    display: none;
+
+    //clear: both;
+    /*a {
+      color: $red;
+      text-decoration: none;
+      box-shadow: none;
+    }*/
+
+  }
+
 }
