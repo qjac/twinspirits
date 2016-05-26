@@ -37,11 +37,14 @@ body {
       margin-right: 7.6923%;
       margin-left: 7.6923%;
     }
-  p {
+  p, ul li, span {
     font-family: $source-serif;
-    font-size: rem(15px);
+    font-size: rem(18px);
     line-height: rem(32px);
     color: $gray-text;
+  }
+  ul {
+    padding: 0 2em;
   }
   blockquote, blockquote p {
     color: $red;
