@@ -133,13 +133,18 @@ body {
 }
 
 footer.site-footer {
-  p.copyright {
+  p.copyright,
+  div.address {
     width: 100%;
     text-align: center;
     order: 2;
     font-family: $open-sans-condensed;
     font-size: rem(15px);
     text-transform: uppercase;
+  }
+  div.address {
+    line-height: 1em;
+    margin-bottom: 1em;
   }
   .social-navigation {
     margin: 0 auto rem(20px);
@@ -176,10 +181,4 @@ footer.site-footer {
       }
     }
   }
-}
-
-/* Splash */
-#wpsp-continue {
-  position: relative;
-  top: -160px;
 }
