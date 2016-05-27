@@ -1,24 +1,35 @@
 .site-header-main {
+   position: relative;
   background: $gray-bg;
-  min-height: 100px;
+   min-height: 130px;
 }
 
-.custom-logo {
+.site-branding {
   position: absolute;
-  top: 10px;
+  width: 100%;
+  min-height: 130px;
+}
+
+.custom-logo-link {
+  position: absolute;
+  top: 44%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
 }
 
 // Mobile nav only.
 .menu-toggle {
   box-sizing: border-box;
   color: white;
-  margin: 30px 10px;
+  margin: auto 7.6923% auto 2px;
+  position: absolute;
+  top: calc(130px/2); //130px is set height of top nav bar
+  right: 0;
+  transform: translateY(-50%);
+
   &:hover, &:focus {
     color: $red;
     border-color: white;
-    background: rgba(255, 255, 255, .75);
   }
 }
 
@@ -36,106 +47,119 @@
 
 //all menus. desktop only styles in media query
 #site-header-menu {
-  margin: 0;
+  margin: 130px 0 0;
+
   @media screen and (min-width: 56.875em) {
+   box-sizing: border-box;
     width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   .main-navigation {
     font-family: $open-sans-condensed;
-    font-size: rem(15px);
-  }
-
-  ul#menu-main-menu {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: auto 0;
     width: 100%;
-    @media screen and (min-width: 56.875em) {
-      width: rem(910px);
-      margin: rem(10px) auto 0;
-      text-align: center;
-    }
   }
 
-   .main-navigation .primary-menu > li {
-    @media screen and (min-width: 56.875em) {
-      float: none;
-      display: inline-flex;
-      width: 12%;
-
-      > a {
-        padding: rem(36px) 0;
-        margin: 0 auto;
-      }
-      
-      // to make space for the logo which has a max-width of 210px 
-      &:nth-of-type(3) {
-        margin-right: rem(105px);
-      }
-      &:nth-of-type(4) {
-        margin-left: rem(105px);
-      }
-    }
-  }
-
-  .main-navigation > a,
-  .main-navigation .menu-item-has-children > a {
-    @media screen and (min-width: 56.875em) {
-      padding: rem(10px) rem(2px);
-    }
-  }
-
-  a, 
-  a:hover {
+  .main-navigation a {
     color: white;
     text-transform: uppercase;
-    font-size: rem(15px);
+    transition: all .25s ease;
     text-align: center;
-    margin: auto 10px;
+    padding: 1rem 0.5rem;
+    white-space: normal;
 
+    &:hover, &:focus {
+      color: $red;
+    }
     &:after {
       // normalize
       content: "";
       position: relative;
       top: 0;
     }
+  } //end .main-navigation a
+
+  .main-navigation .menu-item-has-children > a {
+    margin-right: 0; //to keep li's centered in mobile nav
   }
 
-  .sub-menu {
-    margin: 0;
-    background: rgba(255, 255, 255, .75);
-    a, a:hover {
-      color: $gray-bg;
+  .main-navigation .primary-menu {
+    @media screen and (min-width: 56.875em){
+      padding: 0 2%;
+      margin: auto;
     }
-    .current-menu-item {
-      a, a:hover {
-        color: $red;
+  }
+
+  .main-navigation .primary-menu > li {
+    color: white;
+
+    @media screen and (min-width: 56.875em) {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      float: none;
+      width: 13%;
+      white-space: normal;
+      vertical-align: middle;
+      min-height: 130px;
+
+      //to make space for the logo
+      &:nth-of-type(3) {
+        margin-right: 80px;
+      }
+      &:nth-of-type(4) {
+        margin-left: 80px;
       }
     }
-    a:hover {
+  } //end .main-navigation .primary-menu > li
+
+.main-navigation .primary-menu .sub-menu {
+  background: rgba(255, 255, 255, .75);
+  margin: 0;
+  border-bottom: 0;
+
+  a {
+    color: $gray-bg;
+
+    &:hover,
+    &:focus {
       color: $red;
     }
+  }
 
-    li {
-      text-align: center;
-      border: none;
-      background: rgba(255, 255, 255, .75);
+  .current-menu-item {
+    a,
+    a:hover,
+    a:focus {
+      color: $red;
     }
+  }
+}  //end .main-navigation .primary-menu .sub-menu
 
+.main-navigation .primary-menu > li:hover > ul,
+.main-navigation .primary-menu > li:focus > ul {
+  @media screen and (min-width: 56.875em) {
+    left: -50%;
+    right: -50%;
+    top: 100%;
   }
 }
 
-.main-navigation li:hover > ul,
-.main-navigation li.focus > ul {
-    @media screen and (min-width: 56.875em) {
-      left: -50%;
-      right: -50%;
-      top: 100%;
+  .main-navigation .primary-menu .sub-menu li {
+      border: none;
+      background-color: transparent;
     }
-}
-.main-navigation ul ul {
-  @media screen and (min-width: 56.875em) {
-      border-bottom: 0;
-    }
-}
-.main-navigation ul ul:before, .main-navigation ul ul:after {
+
+.main-navigation ul ul::before,
+.main-navigation ul ul::after {
   border-style: none;
-}
+ } //removes carrot from parent theme
+
+ .main-navigation ul ul a {
+  width: 100%;
+ }
+} //end #site-header-menu
