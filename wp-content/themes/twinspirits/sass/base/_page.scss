@@ -36,11 +36,14 @@ body {
       margin-right: 7.6923%;
       margin-left: 7.6923%;
     }
-  p {
+  p, ul li, span {
     font-family: $source-serif;
-    font-size: rem(15px);
+    font-size: rem(18px);
     line-height: rem(32px);
     color: $gray-text;
+  }
+  ul {
+    padding: 0 2em;
   }
   blockquote, blockquote p {
     color: $red;
@@ -85,14 +88,54 @@ body {
 
 /* Spirits pages */
 .page-template-page-spirits {
-  .entry-header h1 {
-    color: $gold;
-  }
+
   #primary.spirits {
     @extend %interior-narrower;
     margin: 0 auto;
     .entry-header, .entry-content, .entry-footer {
       margin: 0;
+    }
+  }
+
+  .post-thumbnail img {
+    // Not ideal to set the width here - WP is serving an upsized image
+    // based on their responsive image CSS around the featured image.
+    // This should maybe not be a "featured image" but a field instead.
+    // But hey... it works.
+    width: 432px;
+    margin: 0 auto;
+  }
+
+  // Every spirit is a special flower with its own header color.
+  // Fallback is the standard TSD red.
+  .entry-header h1 {
+    color: $red;
+    margin-bottom: 0;
+  }
+
+  &.page-id-57 {
+    .entry-header h1 {
+      color: #d1308a; // Vodka
+    }
+  }
+  &.page-id-82 {
+    .entry-header h1 {
+      color: #73db49; // Gin
+    }
+  }
+  &.page-id-84 {
+    .entry-header h1 {
+      color: #00b5dd; // Rum
+    }
+  }
+  &.page-id-86 {
+    .entry-header h1 {
+      color: #ff4d63; // Whiskey
+    }
+  }
+  &.page-id-88 {
+    .entry-header h1 {
+      color: #262362; // Moonshine
     }
   }
 }
@@ -108,10 +151,6 @@ body {
     }
 
     @extend %interior-narrower;
-  }
-
-  img {
-    width: 365px;
   }
 
   h2, h3 {
@@ -140,13 +179,19 @@ body {
 }
 
 footer.site-footer {
-  p.copyright {
+  p.copyright,
+  div.address {
     width: 100%;
     text-align: center;
     order: 2;
     font-family: $open-sans-condensed;
     font-size: rem(15px);
     text-transform: uppercase;
+  }
+
+  div.address {
+    line-height: 1em;
+    margin-bottom: 1em;
   }
 
   .social-navigation {
@@ -186,5 +231,31 @@ footer.site-footer {
         }
       }
     }
+  }
+}
+
+// Spirit listing
+.page-id-75 {
+  .entry-header h1 {
+    margin-bottom: 1.25em;
+  }
+
+  .page-list-ext .page-list-ext-item {
+    @media screen and (min-width: 56.875em) {
+      float: left;
+      clear: none;
+      width: 20%;
+    }
+  }
+
+  .page-list-ext .page-list-ext-title {
+    display: none;
+
+    //clear: both;
+    /*a {
+      color: $red;
+      text-decoration: none;
+      box-shadow: none;
+    }*/
   }
 }

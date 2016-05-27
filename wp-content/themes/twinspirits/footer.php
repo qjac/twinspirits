@@ -27,6 +27,7 @@
 					?>
 				</nav><!-- .social-navigation -->
 			<?php endif; ?>
+			<div class="address">2591 Central Ave NE<br>Minneapolis, MN 55418</div>
 			<p class="copyright">&copy; <?php echo date('Y'); ?> Twin Spirits Distillery. All rights reserved.</p>
 		</footer><!-- .site-footer -->
 	</div><!-- .site-inner -->

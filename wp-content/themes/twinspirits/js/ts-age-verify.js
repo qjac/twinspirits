@@ -6,15 +6,15 @@ TS = [];
 var $ = jQuery.noConflict();
 
 TS.init = function() {
-  // if (Cookies.get('TSAgeVerify')) {
-  //   if (Cookies.get('TSAgeVerify') == 1) {
-  //     $('#age-verify').remove();
-  //   } else {
-  //     this.setupAgeVerification();
-  //   }
-  // } else {
+  if (Cookies.get('TSAgeVerify')) {
+    if (Cookies.get('TSAgeVerify') == 1) {
+      $('#age-verify').remove();
+    } else {
+      this.setupAgeVerification();
+    }
+  } else {
     this.setupAgeVerification();
-  // }
+  }
 };
 
 TS.setupAgeVerification = function(){
