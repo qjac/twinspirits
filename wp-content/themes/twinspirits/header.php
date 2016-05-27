@@ -92,8 +92,8 @@
 			<div id="age-verify">
 				<div class="shield" aria-label="You must be 21 years old to enter. Please verify you are 21 years of age or older.">
 					<div class="shield-text">
-							<a href="">Yes</a> | 
-							<a href="">No</a>
+							<a href="" class="yes">Yes</a> |
+							<a href="" class="no">No</a>
 					</div>
 				</div>
 			</div>
