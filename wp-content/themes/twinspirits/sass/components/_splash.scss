@@ -6,33 +6,48 @@
   height: 100vh;
   background: url('images/bg_splash.jpg');
   z-index: 999999999999;
-  display: none
+  display: none;
 }
 
-#age-verify div {
-  margin: rem(30px) auto 0;
-  width: 450px;
-  padding:40px 30px;
-  background: white;
+#age-verify .shield {
+  position: relative;
+  margin: 2% auto;
+  padding: 0 4%;
+  max-width: 90%;
+  height: 94vh;
+  min-height: 50vh;
+  //height: auto;
+  text-align: center;
+  background: url('images/shield.png') no-repeat center center;
+  background-size: contain;
 }
 
-#age-verify h2 {
-  font-size: rem(27px);
-}
-#age-verify h3 {
-  font-size: rem(20px);
+
+#age-verify .shield-text {
+  width: 92%;
+  display: block;
+   max-width: 500px;
+  margin: auto;
+  color: $gray-text;
+  position: absolute;
+    top: 65vh;
+    left: 50%;
+    transform: translateX(-50%);
+  font-family: $open-sans-condensed;
+  font-size: 1.5rem;
+  font-size: 10vmin;
+  text-transform: uppercase;
 }
 
-#age-verify div a {
-  display:block;
-  float:left;
-  padding:6px 20px;
-  margin-right:2px;
-  color: black;
-  text-decoration:none;
-  width:49%;
-  text-align:center
+#age-verify .shield-text a {
+  display: inline-block;
+  padding: 2px .5rem;
+  color: $gray-text;
+  text-decoration: none;
 }
 
-#age-verify div a:hover{background:#662914}
-#age-verify div a.no{float:right}
+#age-verify div a:hover {
+  background: $red;
+  border-radius: 4px;
+  color: white;
+}

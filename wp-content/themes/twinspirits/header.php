@@ -90,10 +90,10 @@
 		<div id="content" class="site-content">
 
 			<div id="age-verify">
-				<div>
-					<h2>You must be 21 years old to enter</h2>
-					<h3>please verify you are 21 years of age or older</h3>
-					<a href="" class="yes">Yes</a>
-					<a href="" class="no">No</a>
+				<div class="shield" aria-label="You must be 21 years old to enter. Please verify you are 21 years of age or older.">
+					<div class="shield-text">
+							<a href="">Yes</a> | 
+							<a href="">No</a>
+					</div>
 				</div>
 			</div>
