@@ -69,6 +69,8 @@ body {
     line-height: 3rem;
     color: white;
     word-wrap: normal;
+    word-break: keep-all;
+    hyphens: none;
 
     @media screen and (min-width: 44.375em) {
       font-size: 4.5rem;
