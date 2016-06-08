@@ -91,6 +91,39 @@ body {
 /* Spirits pages */
 .page-template-page-spirits {
 
+  // Navigation
+  .spirits-nav {
+    width: 90%;
+    font-size: rem(30px);
+    line-height: 0;
+    @media screen and (min-width: 44.375em) {
+      width: 70%;
+      font-size: rem(80px);
+    }
+    margin: 0 auto;
+    position: relative;
+    top: rem(250px);
+    z-index: 999;
+
+    a {
+      position: relative;
+      color: $gray-text;
+      transition: all .4s ease;
+
+      &:hover {
+        color: $purple;
+      }
+
+      &.nav-previous {
+        float: left;
+      }
+      &.nav-next {
+        float: right;
+      }
+
+    }
+  }
+
   #primary.spirits {
     @extend %interior-narrower;
     margin: 0 auto;
@@ -140,6 +173,7 @@ body {
       color: #262362; // Moonshine
     }
   }
+
 }
 
 /* Team page */

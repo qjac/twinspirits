@@ -59,3 +59,43 @@ $header_img = array(
   'uploads'                => true
 );
 add_theme_support( 'custom-header', $header_img );
+
+/**
+ * Retrieves sibling pages.
+ * Used for previous/next navigation in Spirits section.
+ *
+ * @param $link
+ * @return array
+ */
+function twinspirits_get_sibling_pages() {
+  global $post;
+
+  if ($post->post_parent) {
+    $siblings = get_pages('child_of=' . $post->post_parent . '&parent=' . $post->post_parent . '&sort_column=menu_order&sort_order=asc');
+
+    $pages = array();
+    foreach ($siblings as $page) {
+      $pages[] += $page->ID;
+    }
+    $current = array_search($post->ID, $pages);
+    $prevID = $pages[$current - 1];
+    $nextID = $pages[$current + 1];
+
+    $nav = array();
+    foreach(array('previous' => $prevID, 'next' => $nextID) as $label => $pageID) {
+      if ($pageID && $pageID !== $post->ID) {
+        if ($label == 'previous') {
+          $direction = 'left';
+        }
+        else {
+          $direction = 'right';
+        }
+        $nav[$label] = '<a class="nav-'. $label .'" href="' . get_permalink($pageID) . '" title="'. $label .'"><i class="fa fa-chevron-'. $direction .'" aria-hidden="true"></i></a>';
+      }
+    }
+
+    return $nav;
+
+  }
+}
+
