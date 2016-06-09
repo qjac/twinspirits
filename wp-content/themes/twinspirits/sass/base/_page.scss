@@ -1,27 +1,23 @@
-body {
-  background: white;
-}
-.site-content {
-  padding: 0;
-}
-.site-inner {
-  max-width: 1800px;
-}
-.post-thumbnail {
-  margin: 0 0 2rem 0;
-}
-.no-sidebar .post-thumbnail img {
-  margin: 0;
-  width: 100%;
-}
-.site-main {
-  margin-bottom: rem(35px);
-}
-
 %interior-narrower {
   max-width: rem(840px);
   padding: 0 rem(20px);
   margin: 0 auto;
+}
+
+body {
+  background: white;
+}
+
+.site-inner {
+  max-width: 1800px;
+}
+
+.site-content {
+  padding: 0;
+}
+
+.site-main {
+  margin-bottom: rem(35px);
 }
 
 .entry-header h1 {
@@ -29,13 +25,20 @@ body {
   font-family: $open-sans;
   font-weight: bold;
   color: $red;
-  margin: rem(75px) 0 rem(70px);
+  margin: rem(20px) 0;
 }
+
+.post-thumbnail {
+  margin: 0 0 2rem 0;
+}
+.no-sidebar .post-thumbnail img {
+  margin: 0;
+  width: 100%;
+}
+
 .entry-content {
-  @media screen and (min-width: 44.375em) {
-      margin-right: 7.6923%;
-      margin-left: 7.6923%;
-    }
+  @extend %interior-narrower;
+
   p, ul li, span {
     font-family: $source-serif;
     font-size: rem(18px);
@@ -51,7 +54,7 @@ body {
     font-weight: bold;
     font-size: rem(20px);
   }
-}
+} //end .entry-content
 
 .page-template-default {
   &.has-featured-image .entry-header {
@@ -59,12 +62,13 @@ body {
     height: auto;
     position: relative;
   }
+
   &.has-featured-image .entry-header h1 {
     position: absolute;
-    bottom: 15%;
+    padding-left: rem(20px);
+    bottom: 0;
     width: 75%;
     max-width: 16rem; //max-width to preserve line break for most titles
-    margin: 0 7.6923%;
     font-size: 3rem;
     line-height: 3rem;
     color: white;
@@ -122,15 +126,7 @@ body {
       }
 
     }
-  }
-
-  #primary.spirits {
-    @extend %interior-narrower;
-    margin: 0 auto;
-    .entry-header, .entry-content, .entry-footer {
-      margin: 0;
-    }
-  }
+  } //end .spirits-nav
 
   .post-thumbnail img {
     // Not ideal to set the width here - WP is serving an upsized image
@@ -145,7 +141,6 @@ body {
   // Fallback is the standard TSD red.
   .entry-header h1 {
     color: $red;
-    margin-bottom: 0;
   }
 
   &.page-id-57 {
@@ -174,7 +169,7 @@ body {
     }
   }
 
-}
+} //end .page-template-page-spirits
 
 /* Team page */
 .page-id-10 {
@@ -183,10 +178,7 @@ body {
     .entry-header,
     .entry-content,
     .entry-footer {
-      margin: 0;
     }
-
-    @extend %interior-narrower;
   }
 
   h2, h3 {
@@ -212,7 +204,7 @@ body {
   .post-edit-link {
     display: none;
   }
-}
+} //end .page-id-10
 
 footer.site-footer {
   p.copyright,
@@ -286,12 +278,5 @@ footer.site-footer {
 
   .page-list-ext .page-list-ext-title {
     display: none;
-
-    //clear: both;
-    /*a {
-      color: $red;
-      text-decoration: none;
-      box-shadow: none;
-    }*/
   }
 }
