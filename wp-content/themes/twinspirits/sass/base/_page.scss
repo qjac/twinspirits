@@ -20,12 +20,19 @@ body {
   margin-bottom: rem(35px);
 }
 
+.entry-header {
+  // margin-right: 0;
+  // margin-left: 0;
+  @extend %interior-narrower;
+}
+
 .entry-header h1 {
   text-transform: uppercase;
   font-family: $open-sans;
   font-weight: bold;
   color: $red;
   margin: rem(20px) 0;
+  padding-right: rem(20px);
 }
 
 .post-thumbnail {
@@ -61,12 +68,15 @@ body {
     margin: 0;
     height: auto;
     position: relative;
+    max-width: 100%;
+    padding: 0;
   }
 
   &.has-featured-image .entry-header h1 {
     position: absolute;
     padding-left: rem(20px);
-    bottom: 0;
+    top: 75%;
+    transform: translateY(-75%);
     width: 75%;
     max-width: 16rem; //max-width to preserve line break for most titles
     font-size: 3rem;
