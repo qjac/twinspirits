@@ -21,8 +21,6 @@ body {
 }
 
 .entry-header {
-  // margin-right: 0;
-  // margin-left: 0;
   @extend %interior-narrower;
 }
 
@@ -120,7 +118,7 @@ body {
     z-index: 999;
 
     a {
-      position: relative;
+      position: absolute;
       color: $gray-text;
       transition: all .4s ease;
 
@@ -129,10 +127,10 @@ body {
       }
 
       &.nav-previous {
-        float: left;
+        left: 0;
       }
       &.nav-next {
-        float: right;
+        right: 0;
       }
 
     }
@@ -178,18 +176,10 @@ body {
       color: #262362; // Moonshine
     }
   }
-
 } //end .page-template-page-spirits
 
 /* Team page */
 .page-id-10 {
-
-  article {
-    .entry-header,
-    .entry-content,
-    .entry-footer {
-    }
-  }
 
   h2, h3 {
     color: $red;
@@ -274,9 +264,6 @@ footer.site-footer {
 
 // Spirit listing
 .page-id-75 {
-  .entry-header h1 {
-    margin-bottom: 1.25em;
-  }
 
   .page-list-ext .page-list-ext-item {
     @media screen and (min-width: 56.875em) {
@@ -289,4 +276,4 @@ footer.site-footer {
   .page-list-ext .page-list-ext-title {
     display: none;
   }
-}
+} //end .page-id-75
