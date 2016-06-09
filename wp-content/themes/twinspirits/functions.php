@@ -50,15 +50,15 @@ add_action( 'wp_head', 'twinspirits_remove_search' );
  * Require cropping of the featured (header) image.
  */
 // @TODO - this doesn't actually work yet
-$header_img = array(
-  'default-image'          => '',
-  'width'                  => 1400,
-  'height'                 => 475,
-  'flex-height'            => true,
-  'flex-width'             => true,
-  'uploads'                => true
-);
-add_theme_support( 'custom-header', $header_img );
+// $header_img = array(
+//   'default-image'          => '',
+//   'width'                  => 1400,
+//   'height'                 => 475,
+//   'flex-height'            => true,
+//   'flex-width'             => true,
+//   'uploads'                => true
+// );
+// add_theme_support( 'custom-header', $header_img );
 
 /**
  * Retrieves sibling pages.
@@ -98,4 +98,3 @@ function twinspirits_get_sibling_pages() {
 
   }
 }
-
