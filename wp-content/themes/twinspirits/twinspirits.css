@@ -47,23 +47,23 @@ body {
   background: white;
   font-family: 'Source Serif Pro', serif; }
 
-/* line 25, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 27, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 a {
   color: #812b5d; }
 
-/* line 29, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 31, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .site-inner {
   max-width: 1800px; }
 
-/* line 33, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 35, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .site-content {
   padding: 0; }
 
-/* line 37, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 39, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .site-main {
   margin-bottom: 2.1875rem; }
 
-/* line 45, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 47, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .entry-header h1 {
   text-transform: uppercase;
   font-family: 'Open Sans', sans-serif;
@@ -72,32 +72,32 @@ a {
   margin: 1.25rem 0;
   padding-right: 1.25rem; }
 
-/* line 54, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 56, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .post-thumbnail {
   margin: 0 0 2rem 0; }
 
-/* line 57, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 59, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .no-sidebar .post-thumbnail img {
   margin: 0;
   width: 100%; }
 
-/* line 65, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 67, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .entry-content p, .entry-content ul li, .entry-content span {
   font-family: 'Source Serif Pro', serif;
   font-size: 1.125rem;
   line-height: 2rem;
   color: #3b3b41; }
-/* line 71, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 73, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .entry-content ul {
   padding: 0 2em; }
-/* line 74, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 76, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .entry-content blockquote, .entry-content blockquote p {
   color: #d14f53;
   font-family: 'Roboto Slab', serif;
   font-weight: bold;
   font-size: 1.25rem; }
 
-/* line 84, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 86, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 footer.site-footer p.copyright, footer.site-footer div.address {
   width: 100%;
   text-align: center;
@@ -106,49 +106,49 @@ footer.site-footer p.copyright, footer.site-footer div.address {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 0.9375rem;
   text-transform: uppercase; }
-/* line 93, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 95, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 footer.site-footer div.address {
   line-height: 1em;
   margin-bottom: 1em; }
-/* line 98, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 100, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 footer.site-footer .social-navigation {
   margin: 0 auto 1.25rem;
   padding-top: 2.1875rem;
   width: 70%;
   border-top: 1px solid #9d9ea0; }
-  /* line 104, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+  /* line 106, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
   footer.site-footer .social-navigation .menu-social-links-footer-container {
     text-align: center; }
-  /* line 108, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+  /* line 110, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
   footer.site-footer .social-navigation ul {
     margin: 0;
     display: inline-block; }
-  /* line 113, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+  /* line 115, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
   footer.site-footer .social-navigation li {
     border-radius: 50%;
     background: #d14f53;
     text-align: center; }
-    /* line 118, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+    /* line 120, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
     footer.site-footer .social-navigation li a {
       border: 0;
       border-radius: 0;
       color: white; }
-      /* line 125, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+      /* line 127, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
       footer.site-footer .social-navigation li a:hover, footer.site-footer .social-navigation li a:hover::before, footer.site-footer .social-navigation li a:focus::before {
         color: white; }
-      /* line 129, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+      /* line 131, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
       footer.site-footer .social-navigation li a[href*="vine.co"]::before {
         font-family: FontAwesome;
         content: '\f1ca'; }
 
-/* line 142, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 144, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .page-template-default.has-featured-image .entry-header {
   margin: 0;
   height: auto;
   position: relative;
   max-width: 100%;
   padding: 0; }
-/* line 150, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 152, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .page-template-default.has-featured-image .entry-header h1 {
   position: absolute;
   padding-left: 1.25rem;
@@ -179,7 +179,7 @@ footer.site-footer .social-navigation {
       max-width: 32rem; } }
 
 /* Spirits pages */
-/* line 184, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 186, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .page-template-page-spirits .spirits-nav {
   width: 90%;
   font-size: 1.875rem;
@@ -192,61 +192,61 @@ footer.site-footer .social-navigation {
     .page-template-page-spirits .spirits-nav {
       width: 70%;
       font-size: 5rem; } }
-  /* line 197, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+  /* line 199, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
   .page-template-page-spirits .spirits-nav a {
     position: absolute;
     color: #3b3b41;
     transition: all .4s ease; }
-    /* line 202, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+    /* line 204, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
     .page-template-page-spirits .spirits-nav a:hover {
       color: #812b5d; }
-    /* line 206, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+    /* line 208, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
     .page-template-page-spirits .spirits-nav a.nav-previous {
       left: 0; }
-    /* line 209, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+    /* line 211, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
     .page-template-page-spirits .spirits-nav a.nav-next {
       right: 0; }
-/* line 216, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 218, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .page-template-page-spirits .post-thumbnail img {
   width: 432px;
   margin: 0 auto; }
-/* line 227, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 229, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .page-template-page-spirits .entry-header h1 {
   color: #d14f53; }
-/* line 232, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 234, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .page-template-page-spirits.page-id-57 .entry-header h1 {
   color: #d1308a; }
-/* line 237, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 239, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .page-template-page-spirits.page-id-82 .entry-header h1 {
   color: #73db49; }
-/* line 242, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 244, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .page-template-page-spirits.page-id-84 .entry-header h1 {
   color: #00b5dd; }
-/* line 247, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 249, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .page-template-page-spirits.page-id-86 .entry-header h1 {
   color: #ff4d63; }
-/* line 252, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 254, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .page-template-page-spirits.page-id-88 .entry-header h1 {
   color: #262362; }
 
 /* Team page */
-/* line 265, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 267, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .page-id-10 h2, .page-id-10 h3 {
   color: #d14f53;
   font-size: 1.125rem; }
-/* line 270, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 272, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .page-id-10 h2 {
   font-family: 'Roboto Slab', serif;
   margin: 2.5rem 0 0.75rem; }
-/* line 275, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 277, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .page-id-10 h3 {
   font-style: italic;
   font-weight: normal;
   margin: 0 0 2.1875rem; }
-/* line 281, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 283, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .page-id-10 .entry-content div p {
   margin: 0; }
-/* line 285, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 287, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .page-id-10 .post-edit-link {
   display: none; }
 
@@ -255,12 +255,12 @@ footer.site-footer .social-navigation {
     float: left;
     clear: none;
     width: 20%; } }
-/* line 300, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+/* line 302, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
 .page-id-75 .page-list-ext .page-list-ext-title {
   display: none; }
 
-/* line 309, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
-.entry-content .fbx-link {
+/* line 311, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_page.scss */
+.entry-content .foogallery-default a {
   box-shadow: none; }
 
 /* line 1, /Applications/MAMP/htdocs/twin-spirits/wp-content/themes/twinspirits/sass/base/_menus.scss */

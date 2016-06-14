@@ -22,6 +22,8 @@ body {
   font-family: $source-serif;
 }
 
+
+
 a {
   color: $purple;
 }
@@ -306,6 +308,6 @@ footer.site-footer {
 // FOO GALLERY STYLES 
 //============================
 
-.entry-content .fbx-link {
+.entry-content .foogallery-default a {
   box-shadow: none;
 }
