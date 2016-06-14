@@ -55,3 +55,8 @@ Thumbs.db
 ##########
 .sass-cache
 node_modules
+
+
+# CUSTOM #
+############
+wp-content/plugins/doptg/uploads
