@@ -1,11 +1,29 @@
+// Contents
+// -includes
+// -general page styles
+// -template specific styles
+// -page specific styles
+// -foo gallery styles
+
+//============================
+// INCLUDES 
+//============================
 %interior-narrower {
   max-width: rem(840px);
   padding: 0 rem(20px);
   margin: 0 auto;
 }
 
+//============================
+// GENERAL PAGE STYLES 
+//============================
 body {
   background: white;
+  font-family: $source-serif;
+}
+
+a {
+  color: $purple;
 }
 
 .site-inner {
@@ -61,6 +79,65 @@ body {
   }
 } //end .entry-content
 
+footer.site-footer {
+  p.copyright,
+  div.address {
+    width: 100%;
+    text-align: center;
+    order: 2;
+    font-family: $open-sans-condensed;
+    font-size: rem(15px);
+    text-transform: uppercase;
+  }
+
+  div.address {
+    line-height: 1em;
+    margin-bottom: 1em;
+  }
+
+  .social-navigation {
+    margin: 0 auto rem(20px);
+    padding-top: rem(35px);
+    width: 70%;
+    border-top: 1px solid #9d9ea0;
+ 
+    .menu-social-links-footer-container {
+      text-align: center;
+    }
+
+    ul {
+      margin: 0;
+      display: inline-block;
+    }
+
+    li {
+      border-radius: 50%;
+      background: $red;
+      text-align: center;
+
+      a {
+        border: 0;
+        border-radius: 0;
+        color: white;
+
+        &:hover,
+        &:hover::before,
+        &:focus::before {
+          color: white;
+        }
+
+        &[href*="vine.co"]::before {
+          font-family: FontAwesome;
+          content: '\f1ca';
+        }
+      }
+    }
+  }
+} //end footer styles
+
+//============================
+// TEMPLATE SPECIFIC STYLES
+//============================
 .page-template-default {
   &.has-featured-image .entry-header {
     margin: 0;
@@ -178,6 +255,10 @@ body {
   }
 } //end .page-template-page-spirits
 
+//============================
+// SPECIFIC PAGE STYLES 
+//============================
+
 /* Team page */
 .page-id-10 {
 
@@ -206,65 +287,8 @@ body {
   }
 } //end .page-id-10
 
-footer.site-footer {
-  p.copyright,
-  div.address {
-    width: 100%;
-    text-align: center;
-    order: 2;
-    font-family: $open-sans-condensed;
-    font-size: rem(15px);
-    text-transform: uppercase;
-  }
-
-  div.address {
-    line-height: 1em;
-    margin-bottom: 1em;
-  }
-
-  .social-navigation {
-    margin: 0 auto rem(20px);
-    padding-top: rem(35px);
-    width: 70%;
-    border-top: 1px solid #9d9ea0;
- 
-    .menu-social-links-footer-container {
-      text-align: center;
-    }
-
-    ul {
-      margin: 0;
-      display: inline-block;
-    }
-
-    li {
-      border-radius: 50%;
-      background: $red;
-      text-align: center;
-
-      a {
-        border: 0;
-        border-radius: 0;
-        color: white;
-
-        &:hover,
-        &:hover::before,
-        &:focus::before {
-          color: white;
-        }
-
-        &[href*="vine.co"]::before {
-          font-family: FontAwesome;
-          content: '\f1ca';
-        }
-      }
-    }
-  }
-}
-
 // Spirit listing
 .page-id-75 {
-
   .page-list-ext .page-list-ext-item {
     @media screen and (min-width: 56.875em) {
       float: left;
@@ -277,3 +301,11 @@ footer.site-footer {
     display: none;
   }
 } //end .page-id-75
+
+//============================
+// FOO GALLERY STYLES 
+//============================
+
+.entry-content .fbx-link {
+  box-shadow: none;
+}
