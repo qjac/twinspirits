@@ -64,8 +64,9 @@ a {
 }
 
 .post-thumbnail {
-  margin: 0 0 2rem 0;
+  margin: 0;
 }
+
 .no-sidebar .post-thumbnail img {
   margin: 0;
   width: 100%;
@@ -73,6 +74,7 @@ a {
 
 .entry-content {
   @extend %interior-narrower;
+  margin-top: rem(35px);
 
   p, ul li, span {
     font-family: $source-serif;
