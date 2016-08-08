@@ -69,6 +69,10 @@ a {
 
 .no-sidebar .post-thumbnail img {
   margin: 0 auto;
+  width: 100%;
+}
+body.home .post-thumbnail img {
+  width: auto;
 }
 
 .entry-content {
