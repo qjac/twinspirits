@@ -47,7 +47,7 @@ function tsd_dashboard_help() {
   $items = [];
   $base_screencast_url = get_site_url() . '/wp-content/uploads/screencasts/';  
   foreach ($help_links as $text => $link) {
-    $items[] = '<li><a href="'. $link .'">'. $text .'</a></li>'; 
+    $items[] = '<li><a href="'. $base_screencast_url . $link .'">'. $text .'</a></li>'; 
   }
 
   $output .= implode(PHP_EOL, $items);
