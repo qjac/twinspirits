@@ -52,6 +52,6 @@ function tsd_dashboard_help() {
 
   $output .= implode(PHP_EOL, $items);
   $output .= '</ul>';
-  return $output;
+  echo $output;
 }
 
