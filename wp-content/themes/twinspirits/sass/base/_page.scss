@@ -188,7 +188,7 @@ footer.site-footer {
       max-width: 24rem; //max-width to preserve line break for most titles
     }
 
-    @media screen and (min-width: 56.875em) {
+    @media screen and (min-width: $width-desktop) {
       margin: 0 15%;
       font-size: 6rem;
       line-height: 6rem;
@@ -311,7 +311,7 @@ footer.site-footer {
 // Spirit listing
 .page-id-75 {
   .page-list-ext .page-list-ext-item {
-    @media screen and (min-width: 56.875em) {
+    @media screen and (min-width: $width-desktop) {
       float: left;
       clear: none;
       width: 20%;

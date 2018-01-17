@@ -50,10 +50,11 @@ Icon?
 Thumbs.db
 ._*
 
-# Vim generated files #
+# IDE/vim generated files #
 ######################
 *.un~
 *.swp
+*.idea
 
 # SASS #
 ##########
