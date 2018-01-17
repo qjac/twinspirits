@@ -3,33 +3,35 @@
   background: $gray-bg;
   min-height: 130px;
 
-  @media screen and (min-width: $width-desktop) {
+  //@media screen and (min-width: $width-desktop) {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-  }
+  //}
+
+
 }
 
 .site-header-main .site-branding {
-  margin: unset;
+  margin: 30px 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-/*.custom-logo-link {
-  position: absolute;
-  top: 44%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}*/
+.custom-logo-link {
+}
 
 // Mobile nav only.
 .menu-toggle {
   box-sizing: border-box;
   color: white;
-  margin: auto 7.6923% auto 2px;
+  margin: auto 0;
   position: absolute;
   top: calc(130px / 2); //130px is set height of top nav bar
-  right: 0;
+  right: 5%;
   transform: translateY(-50%);
 
   &:hover, &:focus {
@@ -53,18 +55,15 @@
 #site-header-menu {
   //margin: 130px 0 0;
 
-  @media screen and (min-width: $width-desktop) {
-    //box-sizing: border-box;
-    //width: 100%;
-    //margin: 0;
-    //padding: 0;
+  @media screen and (max-width: $width-desktop) {
+    margin: 0;
   }
 
   .main-navigation {
     font-family: $open-sans-condensed;
     font-size: 1.1rem;
     text-align: center;
-    //margin: auto 0;
+    margin: unset;
     //width: 100%;
   }
 
@@ -94,8 +93,8 @@
 
   .main-navigation .primary-menu {
     @media screen and (min-width: $width-desktop) {
-      padding: 0 2%;
-      margin: auto;
+      //padding: 0 2%;
+      //margin: auto;
     }
   }
 
@@ -103,6 +102,8 @@
     color: white;
 
     @media screen and (min-width: $width-desktop) {
+      padding: 0 18px;
+
       /*display: inline-flex;
       align-items: center;
       justify-content: center;
