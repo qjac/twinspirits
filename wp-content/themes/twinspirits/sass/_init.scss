@@ -41,17 +41,3 @@ $gold: #f4c416;
 $purple: #812b5d;
 $gray-bg: #3c3c42;
 $gray-text: #3b3b41;
-
-// test
-
-// =============================================================================
-// Partials to be shared with all .scss files.
-// =============================================================================
-
-// Media Queries
-@import "media-queries";
-
-// Now we add our custom helper mixins/classes.
-@import "mixins";
-@import "classes";
-
