@@ -696,20 +696,6 @@ there.
 
   #site-header-menu .main-navigation .primary-menu > li {
     padding: 0 18px;
-    /*display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      float: none;
-      width: 13%;
-      white-space: normal;
-      vertical-align: middle;
-      min-height: 130px;*/
-    /*&:nth-of-type(3) {
-        margin-right: 80px;
-      }
-      &:nth-of-type(4) {
-        margin-left: 80px;
-      }*/
   }
 
   #site-header-menu .main-navigation .primary-menu > li:hover > ul,

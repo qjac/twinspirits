@@ -1,16 +1,10 @@
 .site-header-main {
-  //position: relative;
   background: $gray-bg;
   min-height: 130px;
-
-  //@media screen and (min-width: $width-desktop) {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-  //}
-
-
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .site-header-main .site-branding {
@@ -21,16 +15,13 @@
   align-items: flex-start;
 }
 
-.custom-logo-link {
-}
-
 // Mobile nav only.
 .menu-toggle {
   box-sizing: border-box;
   color: white;
   margin: auto 0;
   position: absolute;
-  top: calc(130px / 2); //130px is set height of top nav bar
+  top: calc(130px / 2); // 130px is set height of top nav bar
   right: 5%;
   transform: translateY(-50%);
 
@@ -53,8 +44,6 @@
 
 // All menus. Desktop only styles in media query.
 #site-header-menu {
-  //margin: 130px 0 0;
-
   @media screen and (max-width: $width-desktop) {
     margin: 0;
   }
@@ -64,7 +53,6 @@
     font-size: 1.1rem;
     text-align: center;
     margin: unset;
-    //width: 100%;
   }
 
   .main-navigation a {
@@ -85,17 +73,9 @@
       top: 0;
     }
   }
-  //end .main-navigation a
 
   .main-navigation .menu-item-has-children > a {
-    margin-right: 0; //to keep li's centered in mobile nav
-  }
-
-  .main-navigation .primary-menu {
-    @media screen and (min-width: $width-desktop) {
-      //padding: 0 2%;
-      //margin: auto;
-    }
+    margin-right: 0; // to keep li's centered in mobile nav
   }
 
   .main-navigation .primary-menu > li {
@@ -103,23 +83,6 @@
 
     @media screen and (min-width: $width-desktop) {
       padding: 0 18px;
-
-      /*display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      float: none;
-      width: 13%;
-      white-space: normal;
-      vertical-align: middle;
-      min-height: 130px;*/
-
-      //to make space for the logo
-      /*&:nth-of-type(3) {
-        margin-right: 80px;
-      }
-      &:nth-of-type(4) {
-        margin-left: 80px;
-      }*/
     }
   }
   //end .main-navigation .primary-menu > li
@@ -162,15 +125,13 @@
     background-color: transparent;
   }
 
+  // Removes carrot from parent theme.
   .main-navigation ul ul::before,
   .main-navigation ul ul::after {
     border-style: none;
   }
-  //removes carrot from parent theme
 
   .main-navigation ul ul a {
     width: 100%;
   }
 }
-
-//end #site-header-menu
