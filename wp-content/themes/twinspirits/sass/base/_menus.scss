@@ -1,22 +1,26 @@
 .site-header-main {
-   position: relative;
+  //position: relative;
   background: $gray-bg;
-   min-height: 130px;
-}
-
-.site-branding {
-  position: absolute;
-  top: 0;
-  width: 100%;
   min-height: 130px;
+
+  @media screen and (min-width: $width-desktop) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 
-.custom-logo-link {
+.site-header-main .site-branding {
+  margin: unset;
+}
+
+/*.custom-logo-link {
   position: absolute;
   top: 44%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+}*/
 
 // Mobile nav only.
 .menu-toggle {
@@ -24,7 +28,7 @@
   color: white;
   margin: auto 7.6923% auto 2px;
   position: absolute;
-  top: calc(130px/2); //130px is set height of top nav bar
+  top: calc(130px / 2); //130px is set height of top nav bar
   right: 0;
   transform: translateY(-50%);
 
@@ -33,36 +37,35 @@
     border-color: white;
   }
 }
-
 .menu-toggle.toggled-on, .menu-toggle.toggled-on:hover, .menu-toggle.toggled-on:focus {
+  color: $red;
+  background: $gray-bg;
+  border-color: $red;
+}
+.dropdown-toggle {
+  color: white;
+  &:hover, &:focus, &:active {
     color: $red;
-    background: $gray-bg;
-    border-color: $red;
   }
+}
 
-  .dropdown-toggle {
-    color: white;
-    &:hover, &:focus, &:active {
-      color: $red;
-    }}
-
-//all menus. desktop only styles in media query
+// All menus. Desktop only styles in media query.
 #site-header-menu {
-  margin: 130px 0 0;
+  //margin: 130px 0 0;
 
-  @media screen and (min-width: 56.875em) {
-   box-sizing: border-box;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+  @media screen and (min-width: $width-desktop) {
+    //box-sizing: border-box;
+    //width: 100%;
+    //margin: 0;
+    //padding: 0;
   }
 
   .main-navigation {
     font-family: $open-sans-condensed;
     font-size: 1.1rem;
     text-align: center;
-    margin: auto 0;
-    width: 100%;
+    //margin: auto 0;
+    //width: 100%;
   }
 
   .main-navigation a {
@@ -82,14 +85,15 @@
       position: relative;
       top: 0;
     }
-  } //end .main-navigation a
+  }
+  //end .main-navigation a
 
   .main-navigation .menu-item-has-children > a {
     margin-right: 0; //to keep li's centered in mobile nav
   }
 
   .main-navigation .primary-menu {
-    @media screen and (min-width: 56.875em){
+    @media screen and (min-width: $width-desktop) {
       padding: 0 2%;
       margin: auto;
     }
@@ -98,69 +102,74 @@
   .main-navigation .primary-menu > li {
     color: white;
 
-    @media screen and (min-width: 56.875em) {
-      display: inline-flex;
+    @media screen and (min-width: $width-desktop) {
+      /*display: inline-flex;
       align-items: center;
       justify-content: center;
       float: none;
       width: 13%;
       white-space: normal;
       vertical-align: middle;
-      min-height: 130px;
+      min-height: 130px;*/
 
       //to make space for the logo
-      &:nth-of-type(3) {
+      /*&:nth-of-type(3) {
         margin-right: 80px;
       }
       &:nth-of-type(4) {
         margin-left: 80px;
+      }*/
+    }
+  }
+  //end .main-navigation .primary-menu > li
+
+  .main-navigation .primary-menu .sub-menu {
+    background: rgba(255, 255, 255, .75);
+    margin: 0;
+    border-bottom: 0;
+
+    a {
+      color: $gray-bg;
+
+      &:hover,
+      &:focus {
+        color: $red;
       }
     }
-  } //end .main-navigation .primary-menu > li
 
-.main-navigation .primary-menu .sub-menu {
-  background: rgba(255, 255, 255, .75);
-  margin: 0;
-  border-bottom: 0;
+    .current-menu-item {
+      a,
+      a:hover,
+      a:focus {
+        color: $red;
+      }
+    }
+  }
+  //end .main-navigation .primary-menu .sub-menu
 
-  a {
-    color: $gray-bg;
-
-    &:hover,
-    &:focus {
-      color: $red;
+  .main-navigation .primary-menu > li:hover > ul,
+  .main-navigation .primary-menu > li:focus > ul {
+    @media screen and (min-width: $width-desktop) {
+      left: -50%;
+      right: -50%;
+      top: 100%;
     }
   }
 
-  .current-menu-item {
-    a,
-    a:hover,
-    a:focus {
-      color: $red;
-    }
+  .main-navigation .primary-menu .sub-menu li {
+    border: none;
+    background-color: transparent;
   }
-}  //end .main-navigation .primary-menu .sub-menu
 
-.main-navigation .primary-menu > li:hover > ul,
-.main-navigation .primary-menu > li:focus > ul {
-  @media screen and (min-width: 56.875em) {
-    left: -50%;
-    right: -50%;
-    top: 100%;
+  .main-navigation ul ul::before,
+  .main-navigation ul ul::after {
+    border-style: none;
+  }
+  //removes carrot from parent theme
+
+  .main-navigation ul ul a {
+    width: 100%;
   }
 }
 
-  .main-navigation .primary-menu .sub-menu li {
-      border: none;
-      background-color: transparent;
-    }
-
-.main-navigation ul ul::before,
-.main-navigation ul ul::after {
-  border-style: none;
- } //removes carrot from parent theme
-
- .main-navigation ul ul a {
-  width: 100%;
- }
-} //end #site-header-menu
+//end #site-header-menu
