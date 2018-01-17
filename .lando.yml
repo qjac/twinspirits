@@ -1,0 +1,6 @@
+name: twin-spirits
+recipe: pantheon
+config:
+  framework: wordpress
+  site: twin-spirits
+  id: 822ef615-56e6-463e-8d37-82b783c3c499
