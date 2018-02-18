@@ -13,8 +13,8 @@ echo '<h2>' . esc_html__( 'Your XML Sitemap', 'wordpress-seo' ) . '</h2>';
 
 if ( $options['enablexmlsitemap'] === true ) {
 	echo '<p>';
-	/* translators: %1$s opening tag of the link to the Sitemap, %2$s closing tag for the link. */
 	printf(
+		/* translators: %1$s opening tag of the link to the Sitemap, %2$s closing tag for the link. */
 		esc_html__( 'You can find your XML Sitemap here: %1$sXML Sitemap%2$s', 'wordpress-seo' ),
 		'<a target="_blank" href="' . esc_url( WPSEO_Sitemaps_Router::get_base_url( 'sitemap_index.xml' ) ) . '">',
 		'</a>'
@@ -25,13 +25,19 @@ if ( $options['enablexmlsitemap'] === true ) {
 	echo '</p>';
 }
 else {
-	echo '<p>', __( 'Save your settings to activate your XML Sitemap.', 'wordpress-seo' ), '</p>';
+	echo '<p>', esc_html__( 'Save your settings to activate your XML Sitemap.', 'wordpress-seo' ), '</p>';
 }
 
 echo '<h2>' . esc_html__( 'Entries per sitemap page', 'wordpress-seo' ) . '</h2>';
 ?>
 	<p>
-		<?php printf( __( 'Please enter the maximum number of entries per sitemap page (defaults to %s, you might want to lower this to prevent memory issues on some installs):', 'wordpress-seo' ), WPSEO_Options::get_default( 'wpseo_xml', 'entries-per-page' ) ); ?>
+		<?php
+		printf(
+			/* translators: %d expands to default number of entries per sitemap. */
+			esc_html__( 'Please enter the maximum number of entries per sitemap page (defaults to %d, you might want to lower this to prevent memory issues on some installs):', 'wordpress-seo' ),
+			(int) WPSEO_Options::get_default( 'wpseo_xml', 'entries-per-page' )
+		);
+		?>
 	</p>
 
 <?php

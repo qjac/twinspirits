@@ -310,34 +310,47 @@ footer.site-footer .social-navigation li a[href*="vine.co"]::before {
 }
 
 .site-header-main {
-  position: relative;
   background: #3c3c42;
   min-height: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.site-branding {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  min-height: 130px;
-}
-
-.custom-logo-link {
-  position: absolute;
-  top: 44%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+.site-header-main .site-branding {
+  margin: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .menu-toggle {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: white;
-  margin: auto 7.6923% auto 2px;
+  margin: auto 0;
   position: absolute;
-  top: calc(130px/2);
-  right: 0;
+  top: calc(130px / 2);
+  right: 5%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
@@ -366,16 +379,11 @@ footer.site-footer .social-navigation li a[href*="vine.co"]::before {
   color: #d14f53;
 }
 
-#site-header-menu {
-  margin: 130px 0 0;
-}
-
 #site-header-menu .main-navigation {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 1.1rem;
   text-align: center;
-  margin: auto 0;
-  width: 100%;
+  margin: unset;
 }
 
 #site-header-menu .main-navigation a {
@@ -686,42 +694,8 @@ there.
     width: 20%;
   }
 
-  #site-header-menu {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  #site-header-menu .main-navigation .primary-menu {
-    padding: 0 2%;
-    margin: auto;
-  }
-
   #site-header-menu .main-navigation .primary-menu > li {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    float: none;
-    width: 13%;
-    white-space: normal;
-    vertical-align: middle;
-    min-height: 130px;
-  }
-
-  #site-header-menu .main-navigation .primary-menu > li:nth-of-type(3) {
-    margin-right: 80px;
-  }
-
-  #site-header-menu .main-navigation .primary-menu > li:nth-of-type(4) {
-    margin-left: 80px;
+    padding: 0 18px;
   }
 
   #site-header-menu .main-navigation .primary-menu > li:hover > ul,
@@ -909,5 +883,11 @@ there.
 
   h6 {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 56.875em) {
+  #site-header-menu {
+    margin: 0;
   }
 }
