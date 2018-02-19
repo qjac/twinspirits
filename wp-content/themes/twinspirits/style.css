@@ -49,16 +49,13 @@ a {
   color: #812b5d;
 }
 
-body {
-  background: white;
-}
-
 body:not(.custom-background-image):before {
   content: unset;
 }
 
 .site {
   margin: 0;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .site-inner {

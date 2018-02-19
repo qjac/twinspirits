@@ -38,7 +38,7 @@ a {
 // GENERAL PAGE STYLES 
 //============================
 body {
-  background: white;
+  // background: white;
 }
 
 body:not(.custom-background-image):before {
@@ -46,6 +46,7 @@ body:not(.custom-background-image):before {
 }
 .site {
 	margin: 0;
+	background: rgba(#ffffff, 0.9);
 }
 .site-inner {
   max-width: 1800px;
