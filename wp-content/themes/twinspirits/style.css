@@ -130,32 +130,18 @@ body.home .post-thumbnail img {
   margin: 0 -7.5% 1rem;
 }
 
-footer.site-footer p.copyright,
-footer.site-footer div.address {
-  width: 100%;
+footer.site-footer {
   text-align: center;
-  -webkit-box-ordinal-group: 3;
-  -ms-flex-order: 2;
-  order: 2;
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 0.9375rem;
   text-transform: uppercase;
-}
-
-footer.site-footer div.address {
-  line-height: 1em;
-  margin-bottom: 1em;
+  background: #3c3c42;
+  color: #ffffff;
 }
 
 footer.site-footer .social-navigation {
-  margin: 0 auto 1.25rem;
+  margin: 0 auto;
   padding-top: 2.1875rem;
-  width: 70%;
-  border-top: 1px solid #9d9ea0;
-}
-
-footer.site-footer .social-navigation .menu-social-links-footer-container {
-  text-align: center;
 }
 
 footer.site-footer .social-navigation ul {
@@ -166,7 +152,12 @@ footer.site-footer .social-navigation ul {
 footer.site-footer .social-navigation li {
   border-radius: 50%;
   background: #d14f53;
-  text-align: center;
+}
+
+footer.site-footer .social-navigation li:hover,
+footer.site-footer .social-navigation li:hover::before,
+footer.site-footer .social-navigation li:focus::before {
+  background: none;
 }
 
 footer.site-footer .social-navigation li a {
@@ -179,11 +170,6 @@ footer.site-footer .social-navigation li a:hover,
 footer.site-footer .social-navigation li a:hover::before,
 footer.site-footer .social-navigation li a:focus::before {
   color: white;
-}
-
-footer.site-footer .social-navigation li a[href*="vine.co"]::before {
-  font-family: FontAwesome;
-  content: '\f1ca';
 }
 
 .site-header {
