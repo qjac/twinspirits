@@ -1,4 +1,8 @@
-.site-header-main {
+.site-header {
+  width: 100%;
+  padding: 0 0 2rem;
+}
+  .site-header-main {
   background: $gray-bg;
   min-height: 130px;
   display: flex;

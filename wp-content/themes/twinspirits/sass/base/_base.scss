@@ -1,0 +1,144 @@
+//============================
+// INCLUDES 
+//============================
+%interior-narrower {
+  // max-width: rem(840px);
+  padding: 0 5%;
+  margin: 0 auto;
+}
+
+//============================
+// TYPOGRAPHY
+//============================
+body {
+  font-family: $source-serif;
+  color: $gray-text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $open-sans;
+  font-weight: bold;
+  color: $red;
+}
+
+h1 {
+  padding-top: rem(35px);
+}
+
+a {
+  color: $purple;
+}
+
+//============================
+// GENERAL PAGE STYLES 
+//============================
+body {
+  background: white;
+}
+
+body:not(.custom-background-image):before {
+	content: unset; // removes extra space at top of page before nav bar/header
+}
+.site {
+	margin: 0;
+}
+.site-inner {
+  max-width: 1800px;
+}
+
+// 
+// MAIN CONTENT SECTION
+// 
+.site-content {
+  padding: 0;
+}
+
+.site-main {
+  margin-bottom: rem(35px);
+}
+
+.entry-header {
+  @extend %interior-narrower;
+  // margin-right: auto;
+  // margin-left: auto;
+}
+
+.entry-header h1 {
+  text-transform: uppercase;
+  // padding: 0 rem(20px);
+}
+
+// on page featured img styles
+.post-thumbnail {
+  margin: 0;
+}
+
+.no-sidebar .post-thumbnail img {
+  margin: 0 auto;
+  width: 100%;
+}
+body.home .post-thumbnail img {
+  width: auto;
+}
+
+.entry-content {
+  @extend %interior-narrower;
+  // margin-right: auto;
+  // margin-left: auto;
+  margin-top: rem(35px);
+
+  p, ul li, span {
+    font-family: $source-serif;
+    font-size: rem(18px);
+    line-height: rem(32px);
+    color: $gray-text;
+  }
+
+  ul {
+    padding: 0 2em;
+  }
+
+  blockquote, 
+  blockquote p {
+    color: $red;
+    font-family: $roboto-slab;
+    font-size: rem(20px);
+    font-weight: bold;
+  }
+
+// inline content images
+img,
+.alignright,
+.alignleft,
+.aligncenter {
+	width: 115%;
+	max-width: 115%;
+	margin: 0 -7.5% 1rem;
+}
+img,
+.aligncenter {
+	@media screen and (min-width: $width-desktop) {
+		margin: 0 auto 1rem;
+		width: 100%;
+	}	
+}
+  .alignright{
+  	@media screen and (min-width: $width-desktop) {
+			max-width: 50%;
+			margin-right: 0;
+			margin-left: 1.75em; 
+  	}
+	}
+  .alignleft {
+  	@media screen and (min-width: $width-desktop) {
+			max-width: 50%;
+			margin-left:0;
+			margin-right: 1.75em;
+  	}
+	}
+} //end .entry-content

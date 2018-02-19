@@ -1,332 +1,191 @@
-// Contents
-// -includes
-// -general page styles
-// -template specific styles
-// -page specific styles
-// -foo gallery styles
+// // Contents
+// // -includes
+// // -general page styles
+// // -template specific styles
+// // -page specific styles
+// // -foo gallery styles
 
 //============================
 // INCLUDES 
 //============================
-%interior-narrower {
-  max-width: rem(840px);
-  padding: 0 rem(20px);
-  margin: 0 auto;
-}
+// %interior-narrower {
+//   max-width: rem(840px);
+//   padding: 0 rem(20px);
+//   margin: 0 auto;
+// }
 
-//============================
-// GENERAL PAGE STYLES 
-//============================
-body {
-  background: white;
-  font-family: $source-serif;
-  color: $gray-text;
-}
+// //============================
+// // TEMPLATE SPECIFIC STYLES
+// //============================
+// .page-template-default {
+//   &.has-featured-image .entry-header {
+//     margin: 0;
+//     height: auto;
+//     position: relative;
+//     max-width: 100%;
+//     padding: 0;
+//   }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $open-sans;
-  font-weight: bold;
-  color: $red;
-}
+//   &.has-featured-image .entry-header h1 {
+//     position: absolute;
+//     top: 75%;
+//     transform: translateY(-75%);
+//     width: 75%;
+//     max-width: 16rem; //max-width to preserve line break for most titles
+//     padding-left: rem(20px);
+//     font-size: 3rem;
+//     line-height: 3rem;
+//     color: white;
+//     word-wrap: normal;
+//     word-break: keep-all;
+//     hyphens: none;
 
-h1 {
-  padding-top: rem(35px);
-}
+//     @media screen and (min-width: 44.375em) {
+//       font-size: 4.5rem;
+//       line-height: 4.5rem;
+//       width: 50%;
+//       max-width: 24rem; //max-width to preserve line break for most titles
+//     }
 
-a {
-  color: $purple;
-}
+//     @media screen and (min-width: $width-desktop) {
+//       margin: 0 15%;
+//       font-size: 6rem;
+//       line-height: 6rem;
+//       max-width: 32rem; //max-width to preserve line break for most titles
+//     }
+//   }
+// }
 
-.site-inner {
-  max-width: 1800px;
-}
+// /* Spirits pages */
+// .page-template-page-spirits {
 
-.site-content {
-  padding: 0;
-}
+//   // Navigation
+//   .spirits-nav {
+//     width: 90%;
+//     font-size: rem(30px);
+//     line-height: 0;
+//     @media screen and (min-width: 44.375em) {
+//       width: 70%;
+//       font-size: rem(80px);
+//     }
+//     margin: 0 auto;
+//     position: relative;
+//     top: rem(250px);
+//     z-index: 999;
 
-.site-main {
-  margin-bottom: rem(35px);
-}
+//     a {
+//       position: absolute;
+//       color: $gray-text;
+//       transition: all .4s ease;
 
-.entry-header {
-  @extend %interior-narrower;
-}
+//       &:hover {
+//         color: $purple;
+//       }
 
-.entry-header h1 {
-  text-transform: uppercase;
-  padding-right: rem(20px);
-}
+//       &.nav-previous {
+//         left: 0;
+//       }
+//       &.nav-next {
+//         right: 0;
+//       }
 
-.post-thumbnail {
-  margin: 0;
-}
+//     }
+//   } //end .spirits-nav
 
-.no-sidebar .post-thumbnail img {
-  margin: 0 auto;
-  width: 100%;
-}
-body.home .post-thumbnail img {
-  width: auto;
-}
+//   .post-thumbnail img {
+//     // Not ideal to set the width here - WP is serving an upsized image
+//     // based on their responsive image CSS around the featured image.
+//     // This should maybe not be a "featured image" but a field instead.
+//     // But hey... it works.
+//     width: 432px;
+//     margin: 0 auto;
+//   }
 
-.entry-content {
-  @extend %interior-narrower;
-  margin-top: rem(35px);
+//   // Every spirit is a special flower with its own header color.
+//   // Fallback is the standard TSD red.
+//   .entry-header h1 {
+//     color: $red;
+//   }
 
-  p, ul li, span {
-    font-family: $source-serif;
-    font-size: rem(18px);
-    line-height: rem(32px);
-    color: $gray-text;
-  }
+//   &.page-id-57 {
+//     .entry-header h1 {
+//       color: #d1308a; // Vodka
+//     }
+//   }
+//   &.page-id-82 {
+//     .entry-header h1 {
+//       color: #73db49; // Gin
+//     }
+//   }
+//   &.page-id-84 {
+//     .entry-header h1 {
+//       color: #00b5dd; // Rum
+//     }
+//   }
+//   &.page-id-86 {
+//     .entry-header h1 {
+//       color: #ff4d63; // Whiskey
+//     }
+//   }
+//   &.page-id-88 {
+//     .entry-header h1 {
+//       color: #262362; // Moonshine
+//     }
+//   }
+// } //end .page-template-page-spirits
 
-  ul {
-    padding: 0 2em;
-  }
+// //============================
+// // SPECIFIC PAGE STYLES 
+// //============================
 
-  blockquote, 
-  blockquote p {
-    color: $red;
-    font-family: $roboto-slab;
-    font-size: rem(20px);
-    font-weight: bold;
-  }
-} //end .entry-content
+// /* Team page */
+// .page-id-10 {
 
-footer.site-footer {
-  p.copyright,
-  div.address {
-    width: 100%;
-    text-align: center;
-    order: 2;
-    font-family: $open-sans-condensed;
-    font-size: rem(15px);
-    text-transform: uppercase;
-  }
+//   h2, h3 {
+//     color: $red;
+//     font-size: rem(18px);
+//     padding: 0;
+//   }
 
-  div.address {
-    line-height: 1em;
-    margin-bottom: 1em;
-  }
+//   h2 {
+//     font-family: $roboto-slab;
+//     margin: rem(40px) 0 rem(12px);
+//   }
 
-  .social-navigation {
-    margin: 0 auto rem(20px);
-    padding-top: rem(35px);
-    width: 70%;
-    border-top: 1px solid #9d9ea0;
- 
-    .menu-social-links-footer-container {
-      text-align: center;
-    }
+//   h3 {
+//     font-style: italic;
+//     font-weight: normal;
+//     margin: 0 0 rem(35px);
+//   }
 
-    ul {
-      margin: 0;
-      display: inline-block;
-    }
+//   .entry-content div p {
+//     margin: 0;
+//   }
 
-    li {
-      border-radius: 50%;
-      background: $red;
-      text-align: center;
+//   .post-edit-link {
+//     display: none;
+//   }
+// } //end .page-id-10
 
-      a {
-        border: 0;
-        border-radius: 0;
-        color: white;
+// // Spirit listing
+// .page-id-75 {
+//   .page-list-ext .page-list-ext-item {
+//     @media screen and (min-width: $width-desktop) {
+//       float: left;
+//       clear: none;
+//       width: 20%;
+//     }
+//   }
 
-        &:hover,
-        &:hover::before,
-        &:focus::before {
-          color: white;
-        }
+//   .page-list-ext .page-list-ext-title {
+//     display: none;
+//   }
+// } //end .page-id-75
 
-        &[href*="vine.co"]::before {
-          font-family: FontAwesome;
-          content: '\f1ca';
-        }
-      }
-    }
-  }
-} //end footer styles
+// //============================
+// // FOO GALLERY STYLES 
+// //============================
 
-//============================
-// TEMPLATE SPECIFIC STYLES
-//============================
-.page-template-default {
-  &.has-featured-image .entry-header {
-    margin: 0;
-    height: auto;
-    position: relative;
-    max-width: 100%;
-    padding: 0;
-  }
-
-  &.has-featured-image .entry-header h1 {
-    position: absolute;
-    top: 75%;
-    transform: translateY(-75%);
-    width: 75%;
-    max-width: 16rem; //max-width to preserve line break for most titles
-    padding-left: rem(20px);
-    font-size: 3rem;
-    line-height: 3rem;
-    color: white;
-    word-wrap: normal;
-    word-break: keep-all;
-    hyphens: none;
-
-    @media screen and (min-width: 44.375em) {
-      font-size: 4.5rem;
-      line-height: 4.5rem;
-      width: 50%;
-      max-width: 24rem; //max-width to preserve line break for most titles
-    }
-
-    @media screen and (min-width: $width-desktop) {
-      margin: 0 15%;
-      font-size: 6rem;
-      line-height: 6rem;
-      max-width: 32rem; //max-width to preserve line break for most titles
-    }
-  }
-}
-
-/* Spirits pages */
-.page-template-page-spirits {
-
-  // Navigation
-  .spirits-nav {
-    width: 90%;
-    font-size: rem(30px);
-    line-height: 0;
-    @media screen and (min-width: 44.375em) {
-      width: 70%;
-      font-size: rem(80px);
-    }
-    margin: 0 auto;
-    position: relative;
-    top: rem(250px);
-    z-index: 999;
-
-    a {
-      position: absolute;
-      color: $gray-text;
-      transition: all .4s ease;
-
-      &:hover {
-        color: $purple;
-      }
-
-      &.nav-previous {
-        left: 0;
-      }
-      &.nav-next {
-        right: 0;
-      }
-
-    }
-  } //end .spirits-nav
-
-  .post-thumbnail img {
-    // Not ideal to set the width here - WP is serving an upsized image
-    // based on their responsive image CSS around the featured image.
-    // This should maybe not be a "featured image" but a field instead.
-    // But hey... it works.
-    width: 432px;
-    margin: 0 auto;
-  }
-
-  // Every spirit is a special flower with its own header color.
-  // Fallback is the standard TSD red.
-  .entry-header h1 {
-    color: $red;
-  }
-
-  &.page-id-57 {
-    .entry-header h1 {
-      color: #d1308a; // Vodka
-    }
-  }
-  &.page-id-82 {
-    .entry-header h1 {
-      color: #73db49; // Gin
-    }
-  }
-  &.page-id-84 {
-    .entry-header h1 {
-      color: #00b5dd; // Rum
-    }
-  }
-  &.page-id-86 {
-    .entry-header h1 {
-      color: #ff4d63; // Whiskey
-    }
-  }
-  &.page-id-88 {
-    .entry-header h1 {
-      color: #262362; // Moonshine
-    }
-  }
-} //end .page-template-page-spirits
-
-//============================
-// SPECIFIC PAGE STYLES 
-//============================
-
-/* Team page */
-.page-id-10 {
-
-  h2, h3 {
-    color: $red;
-    font-size: rem(18px);
-    padding: 0;
-  }
-
-  h2 {
-    font-family: $roboto-slab;
-    margin: rem(40px) 0 rem(12px);
-  }
-
-  h3 {
-    font-style: italic;
-    font-weight: normal;
-    margin: 0 0 rem(35px);
-  }
-
-  .entry-content div p {
-    margin: 0;
-  }
-
-  .post-edit-link {
-    display: none;
-  }
-} //end .page-id-10
-
-// Spirit listing
-.page-id-75 {
-  .page-list-ext .page-list-ext-item {
-    @media screen and (min-width: $width-desktop) {
-      float: left;
-      clear: none;
-      width: 20%;
-    }
-  }
-
-  .page-list-ext .page-list-ext-title {
-    display: none;
-  }
-} //end .page-id-75
-
-//============================
-// FOO GALLERY STYLES 
-//============================
-
-.entry-content .foogallery-default a {
-  box-shadow: none;
-}
+// .entry-content .foogallery-default a {
+//   box-shadow: none;
+// }
