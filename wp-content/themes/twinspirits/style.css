@@ -39,10 +39,11 @@ h6 {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
   color: #d14f53;
+  margin: 1em inherit;
 }
 
 h1 {
-  padding-top: 2.1875rem;
+  padding: 2.1875rem 0;
 }
 
 a {
@@ -91,6 +92,10 @@ body.home .post-thumbnail img {
   margin-top: 2.1875rem;
 }
 
+.entry-content a {
+  color: #f4c416;
+}
+
 .entry-content p,
 .entry-content ul li,
 .entry-content span {
@@ -110,6 +115,10 @@ body.home .post-thumbnail img {
   font-family: "Roboto Slab", serif;
   font-size: 1.25rem;
   font-weight: bold;
+}
+
+.entry-content h4 + h4 {
+  margin-top: .75em;
 }
 
 .entry-content img,

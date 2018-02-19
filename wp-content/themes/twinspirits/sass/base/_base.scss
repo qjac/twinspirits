@@ -24,10 +24,11 @@ h6 {
   font-family: $open-sans;
   font-weight: bold;
   color: $red;
+  margin: 1em inherit;
 }
 
 h1 {
-  padding-top: rem(35px);
+  padding: rem(35px) 0;
 }
 
 a {
@@ -89,10 +90,11 @@ body.home .post-thumbnail img {
 
 .entry-content {
   @extend %interior-narrower;
-  // margin-right: auto;
-  // margin-left: auto;
   margin-top: rem(35px);
 
+a {
+	color: $gold;
+}
   p, ul li, span {
     font-family: $source-serif;
     font-size: rem(18px);
@@ -110,6 +112,10 @@ body.home .post-thumbnail img {
     font-family: $roboto-slab;
     font-size: rem(20px);
     font-weight: bold;
+  }
+
+  h4 + h4 {
+  	margin-top: .75em;
   }
 
 // inline content images
