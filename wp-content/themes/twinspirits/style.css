@@ -186,6 +186,8 @@ footer.site-footer .footer-navigation {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
 }
 
 footer.site-footer .footer-navigation ul.footer-menu {

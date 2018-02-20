@@ -49,6 +49,8 @@ footer.site-footer {
     // footer widgets
     .footer-navigation {
       flex: 0 1 auto;
+      font-family: $open-sans;
+      font-weight: 700;
     
       ul.footer-menu {
       list-style-type: none;
