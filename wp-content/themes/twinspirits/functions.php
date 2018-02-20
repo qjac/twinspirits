@@ -6,6 +6,12 @@ function theme_enqueue_styles() {
   wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 }
 
+// add another nav menu
+function wpb_custom_new_menu() {
+  register_nav_menu('footer',__( 'Footer Menu' ));
+}
+add_action( 'init', 'wpb_custom_new_menu' );
+  
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
  * for post thumbnails
@@ -98,3 +104,27 @@ function twinspirits_get_sibling_pages() {
 
   }
 }
+
+// add footer widget area
+function mytraining_widgets_init() {
+  register_sidebar( array(
+    'name' => 'Footer 1',
+    'id' => 'footer-one',
+    'before_widget' => '
+',
+    'after_widget' => '
+', 
+    'before_title' => '<h4>', 
+    'after_title' => '</h4>', ) );
+  register_sidebar( array(
+    'name' => 'Footer 2',
+    'id' => 'footer-two',
+    'before_widget' => '
+',
+    'after_widget' => '
+', 
+    'before_title' => '<h4>', 
+    'after_title' => '</h4>', ) );
+}
+add_action( 'widgets_init', 'mytraining_widgets_init' );
+?>

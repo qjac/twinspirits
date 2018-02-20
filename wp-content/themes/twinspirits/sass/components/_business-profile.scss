@@ -1,0 +1,30 @@
+// 
+// Custom Styles for Business Profile Plugin
+// 
+
+.bp-directions:before,
+.bp-phone:before,
+.bp-contact:before,
+.bp-booking:before,
+.bp-opening-hours-brief:before,
+.bp-opening-hours .bp-title:before {
+  content: unset !important;
+}
+
+.bp-opening-hours .bp-title {
+	text-align: unset !important;
+}
+
+h4.bp-title {
+	text-align: left;
+	margin-top:2rem !important;
+	margin-bottom: .5rem;
+}
+
+.bp-contact-card > .bp-phone {
+      margin-bottom: 0;
+    }
+
+    .bp-contact-card > div.bp-contact-email {
+    	margin-top:0;
+    }
