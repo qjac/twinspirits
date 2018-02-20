@@ -31,4 +31,7 @@ Normalized styles, typography and base-level page/element styling.
 
 /* Component (SMACSS module) rules */
 @import "sass/components/_splash";
-@import "sass/components/_business-profile"
+@import "sass/components/_business-profile";
+
+/* Weird stuff specific to certain pages or post type templates */
+// @import "sass/page-specific/_tours";

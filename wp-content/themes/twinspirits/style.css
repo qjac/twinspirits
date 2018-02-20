@@ -92,10 +92,6 @@ body.home .post-thumbnail img {
   margin-top: 2.1875rem;
 }
 
-.entry-content a {
-  color: #f4c416;
-}
-
 .entry-content p,
 .entry-content ul li,
 .entry-content span {
@@ -117,8 +113,13 @@ body.home .post-thumbnail img {
   font-weight: bold;
 }
 
-.entry-content h4 + h4 {
-  margin-top: .75em;
+.entry-content h4 ~ h4 {
+  margin-top: 0;
+  margin-bottom: .75em;
+}
+
+.entry-content h4 + h4 > a {
+  color: #f4c416;
 }
 
 .entry-content img,
@@ -467,6 +468,8 @@ h4.bp-title {
 .bp-contact-card > div.bp-contact-email {
   margin-top: 0;
 }
+
+/* Weird stuff specific to certain pages or post type templates */
 
 @media screen and (min-width: 56.875em) {
   .entry-content img,

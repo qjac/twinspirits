@@ -92,9 +92,7 @@ body.home .post-thumbnail img {
   @extend %interior-narrower;
   margin-top: rem(35px);
 
-a {
-	color: $gold;
-}
+
   p, ul li, span {
     font-family: $source-serif;
     font-size: rem(18px);
@@ -114,11 +112,18 @@ a {
     font-weight: bold;
   }
 
-  h4 + h4 {
-  	margin-top: .75em; // reduces margin between h4s in content so the sign up link is in closer proximity to explainer text
+  h4 ~ h4 {
+  	margin-top: 0; // reduces margin between h4s in content so the sign up link is in closer proximity to explainer text
+    margin-bottom: .75em;
   }
 
+  h4 + h4 > a {
+    color: $gold; // make sign up now or similar callout links gold. leave other in content links purple
+}
+
+// 
 // inline content images
+// 
 img,
 .alignright,
 .alignleft,

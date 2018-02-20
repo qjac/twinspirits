@@ -1,0 +1,34 @@
+.wprm-recipe {
+    // Clearfix
+    overflow: auto;
+    zoom: 1;
+    text-align: left;
+
+    p, li {
+		font-size: 1em;
+    }
+    
+    li,
+    li.wprm-recipe-instruction {
+        list-style-position: outside;
+    }
+
+    li:before {
+        display: none;
+    }
+
+    a.wprm-recipe-print, a.wprm-recipe-print:hover {
+        text-decoration: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .wprm-nutrition-label {
+        margin-top: 10px;
+    }
+}
+
+.rtl .wprm-recipe {
+    text-align: right;
+}
