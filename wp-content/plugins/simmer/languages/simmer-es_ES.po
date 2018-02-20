@@ -1,0 +1,997 @@
+# Copyright (C) 2015 Team Simmer
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Simmer for Recipes 1.3.7\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/simmer\n"
+"POT-Creation-Date: 2015-11-02 15:25-0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-11-02 23:49-0300\n"
+"Language-Team: Simmer for Recipes <hi@simmerwp.com>\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"Last-Translator: Mariano Caino <mariano@finderdesign.com.ar>\n"
+"Language: es\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: core/admin/class-simmer-admin-bulk-add.php:51
+msgid "The Simmer_Admin_Bulk_Add class can not be cloned"
+msgstr "La clase Simmer_Admin_Bulk_Add no puede ser clonada"
+
+#: core/admin/class-simmer-admin-bulk-add.php:61
+msgid "The Simmer_Admin_Bulk_Add class can not be unserialized"
+msgstr "La clase Simmer_Admin_Bulk_Add no puede ser decodificada"
+
+#: core/admin/class-simmer-admin-bulk-add.php:91
+msgid "No don't have permission to do this."
+msgstr "No tienes permiso para realizar esto."
+
+#: core/admin/class-simmer-admin-bulk-add.php:101
+msgid "Please add some text."
+msgstr "Por favor agrega algún texto."
+
+#: core/admin/class-simmer-admin-bulk-add.php:120
+msgid "Could not parse input."
+msgstr "No se ha podido analizar la entrada."
+
+#: core/admin/class-simmer-admin-dashboard.php:55
+msgid "The Simmer_Admin_Dashboard class can not be cloned"
+msgstr "La clase Simmer_Admin_Dashboard no puede ser clonada"
+
+#: core/admin/class-simmer-admin-dashboard.php:65
+msgid "The Simmer_Admin_Dashboard class can not be unserialized"
+msgstr "La clase Simmer_Admin_Dashboard no puede ser decodificada"
+
+#: core/admin/class-simmer-admin-dashboard.php:83
+msgid "You must have at least one ingredient!"
+msgstr "¡Debes al menos tener un ingrediente!"
+
+#: core/admin/class-simmer-admin-dashboard.php:84
+msgid "You must have at least one instruction!"
+msgstr "¡Debes al menos tener una instrucción!"
+
+#: core/admin/class-simmer-admin-dashboard.php:85
+msgid "Are you sure you want to remove this item?"
+msgstr "¿Estás seguro que quieres quitar este ítem?"
+
+#: core/admin/class-simmer-admin-dashboard.php:93
+msgid "Add Bulk Ingredients"
+msgstr "Agregar ingredientes a granel"
+
+#: core/admin/class-simmer-admin-dashboard.php:94
+msgid "Type or paste the list of ingredients below, one ingredient per line."
+msgstr ""
+"Escribe o pega la lista de ingredientes debajo, un ingrediente por línea."
+
+#: core/admin/class-simmer-admin-dashboard.php:95
+msgid "e.g. 1 cup flour, sifted"
+msgstr "ej. 1 taza de harina integral, tamizada"
+
+#: core/admin/class-simmer-admin-dashboard.php:96
+msgid "Add Ingredients"
+msgstr "Agregar ingredientes"
+
+#: core/admin/class-simmer-admin-dashboard.php:99
+msgid "Add Bulk Instructions"
+msgstr "Agregar instrucciones a granel"
+
+#: core/admin/class-simmer-admin-dashboard.php:100
+msgid "Type or paste the list of instructions below, one instruction per line."
+msgstr ""
+"Escribe o pega la lista de instrucciones debajo, una instrucción por línea."
+
+#: core/admin/class-simmer-admin-dashboard.php:101
+msgid "e.g. Preheat your oven to 450 degrees."
+msgstr "ej. Precalentar el horno a 230 grados."
+
+#: core/admin/class-simmer-admin-dashboard.php:102
+msgid "Add Instructions"
+msgstr "Agregar instrucciones"
+
+#: core/admin/class-simmer-admin-dashboard.php:105
+msgid "Something went wrong. Please try again."
+msgstr "Algo salió mal. Por favor vuelve a intentarlo."
+
+#: core/admin/class-simmer-admin-dashboard.php:128
+msgid "%s Recipe"
+msgid_plural "%s Recipes"
+msgstr[0] "%s receta"
+msgstr[1] "%s recetas"
+
+#: core/admin/class-simmer-admin-dashboard.php:159
+msgid "Settings"
+msgstr "Ajustes"
+
+#: core/admin/class-simmer-admin-dashboard.php:181
+msgid "Thank you for creating with %sWordPress%s and cooking with %sSimmer%s."
+msgstr "Gracias por crear con %sWordPress%s y cocinar con %sSimmer%s."
+
+#: core/admin/class-simmer-admin-recipes.php:51
+msgid "The Simmer_Admin_Recipes class can not be cloned"
+msgstr "La clase Simmer_Admin_Recipes no puede ser clonada"
+
+#: core/admin/class-simmer-admin-recipes.php:61
+msgid "The Simmer_Admin_Recipes class can not be unserialized"
+msgstr "La clase Simmer_Admin_Recipes no puede ser decodificada"
+
+#: core/admin/class-simmer-admin-recipes.php:77
+#: core/admin/class-simmer-admin-settings.php:103
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:26
+msgid "Ingredients"
+msgstr "Ingredientes"
+
+#: core/admin/class-simmer-admin-recipes.php:87
+#: core/admin/class-simmer-admin-settings.php:139
+#: core/recipes/items/instructions/class-simmer-recipe-instructions.php:26
+msgid "Instructions"
+msgstr "Instrucciones"
+
+#: core/admin/class-simmer-admin-recipes.php:97
+msgid "Information"
+msgstr "Información"
+
+#: core/admin/class-simmer-admin-recipes.php:444
+msgid "Recipe updated. <a href=\"%s\">View recipe</a>"
+msgstr "Receta actualizada. <a href=\"%s\">Ver receta</a>"
+
+#: core/admin/class-simmer-admin-recipes.php:447
+msgid "Recipe updated."
+msgstr "Receta actualizada."
+
+#: core/admin/class-simmer-admin-recipes.php:449
+msgid "Recipe restored to revision from %s"
+msgstr "Receta restaurada a partir de la revisión %s"
+
+#: core/admin/class-simmer-admin-recipes.php:453
+msgid "Recipe created. <a href=\"%s\">View recipe</a>"
+msgstr "Receta creada. <a href=\"%s\">Ver receta</a>"
+
+#: core/admin/class-simmer-admin-recipes.php:456
+msgid "Recipe saved."
+msgstr "Receta guardada."
+
+#: core/admin/class-simmer-admin-recipes.php:458
+msgid "Recipe submitted. <a target=\"_blank\" href=\"%s\">Preview recipe</a>"
+msgstr ""
+"Receta enviada. <a target=\"_blank\" href=\"%s\">Vista previa de la receta</"
+"a>"
+
+#: core/admin/class-simmer-admin-recipes.php:462
+msgid ""
+"Recipe scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s"
+"\">Preview recipe</a>"
+msgstr ""
+"Receta programada para: <strong>%1$s</strong>. <a target=\"_blank\" href="
+"\"%2$s\">Vista previa de la receta</a>"
+
+#: core/admin/class-simmer-admin-recipes.php:463
+msgid "M j, Y @ G:i"
+msgstr "M j, Y @ G:i"
+
+#: core/admin/class-simmer-admin-recipes.php:468
+msgid ""
+"Recipe draft updated. <a target=\"_blank\" href=\"%s\">Preview recipe</a>"
+msgstr ""
+"Borrador de receta actualizada. <a target=\"_blank\" href=\"%s\">Vista "
+"previa de la receta</a>"
+
+#: core/admin/class-simmer-admin-recipes.php:488
+msgid "%s recipe updated."
+msgid_plural "%s recipes updated."
+msgstr[0] "%s receta actualizada."
+msgstr[1] "%s recetas actualizadas."
+
+#: core/admin/class-simmer-admin-recipes.php:489
+msgid "%s recipe not updated, somebody is editing it."
+msgid_plural "%s recipes not updated, somebody is editing them."
+msgstr[0] "%s receta no actualizada, alguien está editándola."
+msgstr[1] "%s recetas no actualizadas, alguien está editándolas."
+
+#: core/admin/class-simmer-admin-recipes.php:490
+msgid "%s recipe permanently deleted."
+msgid_plural "%s recipes permanently deleted."
+msgstr[0] "%s receta eliminada permanentemente."
+msgstr[1] "%s recetas eliminadas permanentemente."
+
+#: core/admin/class-simmer-admin-recipes.php:491
+msgid "%s recipe moved to the Trash."
+msgid_plural "%s recipes moved to the Trash."
+msgstr[0] "%s receta trasladada a la Papelera."
+msgstr[1] "%s recetas trasladadas a la Papelera."
+
+#: core/admin/class-simmer-admin-recipes.php:492
+msgid "%s recipe restored from the Trash."
+msgid_plural "%s recipes restored from the Trash."
+msgstr[0] "%s receta restaurada desde la Papelera."
+msgstr[1] "%s recetas restauradas desde la Papelera."
+
+#: core/admin/class-simmer-admin-settings.php:51
+msgid "The Simmer_Admin_Settings class can not be cloned"
+msgstr "La clase Simmer_Admin_Settings no puede ser clonada"
+
+#: core/admin/class-simmer-admin-settings.php:61
+msgid "The Simmer_Admin_Settings class can not be unserialized"
+msgstr "La clase Simmer_Admin_Settings no puede ser decodificada"
+
+#: core/admin/class-simmer-admin-settings.php:73
+#: core/admin/class-simmer-admin-settings.php:74
+msgid "Extend"
+msgstr "Extender"
+
+#: core/admin/class-simmer-admin-settings.php:81
+#: core/admin/views/settings/settings-page.php:21
+msgid "Simmer Settings"
+msgstr "Ajustes Simmer"
+
+#: core/admin/class-simmer-admin-settings.php:82
+msgid "Simmer"
+msgstr "Simmer"
+
+#: core/admin/class-simmer-admin-settings.php:116
+#: core/admin/class-simmer-admin-settings.php:151
+msgid "List Heading"
+msgstr "Título de lista"
+
+#: core/admin/class-simmer-admin-settings.php:123
+#: core/admin/class-simmer-admin-settings.php:158
+msgid "List Type"
+msgstr "Tipo de lista"
+
+#: core/admin/class-simmer-admin-settings.php:130
+msgid "Show Units As"
+msgstr "Mostrar unidades como"
+
+#: core/admin/class-simmer-admin-settings.php:167
+msgid "Styles"
+msgstr "Estilos"
+
+#: core/admin/class-simmer-admin-settings.php:180
+msgid "Enable Styles"
+msgstr "Habilitar estilos"
+
+#: core/admin/class-simmer-admin-settings.php:187
+#: core/admin/views/settings/recipe-accent-color.php:13
+msgid "Accent Color"
+msgstr "Color acentuado"
+
+#: core/admin/class-simmer-admin-settings.php:194
+#: core/admin/views/settings/recipe-text-color.php:13
+msgid "Text Color"
+msgstr "Color de texto"
+
+#: core/admin/class-simmer-admin-settings.php:213
+msgid "Extension Licenses"
+msgstr "Licencias de extensión"
+
+#: core/admin/class-simmer-admin-settings.php:230
+msgid "Permalinks"
+msgstr "Enlaces permanentes"
+
+#: core/admin/class-simmer-admin-settings.php:243
+msgid "Archive base"
+msgstr "Base de archivo"
+
+#: core/admin/class-simmer-admin-settings.php:250
+msgid "Single recipe base"
+msgstr "Base de receta única"
+
+#: core/admin/class-simmer-admin-settings.php:257
+msgid "Category base"
+msgstr "Categoría base"
+
+#: core/admin/class-simmer-admin-settings.php:266
+msgid "Uninstall Settings"
+msgstr "Desinstalar ajustes"
+
+#: core/admin/class-simmer-admin-settings.php:276
+msgid "On Uninstall"
+msgstr "Al desinstalar"
+
+#: core/admin/class-simmer-admin-settings.php:340
+msgid "Display"
+msgstr "Mostrar"
+
+#: core/admin/class-simmer-admin-settings.php:353
+msgid "Advanced"
+msgstr "Avanzado"
+
+#: core/admin/class-simmer-admin-settings.php:361
+msgid "Licenses"
+msgstr "Licencias"
+
+#: core/admin/class-simmer-admin-shortcode-ui.php:55
+msgid "The Simmer_Admin_Shortcode_UI class can not be cloned"
+msgstr "La clase Simmer_Admin_Shortcode_UI no puede ser clonada"
+
+#: core/admin/class-simmer-admin-shortcode-ui.php:65
+msgid "The Simmer_Admin_Shortcode_UI class can not be unserialized"
+msgstr "La clase Simmer_Admin_Shortcode_UI no puede ser decodificada"
+
+#: core/admin/class-simmer-admin-shortcode-ui.php:122
+#: core/admin/class-simmer-admin-shortcode-ui.php:123
+msgid "Add Recipe"
+msgstr "Agregar receta"
+
+#: core/admin/views/extend-page.php:21
+msgid "Recipe Extensions"
+msgstr "Extensiones de receta"
+
+#: core/admin/views/extend-page.php:23
+msgid ""
+"Extend your business to whatever length you desire with Simmer. Sign up for "
+"a membership, or pick and choose add-ons."
+msgstr ""
+"Amplía tu negocio hasta donde deseas con Simmer. Compra solo las extensiones "
+"que necesitas, y date una vuelta para lograr tus objetivos de negocio."
+
+#: core/admin/views/extend-page.php:38
+msgid "Recipe Connector"
+msgstr "Conector de receta"
+
+#: core/admin/views/extend-page.php:41 core/admin/views/extend-page.php:87
+msgid "Get"
+msgstr "Obtener"
+
+#: core/admin/views/extend-page.php:43
+msgid ""
+"Attach individual recipes to a single blog post to keep your recipe database "
+"clear and concise"
+msgstr ""
+"Adjuntar recetas individuales a una sola entrada para mantener la base de "
+"datos de recetas clara y concisa"
+
+#: core/admin/views/extend-page.php:84
+msgid "Tinypass for Simmer"
+msgstr "Tinypass para Simmer"
+
+#: core/admin/views/extend-page.php:89
+msgid ""
+"Tinypass for Simmer is an extension that allows WordPress websites to "
+"connect the power of micro e-commerce to monetize your food, drink, or "
+"recipe content instantly with Simmer."
+msgstr ""
+"Tinypass para Simmer es una extensión que permite conectar sitios web "
+"WordPress al poder del micro comercio electrónico para monetizar tu comida, "
+"bebida, o receta instantáneamente con Simmer."
+
+#: core/admin/views/extend-page.php:130
+msgid "Membership"
+msgstr "Membresía"
+
+#: core/admin/views/extend-page.php:133
+msgid "Sign Up"
+msgstr "Regístrate"
+
+#: core/admin/views/extend-page.php:135
+msgid ""
+"When you sign up for a Simmer for Recipes account, you'll receive access to "
+"a variety of members-only benefits that are really helpful for food-related "
+"businesses using WordPress."
+msgstr ""
+"Cuando te registras a una cuenta Simmer para Recetas, tendrás acceso a una "
+"variedad de beneficios exclusivos para miembros realmente útiles para "
+"negocios relacionados a la gastronomía utilizando WordPress."
+
+#: core/admin/views/extend-page.php:176
+msgid "Codex and APIs"
+msgstr "Codex y APIs"
+
+#: core/admin/views/extend-page.php:179
+msgid "View"
+msgstr "Ver"
+
+#: core/admin/views/extend-page.php:181
+msgid ""
+"Those looking to extend and customize this plugin can utilize the ever-"
+"growing list of action and filter hooks, as well as customizable template "
+"files to help tailor recipe display and functionality for any project."
+msgstr ""
+"Aquellos que buscan ampliar y personalizar este plugin pueden utilizar la "
+"creciente lista de acción y filtro de ganchos, así como personalizar "
+"archivos de plantilla para cualquier proyecto."
+
+#: core/admin/views/meta-boxes/bulk-add.php:17
+msgid "Add In Bulk"
+msgstr "Agregar a granel"
+
+#: core/admin/views/meta-boxes/bulk-add.php:19
+#: core/admin/views/shortcode-modal.php:19
+msgid "Close"
+msgstr "Cerrar"
+
+#: core/admin/views/meta-boxes/bulk-add.php:27
+msgid "Type or copy/paste the list of items below, one item per line."
+msgstr ""
+"Escribe o copia/pega la lista de ítems que están debajo, un ítem por línea."
+
+#: core/admin/views/meta-boxes/bulk-add.php:35
+#: core/admin/views/shortcode-modal.php:55
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: core/admin/views/meta-boxes/bulk-add.php:39
+msgid "Add"
+msgstr "Agregar"
+
+#: core/admin/views/meta-boxes/information.php:43
+#: core/frontend/templates/recipe-shortcode.php:49
+#: core/frontend/templates/recipe.php:23
+msgid "Prep Time"
+msgstr "Tiempo de preparación"
+
+#: core/admin/views/meta-boxes/information.php:50
+#: core/frontend/templates/recipe-shortcode.php:58
+#: core/frontend/templates/recipe.php:32
+msgid "Cook Time"
+msgstr "Tiempo de cocción"
+
+#: core/admin/views/meta-boxes/information.php:57
+#: core/frontend/templates/recipe-shortcode.php:67
+#: core/frontend/templates/recipe.php:41
+msgid "Total Time"
+msgstr "Tiempo total"
+
+#: core/admin/views/meta-boxes/information.php:64
+msgid "Servings"
+msgstr "Porciones"
+
+#: core/admin/views/meta-boxes/information.php:66
+msgid "people"
+msgstr "personas"
+
+#: core/admin/views/meta-boxes/information.php:70
+#: core/frontend/templates/recipe-shortcode.php:89
+#: core/frontend/templates/recipe.php:69
+msgid "Yield"
+msgstr "Rinde"
+
+#: core/admin/views/meta-boxes/information.php:90
+msgid "Source"
+msgstr "Fuente"
+
+#: core/admin/views/meta-boxes/information.php:92
+msgid "Source URL"
+msgstr "URL de la fuente"
+
+#: core/admin/views/meta-boxes/ingredients.php:21
+msgid "Amount"
+msgstr "Cantidad"
+
+#: core/admin/views/meta-boxes/ingredients.php:22
+msgid "Unit"
+msgstr "Unidad"
+
+#: core/admin/views/meta-boxes/ingredients.php:23
+#: core/admin/views/meta-boxes/instructions.php:19
+msgid "Description"
+msgstr "Descripción"
+
+#: core/admin/views/meta-boxes/ingredients.php:36
+#: core/admin/views/meta-boxes/ingredients.php:60
+#: core/admin/views/meta-boxes/instructions.php:32
+#: core/admin/views/meta-boxes/instructions.php:55
+msgid "Heading"
+msgstr "Título"
+
+#: core/admin/views/meta-boxes/ingredients.php:138
+#: core/admin/views/meta-boxes/instructions.php:112
+msgid "+ Add in Bulk"
+msgstr "+ Agregar a granel"
+
+#: core/admin/views/meta-boxes/ingredients.php:142
+msgid "Add an Ingredient"
+msgstr "Agregar un ingrediente"
+
+#: core/admin/views/meta-boxes/ingredients.php:146
+#: core/admin/views/meta-boxes/instructions.php:120
+msgid "Add a Heading"
+msgstr "Agregar un título"
+
+#: core/admin/views/meta-boxes/instructions.php:116
+msgid "Add an Instruction"
+msgstr "Agregar una instrucción"
+
+#: core/admin/views/settings/advanced/on-uninstall.php:14
+msgid "Delete settings data"
+msgstr "Eliminar datos de ajuste"
+
+#: core/admin/views/settings/advanced/on-uninstall.php:16
+msgid "Delete settings data but keep saved recipes (recommended)."
+msgstr ""
+"Eliminar datos de ajustes pero mantener guardadas las recetas (recomendado)."
+
+#: core/admin/views/settings/advanced/on-uninstall.php:18
+msgid "Keep all data"
+msgstr "Conservar todos los datos"
+
+#: core/admin/views/settings/advanced/on-uninstall.php:20
+msgid "Keep all data."
+msgstr "Conservar todos los datos."
+
+#: core/admin/views/settings/advanced/on-uninstall.php:22
+msgid "Delete all data"
+msgstr "Borrar todos los datos"
+
+#: core/admin/views/settings/advanced/on-uninstall.php:24
+msgid "Delete all data."
+msgstr "Borrar todos los datos."
+
+#: core/admin/views/settings/enqueue-styles.php:13
+msgid "Default Styles"
+msgstr "Estilos predeterminados"
+
+#: core/admin/views/settings/enqueue-styles.php:17
+msgid "Enable built-in front end styles"
+msgstr "Habilitar estilos integrados de interfaz"
+
+#: core/admin/views/settings/ingredients-list-heading.php:12
+msgid "The heading to be displayed before the list of ingredients."
+msgstr "El título se mostrará antes de la lista de ingredientes."
+
+#: core/admin/views/settings/ingredients-list-type.php:14
+#: core/admin/views/settings/ingredients-list-type.php:16
+#: core/admin/views/settings/instructions-list-type.php:14
+#: core/admin/views/settings/instructions-list-type.php:16
+msgid "Bulleted List"
+msgstr "Lista sin orden"
+
+#: core/admin/views/settings/ingredients-list-type.php:18
+#: core/admin/views/settings/ingredients-list-type.php:20
+#: core/admin/views/settings/instructions-list-type.php:18
+#: core/admin/views/settings/instructions-list-type.php:20
+msgid "Numbered List"
+msgstr "Lista ordenada"
+
+#: core/admin/views/settings/instructions-list-heading.php:12
+msgid "The heading to be displayed before the list of instructions."
+msgstr "El título se mostrará antes de la lista de instrucciones."
+
+#: core/admin/views/settings/license-extensions-section.php:12
+msgid ""
+"Some Simmer extensions require their own active license in order to receive "
+"updates and support. If you do not have an active license for any of the "
+"below extensions, you can purchase one from the Simmer's %sExtensions Library"
+"%s."
+msgstr ""
+"Algunas extensiones Simmer requieren su propia licencia activa con el fin de "
+"recibir actualizaciones y soporte. Si no tienes una licencia activa para "
+"cualquiera de las extensiones que están debajo, puedes comprar una desde la "
+"%sBiblioteca de Extensiones%s de Simmer."
+
+#: core/admin/views/settings/settings-page.php:41
+msgid "Save Changes"
+msgstr "Guardar cambios"
+
+#: core/admin/views/settings/units-format.php:14
+msgid "abbreviations (i.e. \"lbs.\")"
+msgstr "abreviaciones (ej. “cda.”)"
+
+#: core/admin/views/settings/units-format.php:15
+msgid "full names (i.e. \"pounds\")"
+msgstr "nombres completos (ej. “tazas”)"
+
+#: core/admin/views/shortcode-modal.php:17
+msgid "Insert Recipe"
+msgstr "Insertar receta"
+
+#: core/admin/views/shortcode-modal.php:25
+msgid "Select or search for a recipe name."
+msgstr "Seleccionar o buscar por nombre de la receta."
+
+#: core/admin/views/shortcode-modal.php:39
+msgid "Choose a recipe..."
+msgstr "Elige una receta…"
+
+#: core/admin/views/shortcode-modal.php:59
+msgid "Insert into post"
+msgstr "Insertar en entrada"
+
+#: core/class-simmer.php:138 core/class-simmer.php:148
+msgid "Cheatin&#8217; huh?"
+msgstr "¿Haciendo trampa?"
+
+#: core/class-simmer.php:327
+msgid "Recipes"
+msgstr "Recetas"
+
+#: core/class-simmer.php:328
+msgid "Recipe"
+msgstr "Receta"
+
+#: core/class-simmer.php:329
+msgid "All Recipes"
+msgstr "Todas las recetas"
+
+#: core/class-simmer.php:330
+msgid "Add New Recipe"
+msgstr "Agregar nueva receta"
+
+#: core/class-simmer.php:331
+msgid "Edit Recipe"
+msgstr "Editar receta"
+
+#: core/class-simmer.php:332
+msgid "New Recipe"
+msgstr "Nueva receta"
+
+#: core/class-simmer.php:333
+msgid "View Recipe"
+msgstr "Ver receta"
+
+#: core/class-simmer.php:334
+msgid "Search Recipes"
+msgstr "Buscar recetas"
+
+#: core/class-simmer.php:335
+msgid "No recipes found"
+msgstr "No hay recetas encontradas"
+
+#: core/class-simmer.php:336
+msgid "No recipes found in Trash"
+msgstr "Ninguna receta encontrada en Papelera"
+
+#: core/deprecated-functions.php:33
+msgid ""
+"%1$s is <strong>deprecated</strong> since Simmer version %2$s! Use %3$s "
+"instead."
+msgstr ""
+"%1$s está <strong>obsoleto</strong> desde la versión Simmer %2$s! Utiliza "
+"%3$s en su lugar."
+
+#: core/deprecated-functions.php:43
+msgid ""
+"%1$s is <strong>deprecated</strong> since Simmer version %2$s with no "
+"alternative available."
+msgstr ""
+"%1$s está <strong>obsoleto</strong> desde la versión Simmer %2$s sin "
+"alternativa disponible."
+
+#: core/frontend/templates/recipe-shortcode.php:24
+#: core/frontend/templates/recipe.php:8
+msgid "Created by %1s on %2s"
+msgstr "Creada por %1s en %2s"
+
+#: core/frontend/templates/recipe-shortcode.php:80
+#: core/frontend/templates/recipe.php:57
+msgid "Serves"
+msgstr "Sirve"
+
+#: core/frontend/templates/recipe-shortcode.php:98
+#: core/frontend/templates/recipe.php:78
+msgid "Category"
+msgstr "Categoría"
+
+#: core/frontend/templates/recipe-shortcode.php:126
+#: core/frontend/templates/recipe.php:106
+msgid "Print"
+msgstr "Imprimir"
+
+#: core/recipes/items/ingredients/template-functions.php:100
+msgid "This recipe has no ingredients"
+msgstr "Esta receta no tiene ingredientes"
+
+#: core/recipes/items/instructions/template-functions.php:100
+msgid "This recipe has no instructions"
+msgstr "Esta receta no tiene instrucciones"
+
+#: core/recipes/template-functions.php:324
+msgid "Source: "
+msgstr "Fuente: "
+
+#: core/widgets/class-simmer-categories-widget.php:36
+msgid "Recipe Categories"
+msgstr "Categorías de recetas"
+
+#: core/widgets/class-simmer-categories-widget.php:39
+msgid "A list of recipe categories"
+msgstr "Una lista de categorías de recetas"
+
+#: core/widgets/class-simmer-recent-recipes-widget.php:36
+msgid "Recent Recipes"
+msgstr "Recetas recientes"
+
+#: core/widgets/class-simmer-recent-recipes-widget.php:39
+msgid "Your site's most recent recipes"
+msgstr "Las recetas más recientes de tu sitio"
+
+#: core/widgets/html/categories-widget-form.php:12
+#: core/widgets/html/recent-recipes-widget-form.php:12
+msgid "Title:"
+msgstr "Título:"
+
+#: core/widgets/html/categories-widget-form.php:18
+msgid "Show recipe counts"
+msgstr "Mostrar recuento de recetas"
+
+#: core/widgets/html/categories-widget-form.php:21
+msgid "Show hierarchy"
+msgstr "Mostrar jerarquía"
+
+#: core/widgets/html/recent-recipes-widget-form.php:17
+msgid "Number of recipes to show:"
+msgstr "Número de recetas a mostrar:"
+
+#: core/widgets/html/recent-recipes-widget-form.php:23
+msgid "Display relative dates"
+msgstr "Mostrar fechas relativas"
+
+#: core/widgets/html/recent-recipes-widget.php:23
+msgid "%s ago"
+msgstr "hace %s"
+
+#: core/widgets/html/recent-recipes-widget.php:35
+msgid "No recent recipes."
+msgstr "No hay recetas recientes."
+
+#. Plugin Name of the plugin/theme
+msgid "Simmer for Recipes"
+msgstr "Simmer para Recetas"
+
+#. Plugin URI of the plugin/theme
+msgid "https://simmerwp.com"
+msgstr "https://simmerwp.com"
+
+#. Description of the plugin/theme
+msgid "A recipe publishing tool for WordPress."
+msgstr "Una herramienta de publicación de recetas para WordPress."
+
+#. Author of the plugin/theme
+msgid "Team Simmer"
+msgstr "Equipo Simmer"
+
+#. Author URI of the plugin/theme
+msgid "https://simmerwp.com/about/"
+msgstr "https://simmerwp.com/about/"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:248
+msgctxt "unit of measurement: singular"
+msgid "teaspoon"
+msgstr "cucharadita"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:253
+msgctxt "unit of measurement: singular"
+msgid "tablespoon"
+msgstr "cucharada"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:258
+msgctxt "unit of measurement: singular"
+msgid "fluid ounce"
+msgstr "onza líquida"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:263
+msgctxt "unit of measurement: singular"
+msgid "cup"
+msgstr "taza"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:268
+msgctxt "unit of measurement: singular"
+msgid "pint"
+msgstr "pinta"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:273
+msgctxt "unit of measurement: singular"
+msgid "quart"
+msgstr "cuarto"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:278
+msgctxt "unit of measurement: singular"
+msgid "gallon"
+msgstr "galón"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:283
+msgctxt "unit of measurement: singular"
+msgid "milliliter"
+msgstr "mililitro"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:288
+msgctxt "unit of measurement: singular"
+msgid "liter"
+msgstr "litro"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:295
+msgctxt "unit of measurement: singular"
+msgid "pound"
+msgstr "libra"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:300
+msgctxt "unit of measurement: singular"
+msgid "ounce"
+msgstr "onza"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:305
+msgctxt "unit of measurement: singular"
+msgid "milligram"
+msgstr "miligramo"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:310
+msgctxt "unit of measurement: singular"
+msgid "gram"
+msgstr "gramo"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:315
+msgctxt "unit of measurement: singular"
+msgid "kilogram"
+msgstr "kilogramo"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:322
+msgctxt "unit of measurement: singular"
+msgid "pinch"
+msgstr "pizca"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:327
+msgctxt "unit of measurement: singular"
+msgid "dash"
+msgstr "toque"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:332
+msgctxt "unit of measurement: singular"
+msgid "package"
+msgstr "paquete"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:249
+msgctxt "unit of measurement: plural"
+msgid "teaspoons"
+msgstr "cucharaditas"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:254
+msgctxt "unit of measurement: plural"
+msgid "tablespoons"
+msgstr "cucharadas"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:259
+msgctxt "unit of measurement: plural"
+msgid "fluid ounces"
+msgstr "onzas líquidas"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:264
+msgctxt "unit of measurement: plural"
+msgid "cups"
+msgstr "tazas"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:269
+msgctxt "unit of measurement: plural"
+msgid "pints"
+msgstr "pintas"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:274
+msgctxt "unit of measurement: plural"
+msgid "quarts"
+msgstr "cuartos"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:279
+msgctxt "unit of measurement: plural"
+msgid "gallons"
+msgstr "galones"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:284
+msgctxt "unit of measurement: plural"
+msgid "milliliters"
+msgstr "mililitros"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:289
+msgctxt "unit of measurement: plural"
+msgid "liters"
+msgstr "litros"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:296
+msgctxt "unit of measurement: plural"
+msgid "pounds"
+msgstr "libras"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:301
+msgctxt "unit of measurement: plural"
+msgid "ounces"
+msgstr "onzas"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:306
+msgctxt "unit of measurement: plural"
+msgid "milligrams"
+msgstr "miligramos"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:311
+msgctxt "unit of measurement: plural"
+msgid "grams"
+msgstr "gramos"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:316
+msgctxt "unit of measurement: plural"
+msgid "kilograms"
+msgstr "kilogramos"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:323
+msgctxt "unit of measurement: plural"
+msgid "pinches"
+msgstr "pizcas"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:328
+msgctxt "unit of measurement: plural"
+msgid "dashes"
+msgstr "toques"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:333
+msgctxt "unit of measurement: plural"
+msgid "packages"
+msgstr "paquetes"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:250
+msgctxt "unit of measurement: abbreviation"
+msgid "tsp."
+msgstr "cdita."
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:255
+msgctxt "unit of measurement: abbreviation"
+msgid "tbsp."
+msgstr "cda."
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:260
+msgctxt "unit of measurement: abbreviation"
+msgid "fl oz"
+msgstr "oz lq"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:265
+msgctxt "unit of measurement: abbreviation"
+msgid "c"
+msgstr "T"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:270
+msgctxt "unit of measurement: abbreviation"
+msgid "pt"
+msgstr "pint."
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:275
+msgctxt "unit of measurement: abbreviation"
+msgid "qt"
+msgstr "crt."
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:280
+msgctxt "unit of measurement: abbreviation"
+msgid "gal"
+msgstr "gal."
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:285
+msgctxt "unit of measurement: abbreviation"
+msgid "mL"
+msgstr "ml"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:290
+msgctxt "unit of measurement: abbreviation"
+msgid "L"
+msgstr "l"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:297
+msgctxt "unit of measurement: abbreviation"
+msgid "lb"
+msgstr "lib."
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:302
+msgctxt "unit of measurement: abbreviation"
+msgid "oz"
+msgstr "oz"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:307
+msgctxt "unit of measurement: abbreviation"
+msgid "mg"
+msgstr "mg"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:312
+msgctxt "unit of measurement: abbreviation"
+msgid "g"
+msgstr "g"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:317
+msgctxt "unit of measurement: abbreviation"
+msgid "kg"
+msgstr "kg"
+
+#: core/recipes/items/ingredients/class-simmer-recipe-ingredients.php:334
+msgctxt "unit of measurement: abbreviation"
+msgid "pkg"
+msgstr "paquet."

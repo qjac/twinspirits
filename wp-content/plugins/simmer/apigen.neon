@@ -1,0 +1,43 @@
+source: ./
+
+destination: codex/src
+
+# list of scanned file extensions (e.g. php5, phpt...)
+extensions: [php]
+
+# directories and files matching this file mask will not be parsed
+exclude:
+    - codex/
+
+# character set of source files; if you use only one across your files, we recommend you name it
+charset: [UTF-8]
+
+# elements with this name prefix will be considered as the "main project" (the rest will be considered as libraries)
+main: Simmer
+
+# title of generated documentation
+title: Simmer
+
+# base url used for sitemap (useful for public doc)
+baseUrl: http://develop.simmerwp.com/
+
+# choose ApiGen template theme
+templateTheme: default
+
+# generate documentation for PHP internal classes
+php: false
+
+# generate highlighted source code for elements
+sourceCode: true
+
+# generate tree view of classes, interfaces, traits and exceptions
+tree: true
+
+# generate documentation for deprecated elements
+deprecated: true
+
+# generate list of tasks with @todo annotation
+todo: true
+
+# add link to ZIP archive of documentation
+download: false

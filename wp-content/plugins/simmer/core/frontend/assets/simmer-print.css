@@ -1,0 +1,49 @@
+/**
+ * The recipe print styling
+ *
+ * @since 1.2.1
+ *
+ * @package Simmer/Frontend/Styles
+ */
+
+/* Title */
+
+.simmer-recipe-title {
+	margin-bottom: 30px;
+	font-size: 22px;
+}
+
+/* Description */
+
+.simmer-recipe-meta {
+}
+.simmer-recipe-meta .simmer-recipe-byline {
+	display: none;
+}
+.simmer-recipe-meta img {
+	float: left;
+	margin: 0 20px 20px 0;
+	width: 30%;
+}
+
+/* Information */
+
+.simmer-recipe-details {
+	
+}
+.simmer-recipe-details li {
+	padding: 0;
+	border: none;
+}
+
+/* Ingredients */
+
+.simmer-recipe-ingredients {
+	margin-bottom: 20px;
+}
+
+/* Tools */
+
+.simmer-recipe-tools {
+	display: none;
+}

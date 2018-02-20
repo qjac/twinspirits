@@ -1,0 +1,158 @@
+/* Simmer's front-end styles */
+
+/** Global **/
+
+/* Clearfixes */
+.simmer-recipe-details:before,
+.simmer-recipe-details:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.simmer-recipe-details:after {
+    clear: both;
+}
+.simmer-recipe-details {
+    *zoom: 1;
+}
+
+/* Meta */
+.simmer-recipe-meta {
+	font-size: 0.8em;
+}
+
+/* Description */
+
+.simmer-recipe-description img {
+	float: right;
+	margin: 0 0 10px 10px;
+}
+
+/* Details */
+
+.simmer-recipe-details {
+	padding: 10px 0;
+	font-size: 0.8em;
+	border-top: 1px solid rgb( 0, 0, 0 );
+	border-bottom: 1px solid rgb( 0, 0, 0 );
+	clear: both;
+}
+.simmer-recipe-details ul {
+	margin: 0 0 10px 0;
+	padding: 0;
+	list-style: none;
+}
+.simmer-recipe-details ul:last-child {
+	margin-bottom: 0;
+}
+.simmer-recipe-details li {
+	display: inline-block;
+	padding: 0 10px;
+	border-right: 1px solid rgb( 0, 0, 0 );
+}
+.simmer-recipe-details li:first-child {
+	padding-left: 0;
+}
+.simmer-recipe-details li:last-child {
+	padding-right: 0;
+	border-right: none;
+}
+
+/* Ingredients */
+
+.simmer-ingredients {
+	margin: 0 0 0 20px;
+}
+.simmer-ingredients li {
+	margin-bottom: 0.5em;
+}
+
+/* Instructions */
+
+.simmer-instructions {
+	margin: 0 0 0 20px;
+}
+.simmer-instructions li {
+	margin-bottom: 1em;
+}
+
+/* Footer */
+
+.simmer-recipe-footer {
+	padding-top: 10px;
+	font-size: 0.8em;
+	border-top: 1px solid rgb( 0, 0, 0 );
+}
+.simmer-recipe-footer::before,
+.simmer-recipe-footer::after {
+	content: "";
+	display: table;
+}
+.simmer-recipe-footer::after {
+	clear: both;
+}
+
+/* Source */
+
+.simmer-recipe-source {
+	float: left;
+	width: 48%;
+}
+
+/* Tools */
+
+.simmer-recipe-tools {
+	float: right;
+	width: 48%;
+	text-align: right;
+}
+.simmer-recipe-tools ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.simmer-recipe-tools li {
+	float: right;
+	margin-right: 10px;
+}
+.simmer-recipe-tools li:last-child {
+	margin-right: 0;
+}
+
+/* Messages */
+
+.simmer-message {
+	margin: 20px 0;
+	padding: 10px;
+	text-align: center;
+	border-radius: 4px;
+}
+
+
+/** Embedded Recipes **/
+
+.simmer-embedded-recipe,
+.simmer-embedded-recipe * {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.simmer-embedded-recipe {
+	padding: 20px;
+	background: rgba( 0, 0, 0, .01 );
+	border: 1px solid rgba( 0, 0, 0, 0.1 );
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;
+}
+.simmer-embedded-recipe.hentry {
+	margin: 20px 0;
+	padding: 20px;
+}
+.simmer-embedded-recipe.hentry.has-post-thumbnail {
+	padding-top: 20px;
+}
+
+.simmer-embedded-recipe .simmer-recipe-title {
+	margin-top: 0;
+}

@@ -1,0 +1,715 @@
+/* =wp-admin area stylesheet for Simmer
+-------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'simmer-admin-icons';
+  src: url('icons/simmer-admin-icons.eot?78457406');
+  src: url('icons/simmer-admin-icons.eot?78457406#iefix') format('embedded-opentype'),
+       url('icons/simmer-admin-icons.woff?78457406') format('woff'),
+       url('icons/simmer-admin-icons.ttf?78457406') format('truetype'),
+       url('icons/simmer-admin-icons.svg?78457406#simmer-admin-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'simmer-admin-icons';
+    src: url('../font/simmer-admin-icons.svg?78457406#simmer-admin-icons') format('svg');
+  }
+}
+*/
+
+[class^="simmer-icon-"]:before, [class*=" simmer-icon-"]:before {
+	display: inline-block;
+	width: 20px;
+	font-family: 'simmer-admin-icons';
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	text-align: center;
+	text-decoration: inherit;
+	text-transform: none;
+	speak: none;
+}
+.simmer-icon-fork:before { content: '\e800'; }
+
+#menu-posts-recipe .wp-menu-image.dashicons-admin-post::before {
+	font-family: 'simmer-admin-icons';
+	content: '\e800';
+}
+
+#dashboard_right_now li a.simmer-recipe-count::before,
+#dashboard_right_now li span.simmer-recipe-count::before {
+	font-family: 'simmer-admin-icons';
+	content: '\e800';
+}
+
+#insert-recipe-button [class^="simmer-icon-"]:before {
+	width: 18px;
+	margin: 0 2px;
+	font-size: 18px;
+}
+
+/* Size up the Shortcode UI content item icon. */
+.add-shortcode-list-item-icon .simmer-icon-fork::before {
+	width: 60px;
+	font-size: 60px;
+}
+
+/* The extend/purchase menu item */
+#menu-posts-recipe a[href="edit.php?post_type=recipe&page=simmer-extend"],
+#menu-posts-recipe a[href="edit.php?post_type=recipe&page=simmer-license"] {
+	color: rgb( 241, 133, 0 );
+}
+#menu-posts-recipe a[href="edit.php?post_type=recipe&page=simmer-extend"]:hover,
+#menu-posts-recipe li.current a[href="edit.php?post_type=recipe&page=simmer-extend"],
+#menu-posts-recipe a[href="edit.php?post_type=recipe&page=simmer-license"]:hover,
+#menu-posts-recipe li.current a[href="edit.php?post_type=recipe&page=simmer-license"] {
+	color: rgb( 255, 255, 255 );
+	background-color: rgb( 241, 133, 0 );
+}
+
+/* Ingredients and Instructions */
+
+#simmer_ingredients .inside,
+#simmer_instructions .inside {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+.simmer-list-table {
+	position: relative;
+	width: 100%;
+	margin: 0;
+	border-spacing: 0;
+}
+.simmer-list-table th,
+.simmer-list-table td {
+	padding: 10px 6px;
+	border-bottom: 1px solid rgb( 238, 238, 238 );
+}
+.simmer-list-table th:first-child {
+	padding-left: 12px;
+}
+.simmer-list-table td:first-child {
+	padding-left: 8px;
+	border-left: 4px solid transparent;
+	-webkit-transition: border 5s;
+	   -moz-transition: border 5s;
+	        transition: border 5s;
+}
+.simmer-list-table .new-row td:first-child {
+	border-left-color: rgb( 122, 208, 58 );
+}
+.simmer-list-table th:last-child,
+.simmer-list-table td:last-child {
+	padding-right: 12px;
+}
+.simmer-list-table th {
+	color: rgb( 200, 200, 200 );
+	font-weight: normal;
+}
+.simmer-list-table td {
+	padding-top: 14px;
+	padding-bottom: 14px;
+}
+.simmer-list-table .simmer-sort-placeholder {
+	background: rgb( 250, 250, 250 );
+}
+.simmer-list-table .simmer-row:hover {
+	background: rgb( 252, 252, 252 );
+}
+.simmer-list-table .simmer-row-hidden {
+	display: none;
+}
+.simmer-list-table .simmer-row.ui-sortable-helper {
+	background: rgb( 252, 252, 252 );
+	border-top: 1px solid rgb( 238, 238, 238 );
+}
+
+.simmer-list-table .simmer-sort,
+.simmer-list-table .simmer-sort,
+.simmer-list-table .simmer-remove,
+.simmer-list-table .simmer-remove {
+	width: 15px;
+}
+.simmer-list-table .simmer-sort {
+	position: relative;
+}
+.simmer-list-table .simmer-row.new-row .simmer-sort {
+	border-left: 4px solid rgb( 122, 208, 58 );
+}
+.simmer-list-table .simmer-amt {
+	width: 40px;
+}
+.simmer-list-table .simmer-unit {
+	width: 60px;
+}
+
+.simmer-heading-label {
+	font-style: italic;
+}
+
+.simmer-list-table td.simmer-sort .simmer-sort-handle,
+.simmer-list-table td.simmer-remove a {
+	color: #888;
+}
+.simmer-list-table .simmer-sort .simmer-sort-handle:hover,
+.simmer-list-table .simmer-remove a:hover {
+	color: #555;
+}
+.simmer-list-table td.simmer-sort .simmer-sort-handle {
+	cursor: move;
+}
+
+.simmer-list-table .simmer-actions td {
+	padding-left: 12px;
+	border: none;
+}
+.simmer-list-table .simmer-actions .simmer-bulk-add-link {
+	float: left;
+	padding-top: 5px;
+	font-weight: bold;
+}
+.simmer-add-row.button {
+	float: right;
+	margin-left: 8px;
+	vertical-align: text-top;
+}
+.simmer-add-row span {
+	vertical-align: text-top;
+}
+
+/* Builk Modal */
+
+.simmer-bulk-modal-background {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	min-height: 360px;
+	background: #000;
+	opacity: .7;
+	filter: alpha(opacity=70);
+	z-index: 100100;
+}
+.simmer-bulk-modal-wrap {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 500px;
+	margin-left: -250px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.3);
+	        box-shadow: 0 3px 6px rgba(0,0,0,.3);
+	overflow: hidden;
+	z-index: 100105;
+	-webkit-transition: height .2s, margin-top .2s;
+	        transition: height .2s, margin-top .2s;
+	-webkit-transform: translateY( -50% );
+	   -moz-transform: translateY( -50% );
+	        transform: translateY( -50% );
+}
+@media screen and ( max-width: 520px ) {
+
+	.simmer-bulk-modal-wrap {
+		width: auto;
+		margin-left: 0;
+		top: 10px;
+		right: 10px;
+		bottom: 10px;
+		left: 10px;
+		-webkit-transform: translateY( 0px );
+		   -moz-transform: translateY( 0px );
+		        transform: translateY( 0px );
+	}
+}
+
+.simmer-bulk-modal-header {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 36px;
+	padding: 0 36px 0 16px;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 36px;
+	background: #fcfcfc;
+	border-bottom: 1px solid #dfdfdf;
+}
+.simmer-bulk-modal-header button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 36px;
+	height: 36px;
+	padding: 0;d
+	color: #666;
+	text-align: center;
+	background: 0 0;
+	border: none;
+	cursor: pointer;
+}
+.simmer-bulk-modal-header button::before {
+	font: 400 20px/36px dashicons;
+	vertical-align: top;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	width: 36px;
+	height: 36px;
+	content: '\f158';
+}
+
+.simmer-bulk-modal-content {
+	padding: 50px 16px 55px;
+}
+.simmer-bulk-modal-content div.error {
+	margin: 0 0 10px;
+}
+.simmer-bulk-modal-content p {
+	margin-top: 0;
+}
+.simmer-bulk-modal-content textarea {
+	width: 100%;
+}
+@media screen and (max-width: 782px) {
+
+	.simmer-bulk-modal-content {
+		padding: 50px 16px 60px;
+	}
+}
+
+.simmer-bulk-modal-footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 8px 16px;
+	background: #fcfcfc;
+	border-top: 1px solid #dfdfdf;
+}
+.simmer-bulk-modal-footer .cancel {
+	line-height: 25px;
+	float: left;
+}
+.simmer-bulk-modal-footer .cancel .submitdelete {
+	text-decoration: none;
+	padding: 1px 2px;
+}
+.simmer-bulk-modal-footer .simmer-submit-bulk {
+	line-height: 23px;
+	float: right;
+}
+.simmer-bulk-modal-footer .simmer-submit-bulk button {
+	float: right;
+	margin-bottom: 0;
+}
+.simmer-bulk-modal-footer .simmer-submit-bulk .spinner {
+	float: left;
+	vertical-align: middle;
+}
+@media screen and (max-width: 782px) {
+
+	.simmer-bulk-modal-footer .cancel {
+		line-height: 32px;
+	}
+}
+
+/* Information */
+input.simmer-time {
+	width: 60px;
+}
+
+/* The Shortcode Button */
+
+#simmer-add-recipe::before {
+	margin: 0 4px 0 0;
+	color: #888;
+	font-size: 18px;
+}
+
+/* Shortcode Modal */
+
+.simmer-shortcode-modal-background {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	min-height: 360px;
+	background: #000;
+	opacity: .7;
+	filter: alpha(opacity=70);
+	z-index: 100000;
+}
+.simmer-shortcode-modal-wrap {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 500px;
+	margin-left: -250px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.3);
+	        box-shadow: 0 3px 6px rgba(0,0,0,.3);
+	overflow: hidden;
+	z-index: 100001;
+	-webkit-transition: height .2s, margin-top .2s;
+	        transition: height .2s, margin-top .2s;
+	-webkit-transform: translateY( -50% );
+	   -moz-transform: translateY( -50% );
+	        transform: translateY( -50% );
+}
+@media screen and ( max-width: 520px ) {
+
+	.simmer-shortcode-modal-wrap {
+		width: auto;
+		margin-left: 0;
+		top: 10px;
+		right: 10px;
+		bottom: 10px;
+		left: 10px;
+		-webkit-transform: translateY( 0px );
+		   -moz-transform: translateY( 0px );
+		        transform: translateY( 0px );
+	}
+}
+
+.simmer-shortcode-modal-header {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 36px;
+	padding: 0 36px 0 16px;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 36px;
+	background: #fcfcfc;
+	border-bottom: 1px solid #dfdfdf;
+}
+.simmer-shortcode-modal-header button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 36px;
+	height: 36px;
+	padding: 0;d
+	color: #666;
+	text-align: center;
+	background: 0 0;
+	border: none;
+	cursor: pointer;
+}
+.simmer-shortcode-modal-header button::before {
+	font: 400 20px/36px dashicons;
+	vertical-align: top;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	width: 36px;
+	height: 36px;
+	content: '\f158';
+}
+
+.simmer-shortcode-modal-content {
+	padding: 50px 16px 75px;
+}
+.simmer-shortcode-modal-content div.error {
+	margin: 0 0 10px;
+}
+.simmer-shortcode-modal-content p {
+	margin-top: 0;
+}
+.simmer-shortcode-modal-content select {
+	width: 100%;
+}
+.select2-container .select2-dropdown {
+	z-index: 100002;
+}
+@media screen and (max-width: 782px) {
+
+	.simmer-shortcode-modal-content {
+		padding: 50px 16px 60px;
+	}
+}
+
+.simmer-shortcode-modal-footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 8px 16px;
+	background: #fcfcfc;
+	border-top: 1px solid #dfdfdf;
+}
+.simmer-shortcode-modal-footer .cancel {
+	line-height: 25px;
+	float: left;
+}
+.simmer-shortcode-modal-footer .cancel .submitdelete {
+	text-decoration: none;
+	padding: 1px 2px;
+}
+.simmer-shortcode-modal-footer .simmer-submit-shortcode {
+	line-height: 23px;
+	float: right;
+}
+.simmer-shortcode-modal-footer .simmer-submit-shortcode button {
+	float: right;
+	margin-bottom: 0;
+}
+.simmer-shortcode-modal-footer .simmer-submit-shortcode .spinner {
+	float: left;
+	vertical-align: middle;
+}
+@media screen and (max-width: 782px) {
+
+	.simmer-shortcode-modal-footer .cancel {
+		line-height: 32px;
+	}
+}
+
+/* The Coming Soon Page */
+.simmer-coming-soon {
+
+}
+.simmer-coming-soon > div {
+	position: relative;
+	margin-bottom: 3em;
+}
+.simmer-coming-soon > div .dashicons {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	color: rgb( 200, 200, 200 );
+	font-size: 50px;
+}
+.simmer-coming-soon > div .dashicons::before {
+	width: 50px;
+	height: 50px;
+}
+.simmer-coming-soon > div h3,
+.simmer-coming-soon > div p {
+	padding-left: 70px;
+}
+
+/* The License Page */
+.simmer-license-card {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	float: left;
+	width: 48.5%;
+	width: -webkit-calc( 50% - 8px );
+	width:         calc( 50% - 8px );
+	margin: 0 8px 16px;
+	background-color: rgb( 255, 255, 255 );
+	border: 1px solid #dedede;
+}
+.simmer-license-card:nth-child(odd) {
+	margin-left: 0;
+	clear: both;
+}
+.simmer-license-card:nth-child(even) {
+	margin-right: 0;
+}
+.simmer-license-card .simmer-license-card-top {
+	position: relative;
+	min-height: 135px;
+	padding: 20px 20px 10px;
+}
+.simmer-license-card .simmer-license-card-top .license-name {
+	margin: 0 100px 1em 0;
+	font-size: 18px;
+	line-height: 1.3;
+}
+.simmer-license-card .simmer-license-card-top .license-get {
+	display: block;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	text-align: center;
+}
+.simmer-license-card .simmer-license-card-top .license-description {
+	margin: 0 0 0 1em;
+	list-style: disc;
+}
+.simmer-license-card .simmer-license-card-bottom {
+	padding: 12px 20px;
+	background-color: #fafafa;
+	border-top: 1px solid #dedede;
+	overflow: hidden;
+	clear: both;
+}
+.simmer-license-card .simmer-license-card-bottom .license-rating {
+	float: left;
+	max-width: 180px;
+	line-height: 23px;
+	clear: left;
+}
+.simmer-license-card .simmer-license-card-bottom .license-rating .star-rating {
+	display: inline;
+}
+.simmer-license-card .simmer-license-card-bottom .license-meta {
+	float: right;
+	width: 65%;
+	width: -webkit-calc( 100% - 180px );
+	width:         calc( 100% - 180px );
+	text-align: right;
+	clear: right:
+}
+.simmer-license-card .simmer-license-card-bottom .license-meta .license-compatibility::before {
+	display: inline-block;
+	position: relative;
+	top: 4px;
+	left: -2px;
+	padding: 0;
+	content: '\f147';
+	color: #444;
+	font: 400 20px/.5 dashicons;
+	text-decoration: none!important;
+	vertical-align: top;
+	 -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	speak: none;
+}
+
+@media screen and ( max-width: 782px ) {
+
+	.simmer-license-card {
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+	}
+}
+
+/* The Extend Page */
+.simmer-extension-card {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	float: left;
+	width: 48.5%;
+	width: -webkit-calc( 50% - 8px );
+	width:         calc( 50% - 8px );
+	margin: 0 8px 16px;
+	background-color: rgb( 255, 255, 255 );
+	border: 1px solid #dedede;
+}
+.simmer-extension-card:nth-child(odd) {
+	margin-left: 0;
+	clear: both;
+}
+.simmer-extension-card:nth-child(even) {
+	margin-right: 0;
+}
+.simmer-extension-card .simmer-extension-card-top {
+	position: relative;
+	min-height: 135px;
+	padding: 20px 20px 10px;
+}
+.simmer-extension-card .simmer-extension-card-top .extension-icon {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 128px;
+	height: 128px;
+	background: gray;
+}
+.simmer-extension-card .simmer-extension-card-top .extension-name {
+	margin: 0 100px 1em 148px;
+	font-size: 18px;
+	line-height: 1.3;
+}
+.simmer-extension-card .simmer-extension-card-top .extension-get {
+	display: block;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	text-align: center;
+}
+.simmer-extension-card .simmer-extension-card-top .extension-description {
+	margin: 0 0 0 148px;
+}
+.simmer-extension-card .simmer-extension-card-bottom {
+	padding: 12px 20px;
+	background-color: #fafafa;
+	border-top: 1px solid #dedede;
+	overflow: hidden;
+	clear: both;
+}
+.simmer-extension-card .simmer-extension-card-bottom .extension-rating {
+	float: left;
+	max-width: 180px;
+	line-height: 23px;
+	clear: left;
+}
+.simmer-extension-card .simmer-extension-card-bottom .extension-rating .star-rating {
+	display: inline;
+}
+.simmer-extension-card .simmer-extension-card-bottom .extension-meta {
+	float: right;
+	width: 65%;
+	width: -webkit-calc( 100% - 180px );
+	width:         calc( 100% - 180px );
+	text-align: right;
+	clear: right:
+}
+.simmer-extension-card .simmer-extension-card-bottom .extension-meta .extension-compatibility::before {
+	display: inline-block;
+	position: relative;
+	top: 4px;
+	left: -2px;
+	padding: 0;
+	content: '\f147';
+	color: #444;
+	font: 400 20px/.5 dashicons;
+	text-decoration: none!important;
+	vertical-align: top;
+	 -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	speak: none;
+}
+
+@media screen and ( max-width: 782px ) {
+
+	.simmer-extension-card {
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+	}
+}
+
+.simmer-license-key-display {
+	display: inline-block;
+	margin-right: 10px;
+}
+.simmer-license-status-badge {
+	display: inline-block;
+	margin-right: 10px;
+	padding: 8px 10px;
+	color: rgb( 255, 255, 255 );
+	line-height: 1;
+	text-transform: lowercase;
+	border-radius: 4px;
+}
+.simmer-license-status-badge.active {
+	background: rgb( 103, 185, 67 );
+}
+.simmer-license-status-badge.inactive {
+	background: rgb( 194, 28, 28 );
+}
