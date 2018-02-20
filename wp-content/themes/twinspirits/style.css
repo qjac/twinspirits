@@ -19,8 +19,8 @@ Base Styles
 Normalized styles, typography and base-level page/element styling.
 */
 
-.entry-header,
-.entry-content {
+.site-main {
+  max-width: 75em;
   padding: 0 5%;
   margin: 0 auto;
 }
@@ -39,11 +39,7 @@ h6 {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
   color: #d14f53;
-  margin: 1em inherit;
-}
-
-h1 {
-  padding: 2.1875rem 0;
+  margin: 1em auto;
 }
 
 a {
@@ -79,15 +75,6 @@ body:not(.custom-background-image):before {
   margin: 0;
 }
 
-.no-sidebar .post-thumbnail img {
-  margin: 0 auto;
-  width: 100%;
-}
-
-body.home .post-thumbnail img {
-  width: auto;
-}
-
 .entry-content {
   margin-top: 2.1875rem;
 }
@@ -111,6 +98,8 @@ body.home .post-thumbnail img {
   font-family: "Roboto Slab", serif;
   font-size: 1.25rem;
   font-weight: bold;
+  font-style: normal;
+  border: none;
 }
 
 .entry-content h4 ~ h4 {
@@ -129,6 +118,12 @@ body.home .post-thumbnail img {
   width: 115%;
   max-width: 115%;
   margin: 0 -7.5% 1rem;
+}
+
+body:not(.page-template-default) .content-area {
+  float: none;
+  margin-right: unset;
+  width: unset;
 }
 
 footer.site-footer {

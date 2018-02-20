@@ -2,7 +2,7 @@
 // INCLUDES 
 //============================
 %interior-narrower {
-  // max-width: rem(840px);
+  max-width: 75em;
   padding: 0 5%;
   margin: 0 auto;
 }
@@ -24,11 +24,7 @@ h6 {
   font-family: $open-sans;
   font-weight: bold;
   color: $red;
-  margin: 1em inherit;
-}
-
-h1 {
-  padding: rem(35px) 0;
+  margin: 1em auto;
 }
 
 a {
@@ -38,9 +34,6 @@ a {
 //============================
 // GENERAL PAGE STYLES 
 //============================
-body {
-  // background: white;
-}
 
 body:not(.custom-background-image):before {
 	content: unset; // removes extra space at top of page before nav bar/header
@@ -61,18 +54,16 @@ body:not(.custom-background-image):before {
 }
 
 .site-main {
+    @extend %interior-narrower;
   margin-bottom: rem(35px);
 }
 
 .entry-header {
-  @extend %interior-narrower;
-  // margin-right: auto;
-  // margin-left: auto;
+  // @extend %interior-narrower;
 }
 
 .entry-header h1 {
   text-transform: uppercase;
-  // padding: 0 rem(20px);
 }
 
 // on page featured img styles
@@ -80,16 +71,16 @@ body:not(.custom-background-image):before {
   margin: 0;
 }
 
-.no-sidebar .post-thumbnail img {
-  margin: 0 auto;
-  width: 100%;
-}
-body.home .post-thumbnail img {
-  width: auto;
-}
+// .no-sidebar .post-thumbnail img {
+//   margin: 0 auto;
+//   width: 100%;
+// }
+// body.home .post-thumbnail img {
+//   width: auto;
+// }
 
 .entry-content {
-  @extend %interior-narrower;
+  // @extend %interior-narrower;
   margin-top: rem(35px);
 
 
@@ -110,6 +101,8 @@ body.home .post-thumbnail img {
     font-family: $roboto-slab;
     font-size: rem(20px);
     font-weight: bold;
+      font-style: normal;
+  border: none;
   }
 
   h4 ~ h4 {
@@ -154,3 +147,16 @@ img,
   	}
 	}
 } //end .entry-content
+
+// 
+//  TEMPLATE STYLES
+// 
+// for templates with noe sidebar (full-width, spirits, and Home)
+body:not(.page-template-default) .content-area {
+  float: none;
+    margin-right: unset;
+    width: unset
+  // .entry-content {
+  //     @extend %interior-narrower;
+  // }
+}
