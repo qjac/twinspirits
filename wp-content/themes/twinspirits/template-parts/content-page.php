@@ -8,7 +8,6 @@
  */
 ?>
 
-<?php $banner_link = '/tours-and-tastings'; ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if (!is_front_page()) : ?>
@@ -17,12 +16,6 @@
 		<?php twentysixteen_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
 		<?php endif; ?>
-
-	<?php if (is_front_page()) {
-		print '<a href="'. $banner_link .'">';
-		twentysixteen_post_thumbnail();
-		print '</a>';
-	} ?>
 
 	<div class="entry-content">
 		<?php

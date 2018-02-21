@@ -30,9 +30,11 @@ Normalized styles, typography and base-level page/element styling.
 // @import "sass/layouts/_responsive";
 
 /* Component (SMACSS module) rules */
+/* Plugin Overrides */
 @import "sass/components/_splash";
 @import "sass/components/_business-profile";
 
 /* Weird stuff specific to certain pages or post type templates */
 // @import "sass/page-specific/_tours";
+@import "sass/page-specific/_spirits";
 @import "sass/page-specific/_home";

@@ -407,6 +407,8 @@ footer.site-footer p.copyright {
 
 /* Component (SMACSS module) rules */
 
+/* Plugin Overrides */
+
 #age-verify {
   position: fixed;
   top: 0;
@@ -488,6 +490,8 @@ h4.bp-title {
 }
 
 /* Weird stuff specific to certain pages or post type templates */
+
+/* Styles specific to SPIRITS individual and archive pages */
 
 .home {
   font-size: 1.1rem;

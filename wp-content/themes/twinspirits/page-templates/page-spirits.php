@@ -10,12 +10,6 @@
 
 get_header(); ?>
 
-<div class="spirits-nav">
-	<?php $nav = twinspirits_get_sibling_pages(); ?>
-	<?php echo $nav['previous']; ?>
-	<?php echo $nav['next']; ?>
-</div>
-
 <div id="primary" class="content-area spirits">
 	<main id="main" class="site-main" role="main">
 		<?php
@@ -29,7 +23,15 @@ get_header(); ?>
 			if ( comments_open() || get_comments_number() ) {
 				comments_template();
 			}
+		?>
 
+		<div class="spirits-nav">
+			<?php $nav = twinspirits_get_sibling_pages(); ?>
+			<?php echo $nav['previous']; ?>
+			<?php echo $nav['next']; ?>
+		</div>
+
+	<?php
 			// End of the loop.
 		endwhile;
 		?>
