@@ -96,7 +96,7 @@ function twinspirits_get_sibling_pages() {
         else {
           $direction = 'right';
         }
-        $nav[$label] = '<a class="nav-'. $label .'" href="' . get_permalink($pageID) . '" title="'. $label .'"><i class="fa fa-chevron-'. $direction .'" aria-hidden="true"></i></a>';
+        $nav[$label] = '<a class="nav-'. $label .'" href="' . get_permalink($pageID) . '" title="'. $label .'"><i class="fa fa-chevron-'. $direction .'" aria-hidden="true"></i>' . get_the_title($pageID) . '</a>';
       }
     }
 
@@ -104,6 +104,8 @@ function twinspirits_get_sibling_pages() {
 
   }
 }
+
+
 
 // add footer widget area
 function mytraining_widgets_init() {
