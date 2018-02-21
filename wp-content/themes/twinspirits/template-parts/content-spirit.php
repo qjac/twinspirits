@@ -18,6 +18,10 @@
 		<?php endif; ?>
 
 	<div class="entry-content">
+		
+		<!-- page-id-20 is 'Where To Buy' page-->
+		<a href="<?php echo get_page_link('20'); ?>" class="btn">Purchase</a>
+
 
 		<div class="proof">
 			<p><?php the_field('proof'); ?></p>
@@ -40,6 +44,8 @@
 		<div class="spirits-nav">
 		<?php $nav = twinspirits_get_sibling_pages(); ?>
 		<?php echo $nav['previous']; ?>
+		<span></span> 
+		<!-- empty element to force proper flexboxing when only one arrow is showing. definitely a hack. -->
 		<?php echo $nav['next']; ?>
 	</div>
 	</div><!-- .entry-content -->

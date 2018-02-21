@@ -6,6 +6,22 @@
 		text-align: center;
 	}
 
+	.entry-content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	a.btn {
+		margin-top: 0;
+		align-self: flex-end;
+		// float: right;
+
+		// &:after {
+		// 	content: ' ';
+		// 	clear: both;
+		// }
+	}
+
 	.proof > p {
 		font-family: $open-sans-condensed;
 		text-transform: uppercase;
@@ -14,24 +30,22 @@
 
 // spirits nav styles
 	.spirits-nav {
-		margin-top: 2.1538461538em; // to match parent theme .entry-footer top margin
+		margin: 1em 0; // to match parent theme .entry-footer top margin
 		font-family: $open-sans-condensed;
 		text-transform: uppercase;
 		font-size: 1.5em;
 		line-height: 1.25em;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 		}
 		.spirits-nav a {
+
 			color: $gold;
 			&:hover,
 			&:focus {
 				color: $purple;
 			}
-		}
-		.spirits-nav .nav-previous {
-			float: left;
-		}
-		.spirits-nav .nav-next {
-			float: right;
 		}
 		// end spirits nav styles
 	

@@ -50,6 +50,43 @@ a {
 }
 
 //============================
+// GENERAL COMPONENTS 
+//============================
+.btn {
+  display: inline-block;
+  min-width: 8em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: .5rem 1em;
+  font-family: $open-sans-condensed;
+  font-size: 1.25em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $gold;
+  background: white;
+  border-radius: .25em;
+  border: .1em solid $gold;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $gold;
+  }
+}
+.entry-content a.btn,
+ .entry-summary a.btn,
+ .taxonomy-description a.btn,
+ .logged-in-as a.btn,
+ .comment-content a.btn,
+ .pingback .comment-body > a.btn,
+ .textwidget a.btn,
+ .entry-footer a.btn:hover,
+  .site-info a.btn:hover {
+    box-shadow: none;
+  }
+
+
+//============================
 // GENERAL PAGE STYLES 
 //============================
 
@@ -59,6 +96,7 @@ body:not(.custom-background-image):before {
 .site {
 	margin: 0;
 	background: rgba(#ffffff, 0.9);
+  overflow: hidden;
 }
 .site-inner {
   max-width: 1800px;
@@ -72,31 +110,44 @@ body:not(.custom-background-image):before {
 }
 
 .site-main {
-    @extend %interior-narrower;
+    // @extend %interior-narrower;
   margin-bottom: rem(35px);
 }
 
 .entry-header,
 .entry-footer {
-  // @extend %interior-narrower;
+  @extend %interior-narrower;
+}
+.entry-footer {
+  // margin-top: 2rem;
 }
 
 // on page featured img styles
 .post-thumbnail {
   margin: 0;
+
 }
 
 // .no-sidebar .post-thumbnail img {
 //   margin: 0 auto;
 //   width: 100%;
 // }
-// body.home .post-thumbnail img {
-//   width: auto;
-// }
+
+.post-thumbnail img {
+  width: 115%;
+  max-width: 115%;
+  margin: 0 -7.5% 1rem;
+
+  @media screen and (min-width: $width-desktop) {
+    margin: 0 auto 1.5rem;
+    max-width: 100%;
+  } 
+}
 
 .entry-content {
-  // @extend %interior-narrower;
+  @extend %interior-narrower;
   margin-top: rem(35px);
+  margin-bottom: rem(35px);
 
   h2,
   h3,
@@ -128,7 +179,7 @@ body:not(.custom-background-image):before {
     border: none;
   }
 
-  h4 + h4 {
+  h4 {
     margin-top: .25em;
   }
   h4 + h4 > a {
@@ -138,18 +189,18 @@ body:not(.custom-background-image):before {
 // 
 // inline content images
 // 
-img,
+img, 
 .alignright,
 .alignleft,
 .aligncenter {
 	width: 115%;
 	max-width: 115%;
-	margin: 0 -7.5% 1rem;
+	margin: 0 -7.5% 1.5rem;
 }
 img,
 .aligncenter {
 	@media screen and (min-width: $width-desktop) {
-		margin: 0 auto 1rem;
+		margin: 0 auto 1.5rem;
 		width: 100%;
 	}	
 }
@@ -167,6 +218,13 @@ img,
 			margin-right: 1.75em;
   	}
 	}
+
+  // p > img,
+  // p > .alignright,
+  // p > .alignleft,
+  // p > .aligncenter {
+  //   margin-bottom: 0; // img wrapped in p tags will have bottom margin from p
+  // }
 } //end .entry-content
 
 // 

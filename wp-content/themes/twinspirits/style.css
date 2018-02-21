@@ -19,7 +19,9 @@ Base Styles
 Normalized styles, typography and base-level page/element styling.
 */
 
-.site-main,
+.entry-header,
+.entry-footer,
+.entry-content,
 .home .home-text-block h2,
 .home .home-title,
 .home .site-main > article {
@@ -67,6 +69,41 @@ a {
   color: #812b5d;
 }
 
+.btn {
+  display: inline-block;
+  min-width: 8em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: .5rem 1em;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.25em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #f4c416;
+  background: white;
+  border-radius: .25em;
+  border: 0.1em solid #f4c416;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background: #f4c416;
+}
+
+.entry-content a.btn,
+.entry-summary a.btn,
+.taxonomy-description a.btn,
+.logged-in-as a.btn,
+.comment-content a.btn,
+.pingback .comment-body > a.btn,
+.textwidget a.btn,
+.entry-footer a.btn:hover,
+.site-info a.btn:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 body:not(.custom-background-image):before {
   content: unset;
 }
@@ -74,6 +111,7 @@ body:not(.custom-background-image):before {
 .site {
   margin: 0;
   background: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
 }
 
 .site-inner {
@@ -92,8 +130,15 @@ body:not(.custom-background-image):before {
   margin: 0;
 }
 
+.post-thumbnail img {
+  width: 115%;
+  max-width: 115%;
+  margin: 0 -7.5% 1rem;
+}
+
 .entry-content {
   margin-top: 2.1875rem;
+  margin-bottom: 2.1875rem;
 }
 
 .entry-content h2,
@@ -128,7 +173,7 @@ body:not(.custom-background-image):before {
   border: none;
 }
 
-.entry-content h4 + h4 {
+.entry-content h4 {
   margin-top: .25em;
 }
 
@@ -138,7 +183,7 @@ body:not(.custom-background-image):before {
 .entry-content .aligncenter {
   width: 115%;
   max-width: 115%;
-  margin: 0 -7.5% 1rem;
+  margin: 0 -7.5% 1.5rem;
 }
 
 body:not(.page-template-default) .content-area {
@@ -489,12 +534,33 @@ h4.bp-title {
   margin-top: 0;
 }
 
+.entry-content .foogallery-default a {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 /* Weird stuff specific to certain pages or post type templates */
 
 /* Styles specific to SPIRITS individual and archive pages */
 
 .page-template-page-spirits h1.entry-title {
   text-align: center;
+}
+
+.page-template-page-spirits .entry-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.page-template-page-spirits a.btn {
+  margin-top: 0;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
 }
 
 .page-template-page-spirits .proof > p {
@@ -504,11 +570,21 @@ h4.bp-title {
 }
 
 .page-template-page-spirits .spirits-nav {
-  margin-top: 2.1538461538em;
+  margin: 1em 0;
   font-family: "Open Sans Condensed", sans-serif;
   text-transform: uppercase;
   font-size: 1.5em;
   line-height: 1.25em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .page-template-page-spirits .spirits-nav a {
@@ -518,14 +594,6 @@ h4.bp-title {
 .page-template-page-spirits .spirits-nav a:hover,
 .page-template-page-spirits .spirits-nav a:focus {
   color: #812b5d;
-}
-
-.page-template-page-spirits .spirits-nav .nav-previous {
-  float: left;
-}
-
-.page-template-page-spirits .spirits-nav .nav-next {
-  float: right;
 }
 
 .page-template-page-spirits.page-id-57 .entry-header h1,
@@ -640,9 +708,14 @@ h4.bp-title {
 }
 
 @media screen and (min-width: 56.875em) {
+  .post-thumbnail img {
+    margin: 0 auto 1.5rem;
+    max-width: 100%;
+  }
+
   .entry-content img,
   .entry-content .aligncenter {
-    margin: 0 auto 1rem;
+    margin: 0 auto 1.5rem;
     width: 100%;
   }
 
