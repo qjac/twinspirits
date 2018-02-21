@@ -18,6 +18,10 @@
 		<?php endif; ?>
 
 	<div class="entry-content">
+
+		<div class="proof">
+			<p><?php the_field('proof'); ?></p>
+		</div>
 		<?php
 		the_content();
 
@@ -30,14 +34,18 @@
 			'separator'   => '<span class="screen-reader-text">, </span>',
 		) );
 		?>
-	</div><!-- .entry-content -->
 
-	<!-- spirits nav -->
-	<div class="spirits-nav">
+
+<!-- spirits nav -->
+		<div class="spirits-nav">
 		<?php $nav = twinspirits_get_sibling_pages(); ?>
 		<?php echo $nav['previous']; ?>
 		<?php echo $nav['next']; ?>
 	</div>
+	</div><!-- .entry-content -->
+
+	
+
 
 	<?php
 		edit_post_link(

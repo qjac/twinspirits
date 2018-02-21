@@ -1,5 +1,72 @@
 /* Styles specific to SPIRITS individual and archive pages */
 
-.spirits-nav {
-	margin-top: 2.1538461538em; // to match parent theme .entry-footer top margin
-}
+.page-template-page-spirits {
+
+	h1.entry-title {
+		text-align: center;
+	}
+
+	.proof > p {
+		font-family: $open-sans-condensed;
+		text-transform: uppercase;
+		margin-bottom: 0.5rem;
+	}
+
+// spirits nav styles
+	.spirits-nav {
+		margin-top: 2.1538461538em; // to match parent theme .entry-footer top margin
+		font-family: $open-sans-condensed;
+		text-transform: uppercase;
+		font-size: 1.5em;
+		line-height: 1.25em;
+		}
+		.spirits-nav a {
+			color: $gold;
+			&:hover,
+			&:focus {
+				color: $purple;
+			}
+		}
+		.spirits-nav .nav-previous {
+			float: left;
+		}
+		.spirits-nav .nav-next {
+			float: right;
+		}
+		// end spirits nav styles
+	
+
+// Every spirit is a special flower with its own header color.
+// Fallback is the standard TSD red.
+
+	&.page-id-57 {
+	  .entry-header h1,
+	  .proof p {
+	    color: #d1308a; // Vodka
+	  }
+	}
+	&.page-id-82 {
+	  .entry-header h1,
+	  .proof p {
+	    color: #73db49; // Gin
+	  }
+	}
+	&.page-id-84 {
+	  .entry-header h1,
+	  .proof p {
+	    color: #00b5dd; // Rum
+	  }
+	}
+	&.page-id-86 {
+	  .entry-header h1,
+	  .proof p {
+	    color: #ff4d63; // Whiskey
+	  }
+	}
+	&.page-id-88 {
+	  .entry-header h1,
+	  .proof p {
+	    color: #262362; // Moonshine
+	  }
+	}
+} //end .page-template-page-spirits

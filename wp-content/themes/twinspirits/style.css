@@ -493,8 +493,64 @@ h4.bp-title {
 
 /* Styles specific to SPIRITS individual and archive pages */
 
-.spirits-nav {
+.page-template-page-spirits h1.entry-title {
+  text-align: center;
+}
+
+.page-template-page-spirits .proof > p {
+  font-family: "Open Sans Condensed", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.page-template-page-spirits .spirits-nav {
   margin-top: 2.1538461538em;
+  font-family: "Open Sans Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  line-height: 1.25em;
+}
+
+.page-template-page-spirits .spirits-nav a {
+  color: #f4c416;
+}
+
+.page-template-page-spirits .spirits-nav a:hover,
+.page-template-page-spirits .spirits-nav a:focus {
+  color: #812b5d;
+}
+
+.page-template-page-spirits .spirits-nav .nav-previous {
+  float: left;
+}
+
+.page-template-page-spirits .spirits-nav .nav-next {
+  float: right;
+}
+
+.page-template-page-spirits.page-id-57 .entry-header h1,
+.page-template-page-spirits.page-id-57 .proof p {
+  color: #d1308a;
+}
+
+.page-template-page-spirits.page-id-82 .entry-header h1,
+.page-template-page-spirits.page-id-82 .proof p {
+  color: #73db49;
+}
+
+.page-template-page-spirits.page-id-84 .entry-header h1,
+.page-template-page-spirits.page-id-84 .proof p {
+  color: #00b5dd;
+}
+
+.page-template-page-spirits.page-id-86 .entry-header h1,
+.page-template-page-spirits.page-id-86 .proof p {
+  color: #ff4d63;
+}
+
+.page-template-page-spirits.page-id-88 .entry-header h1,
+.page-template-page-spirits.page-id-88 .proof p {
+  color: #262362;
 }
 
 .home {
