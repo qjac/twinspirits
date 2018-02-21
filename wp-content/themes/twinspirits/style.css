@@ -19,10 +19,19 @@ Base Styles
 Normalized styles, typography and base-level page/element styling.
 */
 
-.site-main {
+.site-main,
+.home .home-text-block h2,
+.home .home-title,
+.home .site-main > article {
   max-width: 75em;
   padding: 0 5%;
   margin: 0 auto;
+}
+
+.entry-content h4 + h4 > a,
+.home h4 > a {
+  color: #f4c416;
+  font-size: 1.25rem;
 }
 
 body {
@@ -31,15 +40,27 @@ body {
 }
 
 h1,
+h1.entry-title,
 h2,
 h3,
 h4,
 h5,
 h6 {
   font-family: "Open Sans", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   color: #d14f53;
-  margin: 1em auto;
+  margin: 1em auto .25em;
+}
+
+h1,
+h1.entry-title,
+h4 {
+  text-transform: uppercase;
+}
+
+h1,
+h1.entry-title {
+  margin-bottom: 1em;
 }
 
 a {
@@ -67,16 +88,20 @@ body:not(.custom-background-image):before {
   margin-bottom: 2.1875rem;
 }
 
-.entry-header h1 {
-  text-transform: uppercase;
-}
-
 .post-thumbnail {
   margin: 0;
 }
 
 .entry-content {
   margin-top: 2.1875rem;
+}
+
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+  margin-bottom: 0;
 }
 
 .entry-content p,
@@ -95,20 +120,16 @@ body:not(.custom-background-image):before {
 .entry-content blockquote,
 .entry-content blockquote p {
   color: #d14f53;
-  font-family: "Roboto Slab", serif;
+  font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 0.131578947em;
   font-size: 1.25rem;
   font-weight: bold;
   font-style: normal;
   border: none;
 }
 
-.entry-content h4 ~ h4 {
-  margin-top: 0;
-  margin-bottom: .75em;
-}
-
-.entry-content h4 + h4 > a {
-  color: #f4c416;
+.entry-content h4 + h4 {
+  margin-top: .25em;
 }
 
 .entry-content img,
@@ -238,7 +259,7 @@ footer.site-footer p.copyright {
 
 .site-header {
   width: 100%;
-  padding: 0 0 2rem;
+  padding: 0;
 }
 
 .site-header-main {
@@ -468,6 +489,92 @@ h4.bp-title {
 
 /* Weird stuff specific to certain pages or post type templates */
 
+.home {
+  font-size: 1.1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.home .home-title {
+  text-align: center;
+  line-height: 2.25em;
+}
+
+.home h4 {
+  letter-spacing: 0.131578947em;
+}
+
+.home h4 > a {
+  text-decoration: underline;
+}
+
+.home p + h4 {
+  margin-top: -1.5em;
+}
+
+.home .home-text-block h2 {
+  margin: 1rem 0 0.5rem;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.131578947em;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.1em;
+  text-shadow: -1px 3px 5px rgba(59, 59, 65, 0.6);
+}
+
+.home h4.bp-title {
+  margin-top: 0 !important;
+}
+
+.home address.bp-contact-card {
+  margin: 0 !important;
+}
+
+.home .site-main {
+  max-width: 100%;
+  padding: 0;
+}
+
+.home div[class^="home-block-"] {
+  min-height: 30rem;
+  background: no-repeat center center fixed;
+  background-size: cover;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.home div.home-block-two {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.home .home-text-block {
+  width: 100%;
+}
+
+.home .home-text-block > .home-text-body {
+  padding: 1rem 5%;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.home .home-text-body > * {
+  margin: 0;
+  padding: 0;
+}
+
 @media screen and (min-width: 56.875em) {
   .entry-content img,
   .entry-content .aligncenter {
@@ -525,6 +632,20 @@ h4.bp-title {
     left: -50%;
     right: -50%;
     top: 100%;
+  }
+
+  .home .home-text-block {
+    width: 50%;
+  }
+
+  .home .home-text-block > * {
+    padding-right: 10%;
+    padding-left: 1em;
+  }
+
+  .home div.home-block-two > .home-text-block > * {
+    padding-left: 10%;
+    padding-right: 1em;
   }
 }
 
