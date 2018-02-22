@@ -21,7 +21,9 @@
 		
 		<!-- page-id-20 is 'Where To Buy' page-->
 		<a href="<?php echo get_page_link('20'); ?>" class="btn">Purchase</a>
-
+		<div>
+		<!-- duplcate name on spirits pack to hack the placement. -->
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="proof">
 			<p><?php the_field('proof'); ?></p>
@@ -38,6 +40,7 @@
 			'separator'   => '<span class="screen-reader-text">, </span>',
 		) );
 		?>
+		</div>
 
 
 <!-- spirits nav -->

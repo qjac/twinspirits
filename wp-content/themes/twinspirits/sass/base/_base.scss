@@ -110,7 +110,6 @@ body:not(.custom-background-image):before {
 }
 
 .site-main {
-    // @extend %interior-narrower;
   margin-bottom: rem(35px);
 }
 
@@ -118,20 +117,11 @@ body:not(.custom-background-image):before {
 .entry-footer {
   @extend %interior-narrower;
 }
-.entry-footer {
-  // margin-top: 2rem;
-}
 
 // on page featured img styles
 .post-thumbnail {
   margin: 0;
-
 }
-
-// .no-sidebar .post-thumbnail img {
-//   margin: 0 auto;
-//   width: 100%;
-// }
 
 .post-thumbnail img {
   width: 115%;
@@ -143,7 +133,9 @@ body:not(.custom-background-image):before {
     max-width: 100%;
   } 
 }
-
+.entry-header {
+  margin-top: rem(35px);
+}
 .entry-content {
   @extend %interior-narrower;
   margin-top: rem(35px);
@@ -156,18 +148,15 @@ body:not(.custom-background-image):before {
   h6 {
     margin-bottom: 0;
   }
-
   p, ul li, span {
     font-family: $source-serif;
     font-size: rem(18px);
     line-height: rem(32px);
     color: $gray-text;
   }
-
-  ul {
+ ul {
     padding: 0 2em;
   }
-
   blockquote, 
   blockquote p {
     color: $red;
@@ -178,7 +167,6 @@ body:not(.custom-background-image):before {
     font-style: normal;
     border: none;
   }
-
   h4 {
     margin-top: .25em;
   }
@@ -218,24 +206,15 @@ img,
 			margin-right: 1.75em;
   	}
 	}
-
-  // p > img,
-  // p > .alignright,
-  // p > .alignleft,
-  // p > .aligncenter {
-  //   margin-bottom: 0; // img wrapped in p tags will have bottom margin from p
-  // }
 } //end .entry-content
+
 
 // 
 //  TEMPLATE STYLES
 // 
-// for templates with noe sidebar (full-width, spirits, and Home)
-body:not(.page-template-default) .content-area {
-  float: none;
+// for templates with no sidebar (full-width, spirits, and Home)
+  body:not(.page-template-default) .content-area {
+    float: none;
     margin-right: unset;
     width: unset
-  // .entry-content {
-  //     @extend %interior-narrower;
-  // }
-}
+  }

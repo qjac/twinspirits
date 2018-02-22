@@ -2,31 +2,85 @@
 
 .page-template-page-spirits {
 
-	h1.entry-title {
-		text-align: center;
+	article {
+		@media screen and (min-width: $width-desktop) {
+			display: grid;
+			grid: auto / 1fr 40% 40% 1fr;
+			grid-gap: 2%;
+			justify-items: center;
+			align-items: stretch;
+			justify-content: stretch;
+			align-content: stretch;
+		}
 	}
 
-	.entry-content {
+	.entry-header {
+		@media screen and (min-width: $width-desktop) {
+			padding: 0;
+			grid-column: 2 / 3;
+			justify-self: stretch;
+			align-self: stretch;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+		}
+	}
+	.entry-content	 {
+		max-width: 50em;
+		margin: inherit auto;
 		display: flex;
 		flex-direction: column;
+		@media screen and (min-width: $width-desktop) {
+			padding: 0;
+			grid-column: 3 / 4;
+			justify-content: space-between;
+		}
+	}
+	.entry-footer {
+		@media screen and (min-width: $width-desktop) {
+			grid-column: 2 / 4;
+			margin-left: 0;
+		}
+	}
+
+	h1.entry-title {
+		text-align: center;
+		@media screen and (min-width: $width-desktop) {
+			text-align: left;
+			margin-left: 0;
+		}
+	}
+// let's deal with that double title
+	.entry-header h1.entry-title {
+		@media screen and (min-width: $width-desktop) {
+			display: none;
+		}
+	}
+	.entry-content h1.entry-title {
+		display: none;
+		@media screen and (min-width: $width-desktop) {
+			display: block;
+		}
+	}
+
+	.post-thumbnail img {
+		@media screen and (min-width: $width-desktop) {
+			object-fit: fill;
+		}
 	}
 
 	a.btn {
 		margin-top: 0;
 		align-self: flex-end;
-		// float: right;
-
-		// &:after {
-		// 	content: ' ';
-		// 	clear: both;
-		// }
 	}
 
+// typography
 	.proof > p {
 		font-family: $open-sans-condensed;
 		text-transform: uppercase;
 		margin-bottom: 0.5rem;
 	}
+
 
 // spirits nav styles
 	.spirits-nav {
@@ -40,7 +94,6 @@
 		justify-content: space-between;
 		}
 		.spirits-nav a {
-
 			color: $gold;
 			&:hover,
 			&:focus {
@@ -54,31 +107,31 @@
 // Fallback is the standard TSD red.
 
 	&.page-id-57 {
-	  .entry-header h1,
+		h1.entry-title,
 	  .proof p {
 	    color: #d1308a; // Vodka
 	  }
 	}
 	&.page-id-82 {
-	  .entry-header h1,
+	  h1.entry-title,
 	  .proof p {
 	    color: #73db49; // Gin
 	  }
 	}
 	&.page-id-84 {
-	  .entry-header h1,
+		h1.entry-title,
 	  .proof p {
 	    color: #00b5dd; // Rum
 	  }
 	}
 	&.page-id-86 {
-	  .entry-header h1,
+	  h1.entry-title,
 	  .proof p {
 	    color: #ff4d63; // Whiskey
 	  }
 	}
 	&.page-id-88 {
-	  .entry-header h1,
+		h1.entry-title,
 	  .proof p {
 	    color: #262362; // Moonshine
 	  }
