@@ -9,22 +9,34 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
+	<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
+		<header class="entry-header">
 			<span class="sticky-post"><?php _e( 'Featured', 'twentysixteen' ); ?></span>
-		<?php endif; ?>
 	</header><!-- .entry-header -->
+	<?php endif; ?>
 
 	
 	<?php twentysixteen_post_thumbnail(); ?>
 
 
 	<div class="entry-content">
+
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 		<?php twentysixteen_excerpt(); ?>
 		<?php
+		// for grabbing staff title on team page
 			if(get_field('title'))
-			{ echo '<h3>' . get_field('title') . '</h3>'; }
+			{ echo '<h3 class="team-title">' . get_field('title') . '</h3>'; }
+			?>
+
+			<?php
+			// for grabbing recipe ingredients on recipe pages
+			if(get_field('ingredients'))
+			{ echo '<div class="recipe-ingredients">' . get_field('ingredients') . '</div>'; }
+
+			// for grabbing recipe instructions on recipe pages
+			if(get_field('instructions'))
+			{ echo '<div class="recipe-instructions">' . get_field('instructions') . '</div>'; }
 			?>
 		<?php
 			/* translators: %s: Name of current post */

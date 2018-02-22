@@ -8,3 +8,56 @@
 
 }
 // end .archive
+
+// 
+// General Archive styles
+// 
+.archive {
+	.site-main {
+		  @extend %interior-narrower;
+	}
+
+
+}
+// end .archive
+
+// 
+// Recipe Archive pages
+// 
+.archive.tax-recipe_spirit,
+.post-type-archive-recipes {
+	// article is the 'card'
+		article {
+			max-width: 40em;
+			background-color: #ffffff;
+			border-radius: 1em;
+			overflow: hidden;
+			margin-bottom: 2rem;
+			padding-bottom: 1rem;
+
+			.post-thumbnail {
+				padding: 0;
+			}
+			.entry-title {
+				margin-top: 2rem;
+			}
+			.entry-title > a {
+				box-shadow: none;
+				font-family: $open-sans-condensed;
+			}
+			p {
+				line-height: 1.25em;
+			}
+			p:not(:last-child) {
+			margin-bottom: .5rem; 
+		}
+		.recipe-ingredients p {
+			font-weight: 700;
+		}
+		
+
+
+
+	} // end article styles
+}
+// end .archive

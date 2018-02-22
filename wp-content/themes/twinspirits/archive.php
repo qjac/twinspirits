@@ -25,7 +25,16 @@ get_header(); ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
+
+		 if (is_tax( 'recipe_spirit' )) : 
+				the_archive_title( '<h1 class="page-title">', ' Recipes</h1>' );
+			else : 
+				the_archive_title( '<h1 class="page-title">', '</h1>' );
+			endif; ?>
+
+<!--  -->
+<?php
+					
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->

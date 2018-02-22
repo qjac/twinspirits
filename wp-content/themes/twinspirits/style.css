@@ -26,6 +26,7 @@ Normalized styles, typography and base-level page/element styling.
 .entry-footer,
 article:not(.type-page) .post-thumbnail,
 .entry-content,
+.archive .site-main,
 .home .home-text-block h2,
 .home .home-title,
 .home .site-main > article {
@@ -41,12 +42,15 @@ article:not(.type-page) .post-thumbnail,
 }
 
 body {
-  font-family: "Source Serif Pro", serif;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
   color: #3b3b41;
 }
 
 h1,
 h1.entry-title,
+.page-title,
+.entry-title,
 h2,
 h3,
 h4,
@@ -55,7 +59,6 @@ h6 {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   color: #d14f53;
-  margin: 1em auto .25em;
 }
 
 h1,
@@ -68,11 +71,12 @@ h4 {
 h1,
 h1.entry-title,
 h2.entry-title {
-  margin-bottom: 1em;
+  margin-bottom: 2rem;
 }
 
 h1.page-title {
   font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 h2.entry-title {
@@ -143,7 +147,6 @@ body:not(.custom-background-image):before {
 }
 
 .page-header {
-  margin-top: 4rem;
   border-top: 0;
 }
 
@@ -163,7 +166,7 @@ body:not(.custom-background-image):before {
 }
 
 .site-main {
-  margin-bottom: 2.1875rem;
+  margin-bottom: 2rem;
 }
 
 .site-main > section {
@@ -184,27 +187,9 @@ article:not(.type-page) .post-thumbnail img {
   width: 100%;
 }
 
-.entry-header {
-  margin-top: 2.1875rem;
-}
-
-.entry-content {
-  margin-top: 2.1875rem;
-  margin-bottom: 2.1875rem;
-}
-
-.entry-content h2,
-.entry-content h3,
-.entry-content h4,
-.entry-content h5,
-.entry-content h6 {
-  margin-bottom: 0;
-}
-
 .entry-content p,
 .entry-content ul li,
 .entry-content span {
-  font-family: "Source Serif Pro", serif;
   font-size: 1.125rem;
   line-height: 2rem;
   color: #3b3b41;
@@ -225,8 +210,8 @@ article:not(.type-page) .post-thumbnail img {
   border: none;
 }
 
-.entry-content h4 {
-  margin-top: .25em;
+.entry-content h4 + h4 {
+  margin-top: -0.5em;
 }
 
 .entry-content img,
@@ -368,6 +353,7 @@ footer.site-footer p.copyright {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 .site-header-main .site-branding {
@@ -618,11 +604,9 @@ h4.bp-title {
 .page-template-page-spirits .proof > p {
   font-family: "Open Sans Condensed", sans-serif;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
 }
 
 .page-template-page-spirits .spirits-nav {
-  margin: 1em 0;
   font-family: "Open Sans Condensed", sans-serif;
   text-transform: uppercase;
   font-size: 1.5em;
@@ -671,6 +655,48 @@ h4.bp-title {
 .page-template-page-spirits.page-id-88 h1.entry-title,
 .page-template-page-spirits.page-id-88 .proof p {
   color: #262362;
+}
+
+.archive.tax-recipe_spirit article,
+.post-type-archive-recipes article {
+  max-width: 40em;
+  background-color: #ffffff;
+  border-radius: 1em;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.archive.tax-recipe_spirit article .post-thumbnail,
+.post-type-archive-recipes article .post-thumbnail {
+  padding: 0;
+}
+
+.archive.tax-recipe_spirit article .entry-title,
+.post-type-archive-recipes article .entry-title {
+  margin-top: 2rem;
+}
+
+.archive.tax-recipe_spirit article .entry-title > a,
+.post-type-archive-recipes article .entry-title > a {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.archive.tax-recipe_spirit article p,
+.post-type-archive-recipes article p {
+  line-height: 1.25em;
+}
+
+.archive.tax-recipe_spirit article p:not(:last-child),
+.post-type-archive-recipes article p:not(:last-child) {
+  margin-bottom: .5rem;
+}
+
+.archive.tax-recipe_spirit article .recipe-ingredients p,
+.post-type-archive-recipes article .recipe-ingredients p {
+  font-weight: 700;
 }
 
 .home {
