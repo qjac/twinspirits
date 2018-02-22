@@ -34,16 +34,33 @@ h6 {
   margin: 1em auto .25em;
 }
 
-h1, 
+h1,
+
 h1.entry-title,
+h2.entry-title,
 h4 {
   text-transform: uppercase;
 }
 
 h1,
-h1.entry-title {
+h1.entry-title,
+h2.entry-title, {
   margin-bottom: 1em;
 }
+
+  h1.page-title {
+    font-size: 2.5rem;
+  }
+  h2.entry-title {
+    font-size: 1.5rem;
+  }
+  h2.entry-title a {
+    color: $red;
+    &:hover,
+    &:focus {
+      color: $gold;
+    }
+  }
 
 a {
   color: $purple;
@@ -105,6 +122,12 @@ a {
 body:not(.custom-background-image):before {
 	content: unset; // removes extra space at top of page before nav bar/header
 }
+
+.page-header {
+  @extend %interior-narrower;
+  margin-top: 4rem;
+  border-top: 0;
+}
 .site {
 	margin: 0;
 	background: rgba(#ffffff, 0.9);
@@ -158,7 +181,6 @@ article:not(.type-page) .post-thumbnail {
 }
 article:not(.type-page) .post-thumbnail img {
   width: 100%;
-  // margin: 0 auto;
 }
 
 .entry-header {

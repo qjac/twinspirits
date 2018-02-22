@@ -19,6 +19,7 @@ Base Styles
 Normalized styles, typography and base-level page/element styling.
 */
 
+.page-header,
 .site-main + aside,
 .site-main > section,
 .entry-header,
@@ -59,13 +60,32 @@ h6 {
 
 h1,
 h1.entry-title,
+h2.entry-title,
 h4 {
   text-transform: uppercase;
 }
 
 h1,
-h1.entry-title {
+h1.entry-title,
+h2.entry-title {
   margin-bottom: 1em;
+}
+
+h1.page-title {
+  font-size: 2.5rem;
+}
+
+h2.entry-title {
+  font-size: 1.5rem;
+}
+
+h2.entry-title a {
+  color: #d14f53;
+}
+
+h2.entry-title a:hover,
+h2.entry-title a:focus {
+  color: #f4c416;
 }
 
 a {
@@ -120,6 +140,11 @@ body:not(.search-results) article:not(.type-page) .entry-content {
 
 body:not(.custom-background-image):before {
   content: unset;
+}
+
+.page-header {
+  margin-top: 4rem;
+  border-top: 0;
 }
 
 .site {
