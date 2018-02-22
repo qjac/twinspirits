@@ -2,7 +2,7 @@
 /**
  * Template Name: Spirits
  *
- * All this does is add a class to #primary.
+ * All this does is add a class to #primary and pull in modified content loop.
  *
  * @package WordPress
  * @subpackage twinspirits
@@ -27,8 +27,6 @@ get_header(); ?>
 		?>
 
 	</main><!-- .site-main -->
-
-	<?php get_sidebar( 'content-bottom' ); ?>
 
 </div><!-- .content-area -->
 

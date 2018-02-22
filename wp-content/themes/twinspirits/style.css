@@ -19,8 +19,11 @@ Base Styles
 Normalized styles, typography and base-level page/element styling.
 */
 
+.site-main + aside,
+.site-main > section,
 .entry-header,
 .entry-footer,
+article:not(.type-page) .post-thumbnail,
 .entry-content,
 .home .home-text-block h2,
 .home .home-title,
@@ -104,6 +107,17 @@ a {
   box-shadow: none;
 }
 
+body .content-area {
+  float: none;
+  margin-right: unset;
+  width: unset;
+}
+
+body:not(.search-results) article:not(.type-page) .entry-content {
+  float: none;
+  width: unset;
+}
+
 body:not(.custom-background-image):before {
   content: unset;
 }
@@ -116,6 +130,7 @@ body:not(.custom-background-image):before {
 
 .site-inner {
   max-width: 1800px;
+  margin: 0 auto;
 }
 
 .site-content {
@@ -126,14 +141,22 @@ body:not(.custom-background-image):before {
   margin-bottom: 2.1875rem;
 }
 
-.post-thumbnail {
+.site-main > section {
+  padding-top: 2rem;
+}
+
+article.type-page .post-thumbnail {
   margin: 0;
 }
 
-.post-thumbnail img {
+article.type-page .post-thumbnail img {
   width: 115%;
   max-width: 115%;
   margin: 0 -7.5% 1rem;
+}
+
+article:not(.type-page) .post-thumbnail img {
+  width: 100%;
 }
 
 .entry-header {
@@ -188,12 +211,6 @@ body:not(.custom-background-image):before {
   width: 115%;
   max-width: 115%;
   margin: 0 -7.5% 1.5rem;
-}
-
-body:not(.page-template-default) .content-area {
-  float: none;
-  margin-right: unset;
-  width: unset;
 }
 
 footer.site-footer {
@@ -718,7 +735,7 @@ h4.bp-title {
 }
 
 @media screen and (min-width: 56.875em) {
-  .post-thumbnail img {
+  article.type-page .post-thumbnail img {
     margin: 0 auto 1.5rem;
     max-width: 100%;
   }

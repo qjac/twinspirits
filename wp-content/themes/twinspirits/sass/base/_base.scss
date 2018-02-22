@@ -90,6 +90,18 @@ a {
 // GENERAL PAGE STYLES 
 //============================
 
+// ditch the sidebar by default
+  body .content-area {
+    float: none;
+    margin-right: unset;
+    width: unset
+  }
+
+  body:not(.search-results) article:not(.type-page) .entry-content {
+    float: none;
+    width: unset;
+  }
+
 body:not(.custom-background-image):before {
 	content: unset; // removes extra space at top of page before nav bar/header
 }
@@ -100,6 +112,7 @@ body:not(.custom-background-image):before {
 }
 .site-inner {
   max-width: 1800px;
+  margin: 0 auto;
 }
 
 // 
@@ -112,18 +125,23 @@ body:not(.custom-background-image):before {
 .site-main {
   margin-bottom: rem(35px);
 }
-
+.site-main + aside,
+.site-main > section,
 .entry-header,
 .entry-footer {
   @extend %interior-narrower;
 }
 
+.site-main > section {
+  padding-top: 2rem;
+}
+
 // on page featured img styles
-.post-thumbnail {
+ article.type-page .post-thumbnail {
   margin: 0;
 }
 
-.post-thumbnail img {
+article.type-page .post-thumbnail img {
   width: 115%;
   max-width: 115%;
   margin: 0 -7.5% 1rem;
@@ -133,6 +151,16 @@ body:not(.custom-background-image):before {
     max-width: 100%;
   } 
 }
+
+article:not(.type-page) .post-thumbnail {
+  @extend %interior-narrower;
+
+}
+article:not(.type-page) .post-thumbnail img {
+  width: 100%;
+  // margin: 0 auto;
+}
+
 .entry-header {
   margin-top: rem(35px);
 }
@@ -207,14 +235,3 @@ img,
   	}
 	}
 } //end .entry-content
-
-
-// 
-//  TEMPLATE STYLES
-// 
-// for templates with no sidebar (full-width, spirits, and Home)
-  body:not(.page-template-default) .content-area {
-    float: none;
-    margin-right: unset;
-    width: unset
-  }

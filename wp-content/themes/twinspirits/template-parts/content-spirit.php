@@ -42,7 +42,6 @@
 		?>
 		</div>
 
-
 <!-- spirits nav -->
 		<div class="spirits-nav">
 		<?php $nav = twinspirits_get_sibling_pages(); ?>
@@ -52,9 +51,6 @@
 		<?php echo $nav['next']; ?>
 	</div>
 	</div><!-- .entry-content -->
-
-	
-
 
 	<?php
 		edit_post_link(

@@ -129,4 +129,10 @@ function mytraining_widgets_init() {
     'after_title' => '</h4>', ) );
 }
 add_action( 'widgets_init', 'mytraining_widgets_init' );
+
+// unregister sidebar
+function remove_some_widgets(){
+  unregister_sidebar( 'sidebar-1' );
+}
+add_action( 'widgets_init', 'remove_some_widgets', 11 );
 ?>
