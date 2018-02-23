@@ -181,4 +181,29 @@ add_filter('get_the_archive_title', function ($title) {
     }
     return $title;
 });
+
+// add custom post types to search
+function search_filter($query) {
+  if ( !is_admin() && $query->is_main_query() ) {
+    if ($query->is_search) {
+      $query->set('post_type', array( 'post', 'team', 'recipes' ) );
+    }
+  }
+}
+add_action('pre_get_posts','search_filter');
+
+// set team cpt to sort by oldest first
+function wpex_order_category( $query ) {
+  // exit out if it's the admin or it isn't the main query
+  if ( is_admin() || ! $query->is_main_query() ) {
+    return;
+  }
+  // order category archives by title in ascending order
+  if ( is_post_type_archive( 'team' ) ) {
+    $query->set( 'order' , 'asc' );
+    $query->set( 'orderby', 'menu_order');
+    return;
+  }
+}
+add_action( 'pre_get_posts', 'wpex_order_category', 1 );
 ?>
