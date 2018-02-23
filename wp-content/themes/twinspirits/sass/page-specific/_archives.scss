@@ -26,17 +26,36 @@
 // 
 .archive.tax-recipe_spirit,
 .post-type-archive-recipes {
+
+	.article-box {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-content: stretch;
+
+	}
 	// article is the 'card'
-		article {
-			max-width: 40em;
+		 article.recipes {
+			width: 100%;
 			background-color: #ffffff;
 			border-radius: 1em;
 			overflow: hidden;
 			margin-bottom: 2rem;
 			padding-bottom: 1rem;
 
+			@media screen and (min-width: $width-desktop) {
+				max-width: 50%;
+				flex: 1 1 45%;
+				margin-right: 1rem;
+				margin-left:1rem;
+
+			}
+
 			.post-thumbnail {
 				padding: 0;
+			}
+			.post-thumbnail img {
+				width: 100%;
 			}
 			.entry-title {
 				margin-top: 2rem;
