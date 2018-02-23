@@ -1,0 +1,142 @@
+.site-header {
+  width: 100%;
+  padding: 0;
+}
+  .site-header-main {
+  background: $gray-bg;
+  min-height: 130px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.site-header-main .site-branding {
+  margin: 30px 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+// Mobile nav only.
+.menu-toggle {
+  box-sizing: border-box;
+  color: white;
+  margin: auto 0;
+  position: absolute;
+  top: calc(130px / 2); // 130px is set height of top nav bar
+  right: 5%;
+  transform: translateY(-50%);
+
+  &:hover, &:focus {
+    color: $red;
+    border-color: white;
+  }
+}
+.menu-toggle.toggled-on, .menu-toggle.toggled-on:hover, .menu-toggle.toggled-on:focus {
+  color: $red;
+  background: $gray-bg;
+  border-color: $red;
+}
+.dropdown-toggle {
+  color: white;
+  &:hover, &:focus, &:active {
+    color: $red;
+  }
+}
+
+// All menus. Desktop only styles in media query.
+#site-header-menu {
+  @media screen and (max-width: $width-desktop) {
+    margin: 0;
+  }
+
+  .main-navigation {
+    font-family: $open-sans-condensed;
+    font-size: 1.1rem;
+    text-align: center;
+    margin: unset;
+  }
+
+  .main-navigation a {
+    color: white;
+    text-transform: uppercase;
+    transition: all .4s ease;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    white-space: normal;
+
+    &:hover, &:focus {
+      color: $red;
+    }
+    &:after {
+      // normalize
+      content: "";
+      position: relative;
+      top: 0;
+    }
+  }
+
+  .main-navigation .menu-item-has-children > a {
+    margin-right: 0; // to keep li's centered in mobile nav
+  }
+
+  .main-navigation .primary-menu > li {
+    color: white;
+
+    @media screen and (min-width: $width-desktop) {
+      padding: 0 18px;
+    }
+  }
+  //end .main-navigation .primary-menu > li
+
+  .main-navigation .primary-menu .sub-menu {
+    background: rgba(255, 255, 255, .75);
+    margin: 0;
+    border-bottom: 0;
+
+    a {
+      color: $gray-bg;
+
+      &:hover,
+      &:focus {
+        color: $red;
+      }
+    }
+
+    .current-menu-item {
+      a,
+      a:hover,
+      a:focus {
+        color: $red;
+      }
+    }
+  }
+  //end .main-navigation .primary-menu .sub-menu
+
+  .main-navigation .primary-menu > li:hover > ul,
+  .main-navigation .primary-menu > li:focus > ul {
+    @media screen and (min-width: $width-desktop) {
+      left: -50%;
+      right: -50%;
+      top: 100%;
+    }
+  }
+
+  .main-navigation .primary-menu .sub-menu li {
+    border: none;
+    background-color: transparent;
+  }
+
+  // Removes carrot from parent theme.
+  .main-navigation ul ul::before,
+  .main-navigation ul ul::after {
+    border-style: none;
+  }
+
+  .main-navigation ul ul a {
+    width: 100%;
+  }
+}

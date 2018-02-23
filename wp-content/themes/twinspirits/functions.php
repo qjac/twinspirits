@@ -6,6 +6,12 @@ function theme_enqueue_styles() {
   wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 }
 
+// add another nav menu
+function wpb_custom_new_menu() {
+  register_nav_menu('footer',__( 'Footer Menu' ));
+}
+add_action( 'init', 'wpb_custom_new_menu' );
+  
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
  * for post thumbnails
@@ -86,11 +92,12 @@ function twinspirits_get_sibling_pages() {
       if ($pageID && $pageID !== $post->ID) {
         if ($label == 'previous') {
           $direction = 'left';
+          $nav[$label] = '<a class="nav-'. $label .'" href="' . get_permalink($pageID) . '" title="'. $label .'"><i class="fa fa-chevron-'. $direction .'" aria-hidden="true"></i>&nbsp;' . get_the_title($pageID) . '</a>';
         }
         else {
           $direction = 'right';
+          $nav[$label] = '<a class="nav-'. $label .'" href="' . get_permalink($pageID) . '" title="'. $label .'">' . get_the_title($pageID) . '&nbsp;<i class="fa fa-chevron-'. $direction .'" aria-hidden="true"></i></a>';
         }
-        $nav[$label] = '<a class="nav-'. $label .'" href="' . get_permalink($pageID) . '" title="'. $label .'"><i class="fa fa-chevron-'. $direction .'" aria-hidden="true"></i></a>';
       }
     }
 
@@ -98,3 +105,105 @@ function twinspirits_get_sibling_pages() {
 
   }
 }
+
+
+// add footer widget area
+function mytraining_widgets_init() {
+  register_sidebar( array(
+    'name' => 'Footer 1',
+    'id' => 'footer-one',
+    'before_widget' => '
+',
+    'after_widget' => '
+', 
+    'before_title' => '<h4>', 
+    'after_title' => '</h4>', ) );
+  register_sidebar( array(
+    'name' => 'Footer 2',
+    'id' => 'footer-two',
+    'before_widget' => '
+',
+    'after_widget' => '
+', 
+    'before_title' => '<h4>', 
+    'after_title' => '</h4>', ) );
+}
+add_action( 'widgets_init', 'mytraining_widgets_init' );
+
+// unregister sidebar
+function remove_some_widgets(){
+  unregister_sidebar( 'sidebar-1' );
+}
+add_action( 'widgets_init', 'remove_some_widgets', 11 );
+
+
+// return only the page title (ex 'Our Team' instead of 'Archives: Our Team')
+// Return an alternate title, without prefix, for every type used in the get_the_archive_title().
+add_filter('get_the_archive_title', function ($title) {
+    if ( is_category() ) {
+        $title = single_cat_title( '', false );
+    } elseif ( is_tag() ) {
+        $title = single_tag_title( '', false );
+    } elseif ( is_author() ) {
+        $title = '<span class="vcard">' . get_the_author() . '</span>';
+    } elseif ( is_year() ) {
+        $title = get_the_date( _x( 'Y', 'yearly archives date format' ) );
+    } elseif ( is_month() ) {
+        $title = get_the_date( _x( 'F Y', 'monthly archives date format' ) );
+    } elseif ( is_day() ) {
+        $title = get_the_date( _x( 'F j, Y', 'daily archives date format' ) );
+    } elseif ( is_tax( 'post_format' ) ) {
+        if ( is_tax( 'post_format', 'post-format-aside' ) ) {
+            $title = _x( 'Asides', 'post format archive title' );
+        } elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
+            $title = _x( 'Galleries', 'post format archive title' );
+        } elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
+            $title = _x( 'Images', 'post format archive title' );
+        } elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
+            $title = _x( 'Videos', 'post format archive title' );
+        } elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
+            $title = _x( 'Quotes', 'post format archive title' );
+        } elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
+            $title = _x( 'Links', 'post format archive title' );
+        } elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
+            $title = _x( 'Statuses', 'post format archive title' );
+        } elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
+            $title = _x( 'Audio', 'post format archive title' );
+        } elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
+            $title = _x( 'Chats', 'post format archive title' );
+        }
+    } elseif ( is_post_type_archive() ) {
+        $title = post_type_archive_title( '', false );
+    } elseif ( is_tax() ) {
+        $title = single_term_title( '', false );
+    } else {
+        $title = __( 'Archives' );
+    }
+    return $title;
+});
+
+// add custom post types to search
+function search_filter($query) {
+  if ( !is_admin() && $query->is_main_query() ) {
+    if ($query->is_search) {
+      $query->set('post_type', array( 'post', 'team', 'recipes' ) );
+    }
+  }
+}
+add_action('pre_get_posts','search_filter');
+
+// set team cpt to sort by oldest first
+function wpex_order_category( $query ) {
+  // exit out if it's the admin or it isn't the main query
+  if ( is_admin() || ! $query->is_main_query() ) {
+    return;
+  }
+  // order category archives by title in ascending order
+  if ( is_post_type_archive( 'team' ) ) {
+    $query->set( 'order' , 'asc' );
+    $query->set( 'orderby', 'menu_order');
+    return;
+  }
+}
+add_action( 'pre_get_posts', 'wpex_order_category', 1 );
+?>

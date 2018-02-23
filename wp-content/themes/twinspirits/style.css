@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 /*
  Theme Name:   Twin Spirits 
  Theme URI:    http://www.twinspirits.us/
@@ -21,62 +19,146 @@ Base Styles
 Normalized styles, typography and base-level page/element styling.
 */
 
-body:not(.custom-background-image):before {
-  height: 0;
-  width: 0;
-}
-
-.site {
-  margin: 0;
-}
-
-.site-header {
-  padding: 0;
-}
-
-blockquote {
-  font-style: normal;
-  border: none;
-}
-
-.site .avatar {
-  border-radius: 0;
-}
-
+.page-header,
+.site-main + aside,
+.site-main > section,
 .entry-header,
-.entry-content {
-  max-width: 52.5rem;
-  padding: 0 1.25rem;
+.entry-footer,
+article:not(.type-page) .post-thumbnail,
+.entry-content,
+.archive .site-main,
+.home .home-text-block h2,
+.home .home-title,
+.home .site-main > article {
+  max-width: 75em;
+  padding: 0 5%;
   margin: 0 auto;
 }
 
+.entry-content h4 + h4 > a,
+.home h4 > a {
+  color: #f4c416;
+  font-size: 1.25rem;
+}
+
 body {
-  background: white;
-  font-family: "Source Serif Pro", serif;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
   color: #3b3b41;
 }
 
 h1,
+h1.entry-title,
+.page-title,
+.entry-title,
 h2,
 h3,
 h4,
 h5,
 h6 {
   font-family: "Open Sans", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   color: #d14f53;
 }
 
-h1 {
-  padding-top: 2.1875rem;
+h1,
+h1.entry-title,
+h2.entry-title,
+h4 {
+  text-transform: uppercase;
+}
+
+h1,
+h1.entry-title,
+h2.entry-title {
+  margin-bottom: 2rem;
+}
+
+h1.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+h2.entry-title {
+  font-size: 1.5rem;
+}
+
+h2.entry-title a {
+  color: #d14f53;
+}
+
+h2.entry-title a:hover,
+h2.entry-title a:focus {
+  color: #f4c416;
 }
 
 a {
   color: #812b5d;
 }
 
+.btn {
+  display: inline-block;
+  min-width: 8em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: .5rem 1em;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.25em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #f4c416;
+  background: white;
+  border-radius: .25em;
+  border: 0.1em solid #f4c416;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background: #f4c416;
+}
+
+.entry-content a.btn,
+.entry-summary a.btn,
+.taxonomy-description a.btn,
+.logged-in-as a.btn,
+.comment-content a.btn,
+.pingback .comment-body > a.btn,
+.textwidget a.btn,
+.entry-footer a.btn:hover,
+.site-info a.btn:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+body .content-area {
+  float: none;
+  margin-right: unset;
+  width: unset;
+}
+
+body:not(.search-results) article:not(.type-page) .entry-content {
+  float: none;
+  width: unset;
+}
+
+body:not(.custom-background-image):before {
+  content: unset;
+}
+
+.page-header {
+  border-top: 0;
+}
+
+.site {
+  margin: 0;
+  background: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+}
+
 .site-inner {
   max-width: 1800px;
+  margin: 0 auto;
 }
 
 .site-content {
@@ -84,35 +166,30 @@ a {
 }
 
 .site-main {
-  margin-bottom: 2.1875rem;
+  margin-bottom: 2rem;
 }
 
-.entry-header h1 {
-  text-transform: uppercase;
-  padding-right: 1.25rem;
+.site-main > section {
+  padding-top: 2rem;
 }
 
-.post-thumbnail {
+article.type-page .post-thumbnail {
   margin: 0;
 }
 
-.no-sidebar .post-thumbnail img {
-  margin: 0 auto;
+article.type-page .post-thumbnail img {
+  width: 115%;
+  max-width: 115%;
+  margin: 0 -7.5% 1rem;
+}
+
+article:not(.type-page) .post-thumbnail img {
   width: 100%;
-}
-
-body.home .post-thumbnail img {
-  width: auto;
-}
-
-.entry-content {
-  margin-top: 2.1875rem;
 }
 
 .entry-content p,
 .entry-content ul li,
 .entry-content span {
-  font-family: "Source Serif Pro", serif;
   font-size: 1.125rem;
   line-height: 2rem;
   color: #3b3b41;
@@ -125,48 +202,119 @@ body.home .post-thumbnail img {
 .entry-content blockquote,
 .entry-content blockquote p {
   color: #d14f53;
-  font-family: "Roboto Slab", serif;
+  font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 0.131578947em;
   font-size: 1.25rem;
   font-weight: bold;
+  font-style: normal;
+  border: none;
 }
 
-footer.site-footer p.copyright,
-footer.site-footer div.address {
-  width: 100%;
+.entry-content h4 + h4 {
+  margin-top: -0.5em;
+}
+
+.entry-content img,
+.entry-content .alignright,
+.entry-content .alignleft,
+.entry-content .aligncenter {
+  width: 115%;
+  max-width: 115%;
+  margin: 0 -7.5% 1.5rem;
+}
+
+footer.site-footer {
   text-align: center;
-  -webkit-box-ordinal-group: 3;
-  -ms-flex-order: 2;
-  order: 2;
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 0.9375rem;
   text-transform: uppercase;
+  background: #3c3c42;
+  color: #ffffff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
-footer.site-footer div.address {
-  line-height: 1em;
-  margin-bottom: 1em;
+footer.site-footer .footer-top {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+}
+
+footer.site-footer .footer-top a {
+  color: white;
+  text-decoration: underline;
+}
+
+footer.site-footer .footer-top a:hover,
+footer.site-footer .footer-top a:focus {
+  color: #f4c416;
+}
+
+footer.site-footer .footer1,
+footer.site-footer .footer2 {
+  min-width: 310px;
+  -webkit-box-flex: 2;
+  -ms-flex: 2 0 auto;
+  flex: 2 0 auto;
+}
+
+footer.site-footer .footer1 {
+  margin-right: 10%;
+}
+
+footer.site-footer .footer-navigation {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+footer.site-footer .footer-navigation ul.footer-menu {
+  list-style-type: none;
+  margin: 0;
+}
+
+footer.site-footer .footer-navigation li {
+  padding: 1rem 1em 1rem 0;
 }
 
 footer.site-footer .social-navigation {
-  margin: 0 auto 1.25rem;
-  padding-top: 2.1875rem;
-  width: 70%;
-  border-top: 1px solid #9d9ea0;
-}
-
-footer.site-footer .social-navigation .menu-social-links-footer-container {
-  text-align: center;
+  -webkit-box-ordinal-group: unset;
+  -ms-flex-order: unset;
+  order: unset;
+  margin: 0 auto;
+  padding: 1.5rem 0 .5rem;
 }
 
 footer.site-footer .social-navigation ul {
-  margin: 0;
+  margin: 0  auto;
   display: inline-block;
 }
 
 footer.site-footer .social-navigation li {
   border-radius: 50%;
   background: #d14f53;
-  text-align: center;
+  border: 1px solid #d14f53;
+}
+
+footer.site-footer .social-navigation li:hover,
+footer.site-footer .social-navigation li:hover::before,
+footer.site-footer .social-navigation li:focus::before {
+  background: none;
+  border: 1px solid #ffffff;
 }
 
 footer.site-footer .social-navigation li a {
@@ -181,132 +329,13 @@ footer.site-footer .social-navigation li a:focus::before {
   color: white;
 }
 
-footer.site-footer .social-navigation li a[href*="vine.co"]::before {
-  font-family: FontAwesome;
-  content: '\f1ca';
+footer.site-footer p.copyright {
+  margin-bottom: 0;
 }
 
-.page-template-default.has-featured-image .entry-header {
-  margin: 0;
-  height: auto;
-  position: relative;
-  max-width: 100%;
+.site-header {
+  width: 100%;
   padding: 0;
-}
-
-.page-template-default.has-featured-image .entry-header h1 {
-  position: absolute;
-  top: 75%;
-  -webkit-transform: translateY(-75%);
-  transform: translateY(-75%);
-  width: 75%;
-  max-width: 16rem;
-  padding-left: 1.25rem;
-  font-size: 3rem;
-  line-height: 3rem;
-  color: white;
-  word-wrap: normal;
-  word-break: keep-all;
-  -webkit-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
-
-/* Spirits pages */
-
-.page-template-page-spirits .spirits-nav {
-  width: 90%;
-  font-size: 1.875rem;
-  line-height: 0;
-  margin: 0 auto;
-  position: relative;
-  top: 15.625rem;
-  z-index: 999;
-}
-
-.page-template-page-spirits .spirits-nav a {
-  position: absolute;
-  color: #3b3b41;
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
-}
-
-.page-template-page-spirits .spirits-nav a:hover {
-  color: #812b5d;
-}
-
-.page-template-page-spirits .spirits-nav a.nav-previous {
-  left: 0;
-}
-
-.page-template-page-spirits .spirits-nav a.nav-next {
-  right: 0;
-}
-
-.page-template-page-spirits .post-thumbnail img {
-  width: 432px;
-  margin: 0 auto;
-}
-
-.page-template-page-spirits .entry-header h1 {
-  color: #d14f53;
-}
-
-.page-template-page-spirits.page-id-57 .entry-header h1 {
-  color: #d1308a;
-}
-
-.page-template-page-spirits.page-id-82 .entry-header h1 {
-  color: #73db49;
-}
-
-.page-template-page-spirits.page-id-84 .entry-header h1 {
-  color: #00b5dd;
-}
-
-.page-template-page-spirits.page-id-86 .entry-header h1 {
-  color: #ff4d63;
-}
-
-.page-template-page-spirits.page-id-88 .entry-header h1 {
-  color: #262362;
-}
-
-/* Team page */
-
-.page-id-10 h2,
-.page-id-10 h3 {
-  color: #d14f53;
-  font-size: 1.125rem;
-  padding: 0;
-}
-
-.page-id-10 h2 {
-  font-family: "Roboto Slab", serif;
-  margin: 2.5rem 0 0.75rem;
-}
-
-.page-id-10 h3 {
-  font-style: italic;
-  font-weight: normal;
-  margin: 0 0 2.1875rem;
-}
-
-.page-id-10 .entry-content div p {
-  margin: 0;
-}
-
-.page-id-10 .post-edit-link {
-  display: none;
-}
-
-.page-id-75 .page-list-ext .page-list-ext-title {
-  display: none;
-}
-
-.entry-content .foogallery-default a {
-  -webkit-box-shadow: none;
-  box-shadow: none;
 }
 
 .site-header-main {
@@ -324,6 +353,7 @@ footer.site-footer .social-navigation li a[href*="vine.co"]::before {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 .site-header-main .site-branding {
@@ -452,166 +482,9 @@ footer.site-footer .social-navigation li a[href*="vine.co"]::before {
 
 /* Layout rules */
 
-/*
-* Skeleton V2.0.4
-* Copyright 2014, Dave Gamache
-* www.getskeleton.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 12/29/2014
-*/
-
-/* Table of contents
-––––––––––––––––––––––––––––––––––––––––––––––––––
-- Grid
-- Base Styles
-- Typography
-- Links
-- Buttons
-- Forms
-- Lists
-- Code
-- Tables
-- Spacing
-- Utilities
-- Clearing
-- Media Queries
-*/
-
-/* Grid
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.column,
-.columns {
-  width: 100%;
-  float: left;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* For devices larger than 400px */
-
-/* For devices larger than 550px */
-
-/* Typography
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 0;
-  margin-bottom: 2rem;
-  font-weight: 300;
-}
-
-h1 {
-  font-size: 4.0rem;
-  line-height: 1.2;
-  letter-spacing: -.1rem;
-}
-
-h2 {
-  font-size: 3.6rem;
-  line-height: 1.25;
-  letter-spacing: -.1rem;
-}
-
-h3 {
-  font-size: 3.0rem;
-  line-height: 1.3;
-  letter-spacing: -.1rem;
-}
-
-h4 {
-  font-size: 2.4rem;
-  line-height: 1.35;
-  letter-spacing: -.08rem;
-}
-
-h5 {
-  font-size: 1.8rem;
-  line-height: 1.5;
-  letter-spacing: -.05rem;
-}
-
-h6 {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  letter-spacing: 0;
-}
-
-/* Larger than phablet */
-
-/* Utilities
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-.u-full-width {
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.u-max-full-width {
-  max-width: 100%;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.u-pull-right {
-  float: right;
-}
-
-.u-pull-left {
-  float: left;
-}
-
-/* Clearing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-/* Self Clearing Goodness */
-
-.container:after,
-.row:after,
-.u-cf {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Media Queries
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-/*
-Note: The best way to structure the use of media queries is to create the queries
-near the relevant code. For example, if you wanted to change the styles for buttons
-on small devices, paste the mobile query code up in the buttons section and style it
-there.
-*/
-
-/* Larger than mobile */
-
-/* Larger than phablet (also point when grid becomes active) */
-
-/* Larger than tablet */
-
-/* Larger than desktop */
-
-/* Larger than Desktop HD */
-
 /* Component (SMACSS module) rules */
+
+/* Plugin Overrides */
 
 #age-verify {
   position: fixed;
@@ -666,32 +539,324 @@ there.
   color: white;
 }
 
-@media screen and (min-width: 44.375em) {
-  .page-template-default.has-featured-image .entry-header h1 {
-    font-size: 4.5rem;
-    line-height: 4.5rem;
-    width: 50%;
-    max-width: 24rem;
-  }
+.bp-directions:before,
+.bp-phone:before,
+.bp-contact:before,
+.bp-booking:before,
+.bp-opening-hours-brief:before,
+.bp-opening-hours .bp-title:before {
+  content: unset !important;
+}
 
-  .page-template-page-spirits .spirits-nav {
-    width: 70%;
-    font-size: 5rem;
-  }
+.bp-opening-hours .bp-title {
+  text-align: unset !important;
+}
+
+h4.bp-title {
+  text-align: left;
+  margin-top: 2rem !important;
+  margin-bottom: .5rem;
+}
+
+.bp-contact-card > .bp-phone {
+  margin-bottom: 0;
+}
+
+.bp-contact-card > div.bp-contact-email {
+  margin-top: 0;
+}
+
+.entry-content .foogallery-default a {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* Weird stuff specific to certain pages or post type templates */
+
+/* Styles specific to SPIRITS individual and archive pages */
+
+.page-template-page-spirits .entry-content {
+  max-width: 50em;
+  margin: inherit auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.page-template-page-spirits h1.entry-title {
+  text-align: center;
+}
+
+.page-template-page-spirits .entry-content h1.entry-title {
+  display: none;
+}
+
+.page-template-page-spirits a.btn {
+  margin-top: 0;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+
+.page-template-page-spirits .proof > p {
+  font-family: "Open Sans Condensed", sans-serif;
+  text-transform: uppercase;
+}
+
+.page-template-page-spirits .spirits-nav {
+  font-family: "Open Sans Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  line-height: 1.25em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.page-template-page-spirits .spirits-nav a {
+  color: #f4c416;
+}
+
+.page-template-page-spirits .spirits-nav a:hover,
+.page-template-page-spirits .spirits-nav a:focus {
+  color: #812b5d;
+}
+
+.page-template-page-spirits.page-id-57 h1.entry-title,
+.page-template-page-spirits.page-id-57 .proof p {
+  color: #d1308a;
+}
+
+.page-template-page-spirits.page-id-82 h1.entry-title,
+.page-template-page-spirits.page-id-82 .proof p {
+  color: #73db49;
+}
+
+.page-template-page-spirits.page-id-84 h1.entry-title,
+.page-template-page-spirits.page-id-84 .proof p {
+  color: #00b5dd;
+}
+
+.page-template-page-spirits.page-id-86 h1.entry-title,
+.page-template-page-spirits.page-id-86 .proof p {
+  color: #ff4d63;
+}
+
+.page-template-page-spirits.page-id-88 h1.entry-title,
+.page-template-page-spirits.page-id-88 .proof p {
+  color: #262362;
+}
+
+.archive.tax-recipe_spirit .article-box,
+.post-type-archive-recipes .article-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.archive.tax-recipe_spirit article.recipes,
+.post-type-archive-recipes article.recipes {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 1em;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.archive.tax-recipe_spirit article.recipes .post-thumbnail,
+.post-type-archive-recipes article.recipes .post-thumbnail {
+  padding: 0;
+}
+
+.archive.tax-recipe_spirit article.recipes .post-thumbnail img,
+.post-type-archive-recipes article.recipes .post-thumbnail img {
+  width: 100%;
+}
+
+.archive.tax-recipe_spirit article.recipes .entry-title,
+.post-type-archive-recipes article.recipes .entry-title {
+  margin-top: 2rem;
+}
+
+.archive.tax-recipe_spirit article.recipes .entry-title > a,
+.post-type-archive-recipes article.recipes .entry-title > a {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.archive.tax-recipe_spirit article.recipes p,
+.post-type-archive-recipes article.recipes p {
+  line-height: 1.25em;
+}
+
+.archive.tax-recipe_spirit article.recipes p:not(:last-child),
+.post-type-archive-recipes article.recipes p:not(:last-child) {
+  margin-bottom: .5rem;
+}
+
+.archive.tax-recipe_spirit article.recipes .recipe-ingredients p,
+.post-type-archive-recipes article.recipes .recipe-ingredients p {
+  font-weight: 700;
+}
+
+.home {
+  font-size: 1.1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.home .home-title {
+  text-align: center;
+  line-height: 2.25em;
+}
+
+.home h4 {
+  letter-spacing: 0.131578947em;
+}
+
+.home h4 > a {
+  text-decoration: underline;
+}
+
+.home p + h4 {
+  margin-top: -1.5em;
+}
+
+.home .home-text-block h2 {
+  margin: 1rem 0 0.5rem;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.131578947em;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.1em;
+  text-shadow: -1px 3px 5px rgba(59, 59, 65, 0.6);
+}
+
+.home h4.bp-title {
+  margin-top: 0 !important;
+}
+
+.home address.bp-contact-card {
+  margin: 0 !important;
+}
+
+.home .site-main {
+  max-width: 100%;
+  padding: 0;
+}
+
+.home div[class^="home-block-"] {
+  min-height: 30rem;
+  background: no-repeat center center fixed;
+  background-size: cover;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.home div.home-block-two {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.home .home-text-block {
+  width: 100%;
+}
+
+.home .home-text-block > .home-text-body {
+  padding: 1rem 5%;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.home .home-text-body > * {
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (min-width: 56.875em) {
-  .page-template-default.has-featured-image .entry-header h1 {
-    margin: 0 15%;
-    font-size: 6rem;
-    line-height: 6rem;
-    max-width: 32rem;
+  article.type-page .post-thumbnail img {
+    margin: 0 auto 1.5rem;
+    max-width: 100%;
   }
 
-  .page-id-75 .page-list-ext .page-list-ext-item {
-    float: left;
-    clear: none;
-    width: 20%;
+  .entry-content img,
+  .entry-content .aligncenter {
+    margin: 0 auto 1.5rem;
+    width: 100%;
+  }
+
+  .entry-content .alignright {
+    max-width: 50%;
+    margin-right: 0;
+    margin-left: 1.75em;
+  }
+
+  .entry-content .alignleft {
+    max-width: 50%;
+    margin-left: 0;
+    margin-right: 1.75em;
+  }
+
+  footer.site-footer .footer-top {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  }
+
+  footer.site-footer .footer-navigation ul.footer-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  footer.site-footer .footer-navigation li {
+    padding: 2rem 1em 1rem;
   }
 
   #site-header-menu .main-navigation .primary-menu > li {
@@ -704,185 +869,92 @@ there.
     right: -50%;
     top: 100%;
   }
-}
 
-@media (min-width: 400px) {
-  .container {
-    width: 85%;
+  .page-template-page-spirits article {
+    display: grid;
+    grid: auto / 1fr 40% 40% 1fr;
+    grid-gap: 2%;
+    justify-items: center;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: stretch;
+    -ms-flex-pack: stretch;
+    justify-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+  }
+
+  .page-template-page-spirits .entry-header {
     padding: 0;
-  }
-}
-
-@media (min-width: 550px) {
-  .container {
-    width: 80%;
-  }
-
-  .column,
-  .columns {
-    margin-left: 2%;
-  }
-
-  /*.column:first-child,
-  .columns:first-child {
-    margin-left: 0; }*/
-
-  .one.column,
-  .one.columns {
-    width: 4.66666666667%;
+    grid-column: 2 / 3;
+    justify-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
-  .two.columns {
-    width: 13.3333333333%;
+  .page-template-page-spirits .entry-content {
+    padding: 0;
+    grid-column: 3 / 4;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 
-  .three.columns {
-    width: 22%;
-  }
-
-  .four.columns {
-    width: 30.6666666667%;
-  }
-
-  .five.columns {
-    width: 39.3333333333%;
-  }
-
-  .six.columns {
-    width: 48%;
-  }
-
-  .seven.columns {
-    width: 56.6666666667%;
-  }
-
-  .eight.columns {
-    width: 65.3333333333%;
-  }
-
-  .nine.columns {
-    width: 74.0%;
-  }
-
-  .ten.columns {
-    width: 82.6666666667%;
-  }
-
-  .eleven.columns {
-    width: 91.3333333333%;
-  }
-
-  .twelve.columns {
-    width: 100%;
+  .page-template-page-spirits .entry-footer {
+    grid-column: 2 / 4;
     margin-left: 0;
   }
 
-  .one-third.column {
-    width: 30.6666666667%;
+  .page-template-page-spirits h1.entry-title {
+    text-align: left;
+    margin-left: 0;
   }
 
-  .two-thirds.column {
-    width: 65.3333333333%;
+  .page-template-page-spirits .entry-header h1.entry-title {
+    display: none;
   }
 
-  .one-half.column {
-    width: 48%;
+  .page-template-page-spirits .entry-content h1.entry-title {
+    display: block;
   }
 
-  /* Offsets */
-
-  .offset-by-one.column,
-  .offset-by-one.columns {
-    margin-left: 8.66666666667%;
+  .page-template-page-spirits .post-thumbnail img {
+    -o-object-fit: fill;
+    object-fit: fill;
   }
 
-  .offset-by-two.column,
-  .offset-by-two.columns {
-    margin-left: 17.3333333333%;
+  .archive.tax-recipe_spirit article.recipes,
+  .post-type-archive-recipes article.recipes {
+    max-width: 50%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 45%;
+    flex: 1 1 45%;
+    margin-right: 1rem;
+    margin-left: 1rem;
   }
 
-  .offset-by-three.column,
-  .offset-by-three.columns {
-    margin-left: 26%;
+  .home .home-text-block {
+    width: 50%;
   }
 
-  .offset-by-four.column,
-  .offset-by-four.columns {
-    margin-left: 34.6666666667%;
+  .home .home-text-block > * {
+    padding-right: 10%;
+    padding-left: 1em;
   }
 
-  .offset-by-five.column,
-  .offset-by-five.columns {
-    margin-left: 43.3333333333%;
-  }
-
-  .offset-by-six.column,
-  .offset-by-six.columns {
-    margin-left: 52%;
-  }
-
-  .offset-by-seven.column,
-  .offset-by-seven.columns {
-    margin-left: 60.6666666667%;
-  }
-
-  .offset-by-eight.column,
-  .offset-by-eight.columns {
-    margin-left: 69.3333333333%;
-  }
-
-  .offset-by-nine.column,
-  .offset-by-nine.columns {
-    margin-left: 78.0%;
-  }
-
-  .offset-by-ten.column,
-  .offset-by-ten.columns {
-    margin-left: 86.6666666667%;
-  }
-
-  .offset-by-eleven.column,
-  .offset-by-eleven.columns {
-    margin-left: 95.3333333333%;
-  }
-
-  .offset-by-one-third.column,
-  .offset-by-one-third.columns {
-    margin-left: 34.6666666667%;
-  }
-
-  .offset-by-two-thirds.column,
-  .offset-by-two-thirds.columns {
-    margin-left: 69.3333333333%;
-  }
-
-  .offset-by-one-half.column,
-  .offset-by-one-half.columns {
-    margin-left: 52%;
-  }
-
-  h1 {
-    font-size: 5.0rem;
-  }
-
-  h2 {
-    font-size: 4.2rem;
-  }
-
-  h3 {
-    font-size: 3.6rem;
-  }
-
-  h4 {
-    font-size: 3.0rem;
-  }
-
-  h5 {
-    font-size: 2.4rem;
-  }
-
-  h6 {
-    font-size: 1.5rem;
+  .home div.home-block-two > .home-text-block > * {
+    padding-left: 10%;
+    padding-right: 1em;
   }
 }
 

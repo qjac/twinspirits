@@ -1,0 +1,114 @@
+// FOOTER STYLES
+
+footer.site-footer {
+    text-align: center;
+    font-family: $open-sans-condensed;
+    font-size: rem(15px);
+    text-transform: uppercase;
+    background: $gray-bg;
+    color: #ffffff;
+    flex-direction: column;
+
+    // 
+    // footer-top
+    // 
+    .footer-top {
+      width: 100%;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      font-family: $open-sans;
+      text-align: left;
+
+      @media screen and (min-width: $width-desktop) {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: baseline;
+       }
+
+      a {
+      color: white;
+      text-decoration: underline;
+        &:hover,
+        &:focus {
+          color: $gold;
+        }
+    }
+    }
+
+    .footer1,
+    .footer2 {
+      min-width: 310px;
+      flex: 2 0 auto;
+    }
+
+    .footer1 {
+      margin-right: 10%;
+    }
+
+    // footer widgets
+    .footer-navigation {
+      flex: 0 1 auto;
+      font-family: $open-sans;
+      font-weight: 700;
+    
+      ul.footer-menu {
+      list-style-type: none;
+      margin: 0;
+      @media screen and (min-width: $width-desktop) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      }
+    }
+
+      li {
+      padding: 1rem 1em 1rem 0;
+       @media screen and (min-width: $width-desktop) {
+        padding: 2rem 1em 1rem;
+       }
+      }
+    }  // end footer-widgets
+
+  // 
+  // social links menu 
+  // set in menu admin panel
+  // 
+  .social-navigation {
+    order: unset;
+    margin: 0 auto;
+    padding: 1.5rem 0 .5rem;
+
+    ul {
+      margin: 0  auto;
+      display: inline-block;
+    }
+
+    li {
+      border-radius: 50%;
+      background: $red;
+      border: 1px solid $red;
+      &:hover,
+        &:hover::before,
+        &:focus::before {
+          background: none;
+          border: 1px solid #ffffff;
+        }
+    }
+    li a {
+        border: 0;
+        border-radius: 0;
+        color: white;
+
+        &:hover,
+        &:hover::before,
+        &:focus::before {
+          color: white;
+        }
+      }  // end footer a
+  } // end .social nav
+
+  p.copyright {
+    margin-bottom: 0;
+  }
+} //end footer styles
