@@ -105,16 +105,25 @@ a {
     box-shadow: none;
   }
 
+  // 
+  // // ditch the sidebar by default
+  // 
+  body .content-area, body.no-sidebar:not(.search-results) article:not(.type-page) .entry-content,
+  .no-sidebar .entry-header, .no-sidebar .entry-content, .no-sidebar .entry-summary, .no-sidebar .entry-footer, .no-sidebar .comments-area, .no-sidebar .image-navigation, .no-sidebar .post-navigation, .no-sidebar .pagination, .no-sidebar .page-header, .no-sidebar .page-content, .no-sidebar .content-bottom-widgets,
+  body.no-sidebar:not(.search-results) article:not(.type-page) .entry-footer,
+  body:not(.search-results) article:not(.type-page) .entry-footer {
+    margin: 0 auto;
+    float: none;
+    width: unset;
+  }
+
 //============================
 // GENERAL PAGE STYLES 
 //============================
 
-// ditch the sidebar by default
-  body .content-area {
-    float: none;
-    margin-right: unset;
-    width: unset
-  }
+.site-main > :last-child {
+  margin-bottom: 4rem;
+}
 
   body:not(.search-results) article:not(.type-page) .entry-content {
     float: none;
@@ -146,10 +155,8 @@ body:not(.custom-background-image):before {
 .site-content {
   padding: 0;
 }
-
 .site-main {
-  // margin-bottom: rem(35px);
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 .site-main + aside,
 .site-main > section,
@@ -157,7 +164,6 @@ body:not(.custom-background-image):before {
 .entry-footer {
   @extend %interior-narrower;
 }
-
 .site-main > section {
   padding-top: 2rem;
 }
@@ -166,7 +172,6 @@ body:not(.custom-background-image):before {
  article.type-page .post-thumbnail {
   margin: 0;
 }
-
 article.type-page .post-thumbnail img {
   width: 115%;
   max-width: 115%;

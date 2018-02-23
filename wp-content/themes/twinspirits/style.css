@@ -27,6 +27,7 @@ Normalized styles, typography and base-level page/element styling.
 article:not(.type-page) .post-thumbnail,
 .entry-content,
 .archive .site-main,
+.single .site-main,
 .home .home-text-block h2,
 .home .home-title,
 .home .site-main > article {
@@ -131,10 +132,28 @@ a {
   box-shadow: none;
 }
 
-body .content-area {
+body .content-area,
+body.no-sidebar:not(.search-results) article:not(.type-page) .entry-content,
+.no-sidebar .entry-header,
+.no-sidebar .entry-content,
+.no-sidebar .entry-summary,
+.no-sidebar .entry-footer,
+.no-sidebar .comments-area,
+.no-sidebar .image-navigation,
+.no-sidebar .post-navigation,
+.no-sidebar .pagination,
+.no-sidebar .page-header,
+.no-sidebar .page-content,
+.no-sidebar .content-bottom-widgets,
+body.no-sidebar:not(.search-results) article:not(.type-page) .entry-footer,
+body:not(.search-results) article:not(.type-page) .entry-footer {
+  margin: 0 auto;
   float: none;
-  margin-right: unset;
   width: unset;
+}
+
+.site-main > :last-child {
+  margin-bottom: 4rem;
 }
 
 body:not(.search-results) article:not(.type-page) .entry-content {
@@ -166,7 +185,7 @@ body:not(.custom-background-image):before {
 }
 
 .site-main {
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .site-main > section {
@@ -234,6 +253,7 @@ footer.site-footer {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  padding-bottom: 2rem;
 }
 
 footer.site-footer .footer-top {
@@ -657,6 +677,103 @@ h4.bp-title {
   color: #262362;
 }
 
+.archive .entry-title > a,
+.single .entry-title > a {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.archive p:not(:last-child),
+.single p:not(:last-child) {
+  margin-bottom: .5rem;
+}
+
+.archive .entry-content,
+.single .entry-content {
+  padding-top: 2rem;
+}
+
+.archive article,
+.single article {
+  margin-bottom: 6rem;
+}
+
+.page-id-75 .page-list-ext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.page-id-75 .page-list-ext .page-list-ext-item {
+  margin: 0;
+  margin-bottom: 6rem;
+}
+
+.page-id-75 .page-list-ext .page-list-ext-image {
+  float: none;
+  margin: 0;
+}
+
+.page-id-75 .page-list-ext-title {
+  margin: 1rem 0;
+}
+
+.page-id-75 .page-list-ext-title > a {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #d14f53;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.post-type-archive-team .article-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.post-type-archive-team h2.entry-title {
+  margin-bottom: 0;
+}
+
+.post-type-archive-team h3.team-title {
+  font-weight: 400;
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+
+.single-team h3.team-title {
+  margin-top: 0;
+}
+
+.recipes p {
+  line-height: 1.25em;
+}
+
+.recipes .recipe-ingredients p {
+  font-weight: 700;
+}
+
 .archive.tax-recipe_spirit .article-box,
 .post-type-archive-recipes .article-box {
   display: -webkit-box;
@@ -693,31 +810,29 @@ h4.bp-title {
   width: 100%;
 }
 
-.archive.tax-recipe_spirit article.recipes .entry-title,
-.post-type-archive-recipes article.recipes .entry-title {
-  margin-top: 2rem;
+.archive.tax-recipe_spirit.term-m-vodka h1.page-title,
+.post-type-archive-recipes.term-m-vodka h1.page-title {
+  color: #d1308a;
 }
 
-.archive.tax-recipe_spirit article.recipes .entry-title > a,
-.post-type-archive-recipes article.recipes .entry-title > a {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  font-family: "Open Sans Condensed", sans-serif;
+.archive.tax-recipe_spirit.term-m-gin h1.page-title,
+.post-type-archive-recipes.term-m-gin h1.page-title {
+  color: #73db49;
 }
 
-.archive.tax-recipe_spirit article.recipes p,
-.post-type-archive-recipes article.recipes p {
-  line-height: 1.25em;
+.archive.tax-recipe_spirit.term-m-rum h1.page-title,
+.post-type-archive-recipes.term-m-rum h1.page-title {
+  color: #00b5dd;
 }
 
-.archive.tax-recipe_spirit article.recipes p:not(:last-child),
-.post-type-archive-recipes article.recipes p:not(:last-child) {
-  margin-bottom: .5rem;
+.archive.tax-recipe_spirit.term-m-whiskey h1.page-title,
+.post-type-archive-recipes.term-m-whiskey h1.page-title {
+  color: #ff4d63;
 }
 
-.archive.tax-recipe_spirit article.recipes .recipe-ingredients p,
-.post-type-archive-recipes article.recipes .recipe-ingredients p {
-  font-weight: 700;
+.archive.tax-recipe_spirit.term-mammas-moonshine h1.page-title,
+.post-type-archive-recipes.term-mammas-moonshine h1.page-title {
+  color: #262362;
 }
 
 .home {
@@ -931,6 +1046,28 @@ h4.bp-title {
   .page-template-page-spirits .post-thumbnail img {
     -o-object-fit: fill;
     object-fit: fill;
+  }
+
+  .page-id-75 .page-list-ext .page-list-ext-item {
+    max-width: 50%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 45%;
+    flex: 1 1 45%;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  .page-id-75 .page-list-ext-title {
+    text-align: center;
+  }
+
+  .post-type-archive-team article {
+    max-width: 50%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 45%;
+    flex: 1 1 45%;
+    margin-right: 1rem;
+    margin-left: 1rem;
   }
 
   .archive.tax-recipe_spirit article.recipes,
