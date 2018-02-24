@@ -21,8 +21,6 @@ body:not(.custom-background-image):before {
 }
 
 .page-header {
-	@extend %interior-narrower;
-	// margin-top: 4rem;
 	border-top: 0;
 }
 .site {
