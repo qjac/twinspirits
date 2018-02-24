@@ -2,14 +2,14 @@
   width: 100%;
   padding: 0;
 }
-  .site-header-main {
+.site-header-main {
   background: $gray-bg;
   min-height: 130px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .site-header-main .site-branding {
@@ -30,19 +30,24 @@
   right: 5%;
   transform: translateY(-50%);
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: $red;
     border-color: white;
   }
 }
-.menu-toggle.toggled-on, .menu-toggle.toggled-on:hover, .menu-toggle.toggled-on:focus {
+.menu-toggle.toggled-on,
+.menu-toggle.toggled-on:hover,
+.menu-toggle.toggled-on:focus {
   color: $red;
   background: $gray-bg;
   border-color: $red;
 }
 .dropdown-toggle {
   color: white;
-  &:hover, &:focus, &:active {
+  &:hover,
+  &:focus,
+  &:active {
     color: $red;
   }
 }
@@ -63,17 +68,18 @@
   .main-navigation a {
     color: white;
     text-transform: uppercase;
-    transition: all .4s ease;
+    transition: all 0.4s ease;
     text-align: center;
     padding: 1rem 0.5rem;
     white-space: normal;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: $red;
     }
     &:after {
       // normalize
-      content: "";
+      content: '';
       position: relative;
       top: 0;
     }
@@ -93,13 +99,11 @@
   //end .main-navigation .primary-menu > li
 
   .main-navigation .primary-menu .sub-menu {
-    background: rgba(255, 255, 255, .75);
+    background: $gray-bg;
     margin: 0;
     border-bottom: 0;
 
     a {
-      color: $gray-bg;
-
       &:hover,
       &:focus {
         color: $red;
@@ -113,8 +117,7 @@
         color: $red;
       }
     }
-  }
-  //end .main-navigation .primary-menu .sub-menu
+  } //end .main-navigation .primary-menu .sub-menu
 
   .main-navigation .primary-menu > li:hover > ul,
   .main-navigation .primary-menu > li:focus > ul {

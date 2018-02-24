@@ -1,9 +1,9 @@
-// 
+//
 // Custom Styles to Override Plugins
-// 
+//
 
 //============================
-// BUSINESS PROFILE STYLES 
+// BUSINESS PROFILE STYLES
 //============================
 
 .bp-directions:before,
@@ -16,26 +16,25 @@
 }
 
 .bp-opening-hours .bp-title {
-	text-align: unset !important;
+  text-align: unset !important;
 }
 
 h4.bp-title {
-	text-align: left;
-	margin-top:2rem !important;
-	margin-bottom: .5rem;
+  text-align: left;
+  margin-top: 2rem !important;
+  margin-bottom: 0.5rem;
 }
 
 .bp-contact-card > .bp-phone {
-      margin-bottom: 0;
-    }
+  margin-bottom: 0;
+}
 
-    .bp-contact-card > div.bp-contact-email {
-    	margin-top:0;
-    }
-    
+.bp-contact-card > div.bp-contact-email {
+  margin-top: 0;
+}
 
 //============================
-// FOO GALLERY STYLES 
+// FOO GALLERY STYLES
 //============================
 
 .entry-content .foogallery-default a {

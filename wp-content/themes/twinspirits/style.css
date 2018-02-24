@@ -14,12 +14,6 @@
 
 /* Import Sass mixins, variables, Compass modules, etc. */
 
-/*
-Base Styles
-Normalized styles, typography and base-level page/element styling.
-*/
-
-.page-header,
 .site-main + aside,
 .site-main > section,
 .entry-header,
@@ -43,7 +37,7 @@ article:not(.type-page) .post-thumbnail,
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hind", sans-serif;
   font-weight: 400;
   color: #3b3b41;
 }
@@ -57,7 +51,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hind", sans-serif;
   font-weight: 700;
   color: #d14f53;
 }
@@ -102,14 +96,15 @@ a {
   min-width: 8em;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  padding: .5rem 1em;
-  font-family: "Open Sans Condensed", sans-serif;
+  padding: 0.5rem 1em;
+  font-family: "Hind", sans-serif;
+  font-weight: 700;
   font-size: 1.25em;
   text-align: center;
   text-transform: uppercase;
   color: #f4c416;
   background: white;
-  border-radius: .25em;
+  border-radius: 0.25em;
   border: 0.1em solid #f4c416;
 }
 
@@ -151,6 +146,11 @@ body:not(.search-results) article:not(.type-page) .entry-footer {
   float: none;
   width: unset;
 }
+
+/*
+Base Styles
+Normalized styles, typography and base-level page/element styling.
+*/
 
 .site-main > :last-child {
   margin-bottom: 4rem;
@@ -221,7 +221,7 @@ article:not(.type-page) .post-thumbnail img {
 .entry-content blockquote,
 .entry-content blockquote p {
   color: #d14f53;
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Hind", sans-serif;
   letter-spacing: 0.131578947em;
   font-size: 1.25rem;
   font-weight: bold;
@@ -268,7 +268,7 @@ footer.site-footer .footer-top {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hind", sans-serif;
   text-align: left;
 }
 
@@ -290,6 +290,12 @@ footer.site-footer .footer2 {
   flex: 2 0 auto;
 }
 
+footer.site-footer .footer1 h4,
+footer.site-footer .footer2 h4 {
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #ffffff;
+}
+
 footer.site-footer .footer1 {
   margin-right: 10%;
 }
@@ -298,7 +304,7 @@ footer.site-footer .footer-navigation {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hind", sans-serif;
   font-weight: 700;
 }
 
@@ -316,11 +322,11 @@ footer.site-footer .social-navigation {
   -ms-flex-order: unset;
   order: unset;
   margin: 0 auto;
-  padding: 1.5rem 0 .5rem;
+  padding: 1.5rem 0 0.5rem;
 }
 
 footer.site-footer .social-navigation ul {
-  margin: 0  auto;
+  margin: 0 auto;
   display: inline-block;
 }
 
@@ -373,7 +379,7 @@ footer.site-footer p.copyright {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .site-header-main .site-branding {
@@ -439,8 +445,8 @@ footer.site-footer p.copyright {
 #site-header-menu .main-navigation a {
   color: white;
   text-transform: uppercase;
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
   text-align: center;
   padding: 1rem 0.5rem;
   white-space: normal;
@@ -452,7 +458,7 @@ footer.site-footer p.copyright {
 }
 
 #site-header-menu .main-navigation a:after {
-  content: "";
+  content: '';
   position: relative;
   top: 0;
 }
@@ -466,13 +472,9 @@ footer.site-footer p.copyright {
 }
 
 #site-header-menu .main-navigation .primary-menu .sub-menu {
-  background: rgba(255, 255, 255, 0.75);
+  background: #3c3c42;
   margin: 0;
   border-bottom: 0;
-}
-
-#site-header-menu .main-navigation .primary-menu .sub-menu a {
-  color: #3c3c42;
 }
 
 #site-header-menu .main-navigation .primary-menu .sub-menu a:hover,
@@ -548,7 +550,7 @@ footer.site-footer p.copyright {
 
 #age-verify .shield-text a {
   display: inline-block;
-  padding: 2px .5rem;
+  padding: 2px 0.5rem;
   color: #3b3b41;
   text-decoration: none;
 }
@@ -575,7 +577,7 @@ footer.site-footer p.copyright {
 h4.bp-title {
   text-align: left;
   margin-top: 2rem !important;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .bp-contact-card > .bp-phone {
@@ -622,12 +624,11 @@ h4.bp-title {
 }
 
 .page-template-page-spirits .proof > p {
-  font-family: "Open Sans Condensed", sans-serif;
   text-transform: uppercase;
 }
 
 .page-template-page-spirits .spirits-nav {
-  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 1.5em;
   line-height: 1.25em;
@@ -681,12 +682,11 @@ h4.bp-title {
 .single .entry-title > a {
   -webkit-box-shadow: none;
   box-shadow: none;
-  font-family: "Open Sans Condensed", sans-serif;
 }
 
 .archive p:not(:last-child),
 .single p:not(:last-child) {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .archive .entry-content,
@@ -731,7 +731,6 @@ h4.bp-title {
 .page-id-75 .page-list-ext-title > a {
   -webkit-box-shadow: none;
   box-shadow: none;
-  font-family: "Open Sans Condensed", sans-serif;
   color: #d14f53;
   font-size: 1.5em;
   text-transform: uppercase;
@@ -837,7 +836,8 @@ h4.bp-title {
 
 .home {
   font-size: 1.1rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hind", sans-serif;
+  font-weight: 400;
 }
 
 .home .home-title {
@@ -862,7 +862,6 @@ h4.bp-title {
   text-transform: uppercase;
   color: white;
   letter-spacing: 0.131578947em;
-  font-family: "Open Sans Condensed", sans-serif;
   font-size: 2.5rem;
   line-height: 1.1em;
   text-shadow: -1px 3px 5px rgba(59, 59, 65, 0.6);
@@ -881,7 +880,7 @@ h4.bp-title {
   padding: 0;
 }
 
-.home div[class^="home-block-"] {
+.home div[class^='home-block-'] {
   min-height: 30rem;
   background: no-repeat center center fixed;
   background-size: cover;
@@ -913,7 +912,7 @@ h4.bp-title {
 
 .home .home-text-block > .home-text-body {
   padding: 1rem 5%;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .home .home-text-body > * {
@@ -1025,9 +1024,18 @@ h4.bp-title {
     justify-content: space-between;
   }
 
+  .page-template-page-spirits .entry-content:after,
+  .page-template-page-spirits .entry-content:before {
+    content: unset;
+  }
+
   .page-template-page-spirits .entry-footer {
     grid-column: 2 / 4;
     margin-left: 0;
+  }
+
+  .page-template-page-spirits .entry-header .post-thumbnail img {
+    margin-bottom: 0;
   }
 
   .page-template-page-spirits h1.entry-title {
