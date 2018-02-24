@@ -1,144 +1,141 @@
 // // Contents
-// // -includes
 // // -general page styles
 // // -template specific styles
 // // -page specific styles
-// // -foo gallery styles
 
+//============================
+// GENERAL PAGE STYLES
+//============================
 
+.site-main > :last-child {
+	margin-bottom: 4rem;
+}
 
-// //============================
-// // TEMPLATE SPECIFIC STYLES
-// //============================
-// .page-template-default {
-//   &.has-featured-image .entry-header {
-//     margin: 0;
-//     height: auto;
-//     position: relative;
-//     max-width: 100%;
-//     padding: 0;
-//   }
+body:not(.search-results) article:not(.type-page) .entry-content {
+	float: none;
+	width: unset;
+}
 
-//   &.has-featured-image .entry-header h1 {
-//     position: absolute;
-//     top: 75%;
-//     transform: translateY(-75%);
-//     width: 75%;
-//     max-width: 16rem; //max-width to preserve line break for most titles
-//     padding-left: rem(20px);
-//     font-size: 3rem;
-//     line-height: 3rem;
-//     color: white;
-//     word-wrap: normal;
-//     word-break: keep-all;
-//     hyphens: none;
+body:not(.custom-background-image):before {
+	content: unset; // removes extra space at top of page before nav bar/header
+}
 
-//     @media screen and (min-width: 44.375em) {
-//       font-size: 4.5rem;
-//       line-height: 4.5rem;
-//       width: 50%;
-//       max-width: 24rem; //max-width to preserve line break for most titles
-//     }
+.page-header {
+	@extend %interior-narrower;
+	// margin-top: 4rem;
+	border-top: 0;
+}
+.site {
+	margin: 0;
+	background: rgba(#ffffff, 0.9);
+	overflow: hidden;
+}
+.site-inner {
+	max-width: 1800px;
+	margin: 0 auto;
+}
 
-//     @media screen and (min-width: $width-desktop) {
-//       margin: 0 15%;
-//       font-size: 6rem;
-//       line-height: 6rem;
-//       max-width: 32rem; //max-width to preserve line break for most titles
-//     }
-//   }
-// }
+//
+// MAIN CONTENT SECTION
+//
+.site-content {
+	padding: 0;
+}
+.site-main {
+	margin-bottom: 0;
+}
+.site-main + aside,
+.site-main > section,
+.entry-header,
+.entry-footer {
+	@extend %interior-narrower;
+}
+.site-main > section {
+	padding-top: 2rem;
+}
 
-// /* Spirits pages */
-// .page-template-page-spirits {
+// on page featured img styles
+article.type-page .post-thumbnail {
+	margin: 0;
+}
+article.type-page .post-thumbnail img {
+	width: 115%;
+	max-width: 115%;
+	margin: 0 -7.5% 1rem;
 
-//   // Navigation
-//   .spirits-nav {
-//     width: 90%;
-//     font-size: rem(30px);
-//     line-height: 0;
-//     @media screen and (min-width: 44.375em) {
-//       width: 70%;
-//       font-size: rem(80px);
-//     }
-//     margin: 0 auto;
-//     position: relative;
-//     top: rem(250px);
-//     z-index: 999;
+	@media screen and (min-width: $width-desktop) {
+		margin: 0 auto 1.5rem;
+		max-width: 100%;
+	}
+}
 
-//     a {
-//       position: absolute;
-//       color: $gray-text;
-//       transition: all .4s ease;
+article:not(.type-page) .post-thumbnail {
+	@extend %interior-narrower;
+}
+article:not(.type-page) .post-thumbnail img {
+	width: 100%;
+}
 
-//       &:hover {
-//         color: $purple;
-//       }
+.entry-content {
+	@extend %interior-narrower;
 
-//       &.nav-previous {
-//         left: 0;
-//       }
-//       &.nav-next {
-//         right: 0;
-//       }
+	p,
+	ul li,
+	span {
+		font-size: rem(18px);
+		line-height: rem(32px);
+		color: $gray-text;
+	}
+	ul {
+		padding: 0 2em;
+	}
+	blockquote,
+	blockquote p {
+		color: $red;
+		font-family: $font-primary;
+		letter-spacing: 0.131578947em;
+		font-size: rem(20px);
+		font-weight: bold;
+		font-style: normal;
+		border: none;
+	}
+	h4 + h4 {
+		margin-top: -0.5em;
+	}
+	h4 + h4 > a {
+		@extend %callout-link;
+	}
 
-//     }
-//   } //end .spirits-nav
-
-//   .post-thumbnail img {
-//     // Not ideal to set the width here - WP is serving an upsized image
-//     // based on their responsive image CSS around the featured image.
-//     // This should maybe not be a "featured image" but a field instead.
-//     // But hey... it works.
-//     width: 432px;
-//     margin: 0 auto;
-//   }
-
-
-// //============================
-// // SPECIFIC PAGE STYLES 
-// //============================
-
-// /* Team page */
-// .page-id-10 {
-
-//   h2, h3 {
-//     color: $red;
-//     font-size: rem(18px);
-//     padding: 0;
-//   }
-
-//   h2 {
-//     font-family: $roboto-slab;
-//     margin: rem(40px) 0 rem(12px);
-//   }
-
-//   h3 {
-//     font-style: italic;
-//     font-weight: normal;
-//     margin: 0 0 rem(35px);
-//   }
-
-//   .entry-content div p {
-//     margin: 0;
-//   }
-
-//   .post-edit-link {
-//     display: none;
-//   }
-// } //end .page-id-10
-
-// // Spirit listing
-// .page-id-75 {
-//   .page-list-ext .page-list-ext-item {
-//     @media screen and (min-width: $width-desktop) {
-//       float: left;
-//       clear: none;
-//       width: 20%;
-//     }
-//   }
-
-//   .page-list-ext .page-list-ext-title {
-//     display: none;
-//   }
-// } //end .page-id-75
+	//
+	// inline content images
+	//
+	img,
+	.alignright,
+	.alignleft,
+	.aligncenter {
+		width: 115%;
+		max-width: 115%;
+		margin: 0 -7.5% 1.5rem;
+	}
+	img,
+	.aligncenter {
+		@media screen and (min-width: $width-desktop) {
+			margin: 0 auto 1.5rem;
+			width: 100%;
+		}
+	}
+	.alignright {
+		@media screen and (min-width: $width-desktop) {
+			max-width: 50%;
+			margin-right: 0;
+			margin-left: 1.75em;
+		}
+	}
+	.alignleft {
+		@media screen and (min-width: $width-desktop) {
+			max-width: 50%;
+			margin-left: 0;
+			margin-right: 1.75em;
+		}
+	}
+} //end .entry-content

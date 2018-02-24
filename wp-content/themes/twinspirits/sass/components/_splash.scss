@@ -22,17 +22,16 @@
   background-size: contain;
 }
 
-
 #age-verify .shield-text {
   width: 92%;
   display: block;
-   max-width: 500px;
+  max-width: 500px;
   margin: auto;
   color: $gray-text;
   position: absolute;
-    top: 65vh;
-    left: 50%;
-    transform: translateX(-50%);
+  top: 65vh;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: $open-sans-condensed;
   font-size: 1.5rem;
   font-size: 10vmin;
@@ -41,7 +40,7 @@
 
 #age-verify .shield-text a {
   display: inline-block;
-  padding: 2px .5rem;
+  padding: 2px 0.5rem;
   color: $gray-text;
   text-decoration: none;
 }

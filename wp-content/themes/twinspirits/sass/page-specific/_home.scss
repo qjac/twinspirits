@@ -4,48 +4,49 @@
 
 // *************************
 //  TYPOGRAPHY
-// 
+//
 .home {
 	font-size: 1.1rem;
-	font-family: $open-sans;
+	font-family: $font-primary;
+	font-weight: 400;
 	.home-title {
 		text-align: center;
 		line-height: 2.25em;
 	}
 	h4 {
 		letter-spacing: 0.131578947em; // to match h4 styles pulling in on interior pages from base theme
-  }
+	}
 	h4 > a {
-    @extend %callout-link;
-    text-decoration: underline;
-  }
-  p + h4 {
-  	margin-top:-1.5em;
-  }
-  .home-text-block h2 {
-  	@extend %interior-narrower;
-  	margin: 1rem 0 0.5rem;
+		@extend %callout-link;
+		text-decoration: underline;
+	}
+	p + h4 {
+		margin-top: -1.5em;
+	}
+	.home-text-block h2 {
+		@extend %interior-narrower;
+		margin: 1rem 0 0.5rem;
 		text-transform: uppercase;
 		color: white;
 		letter-spacing: 0.131578947em;
-		font-family: $open-sans-condensed;
+		// font-family: $open-sans-condensed;
 		font-size: 2.5rem;
 		line-height: 1.1em;
 		text-shadow: -1px 3px 5px rgba($gray-text, 0.6);
 	}
 } // end .home typography
 
-// 
+//
 // Plug in override styles
-// 
+//
 .home {
-h4.bp-title {
-  	margin-top:0 !important;
-  }
+	h4.bp-title {
+		margin-top: 0 !important;
+	}
 
-  address.bp-contact-card {
-  	margin:0 !important;
-  }
+	address.bp-contact-card {
+		margin: 0 !important;
+	}
 }
 // *************************
 //  LAYOUT
@@ -53,17 +54,17 @@ h4.bp-title {
 .home {
 	.site-main {
 		max-width: 100%;
-    padding: 0;
+		padding: 0;
 	}
 	.home-title,
-.site-main > article {
+	.site-main > article {
 		@extend %interior-narrower;
 	}
-div[class^="home-block-"]  {
+	div[class^='home-block-'] {
 		min-height: 30rem;
 		background: no-repeat center center fixed;
 		background-size: cover;
-		margin-top: 2rem;	
+		margin-top: 2rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
@@ -73,17 +74,17 @@ div[class^="home-block-"]  {
 		align-items: flex-start;
 	}
 	.home-text-block {
-	width: 100%;
-	@media screen and (min-width: $width-desktop) {
-		width: 50%;
+		width: 100%;
+		@media screen and (min-width: $width-desktop) {
+			width: 50%;
+		}
 	}
-}
-.home-text-block > * {
-	@media screen and (min-width: $width-desktop) {
-		padding-right: 10%;
-		padding-left: 1em;
+	.home-text-block > * {
+		@media screen and (min-width: $width-desktop) {
+			padding-right: 10%;
+			padding-left: 1em;
+		}
 	}
-}
 
 	div.home-block-two > .home-text-block > * {
 		@media screen and (min-width: $width-desktop) {
@@ -93,9 +94,8 @@ div[class^="home-block-"]  {
 	}
 
 	.home-text-block > .home-text-body {
-		// @extend %interior-narrower;
 		padding: 1rem 5%;
-		background: rgba(#ffffff, .9);
+		background: rgba(#ffffff, 0.8);
 	}
 	.home-text-body > * {
 		margin: 0;

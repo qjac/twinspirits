@@ -1,7 +1,6 @@
 /* Styles specific to SPIRITS individual and archive pages */
 
 .page-template-page-spirits {
-
 	article {
 		@media screen and (min-width: $width-desktop) {
 			display: grid;
@@ -25,7 +24,7 @@
 			align-items: center;
 		}
 	}
-	.entry-content	 {
+	.entry-content {
 		max-width: 50em;
 		margin: inherit auto;
 		display: flex;
@@ -34,12 +33,23 @@
 			padding: 0;
 			grid-column: 3 / 4;
 			justify-content: space-between;
+
+			&:after,
+			&:before {
+				content: unset;
+			}
 		}
 	}
 	.entry-footer {
 		@media screen and (min-width: $width-desktop) {
 			grid-column: 2 / 4;
 			margin-left: 0;
+		}
+	}
+
+	.entry-header .post-thumbnail img {
+		@media screen and (min-width: $width-desktop) {
+			margin-bottom: 0;
 		}
 	}
 
@@ -50,7 +60,7 @@
 			margin-left: 0;
 		}
 	}
-// let's deal with that double title
+	// let's deal with that double title
 	.entry-header h1.entry-title {
 		@media screen and (min-width: $width-desktop) {
 			display: none;
@@ -74,66 +84,64 @@
 		align-self: flex-end;
 	}
 
-// typography
+	// typography
 	.proof > p {
-		font-family: $open-sans-condensed;
+		// font-family: $open-sans-condensed;
+		// font-weight: 700;
 		text-transform: uppercase;
 		// margin-bottom: 0.5rem;
 	}
 
-
-// spirits nav styles
+	// spirits nav styles
 	.spirits-nav {
-		// margin: 1em 0; // to match parent theme .entry-footer top margin
-		font-family: $open-sans-condensed;
+		font-weight: 700;
 		text-transform: uppercase;
 		font-size: 1.5em;
 		line-height: 1.25em;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+	}
+	.spirits-nav a {
+		color: $gold;
+		&:hover,
+		&:focus {
+			color: $purple;
 		}
-		.spirits-nav a {
-			color: $gold;
-			&:hover,
-			&:focus {
-				color: $purple;
-			}
-		}
-		// end spirits nav styles
-	
+	}
+	// end spirits nav styles
 
-// Every spirit is a special flower with its own header color.
-// Fallback is the standard TSD red.
+	// Every spirit is a special flower with its own header color.
+	// Fallback is the standard TSD red.
 
 	&.page-id-57 {
 		h1.entry-title,
-	  .proof p {
-	    color: #d1308a; // Vodka
-	  }
+		.proof p {
+			color: #d1308a; // Vodka
+		}
 	}
 	&.page-id-82 {
-	  h1.entry-title,
-	  .proof p {
-	    color: #73db49; // Gin
-	  }
+		h1.entry-title,
+		.proof p {
+			color: #73db49; // Gin
+		}
 	}
 	&.page-id-84 {
 		h1.entry-title,
-	  .proof p {
-	    color: #00b5dd; // Rum
-	  }
+		.proof p {
+			color: #00b5dd; // Rum
+		}
 	}
 	&.page-id-86 {
-	  h1.entry-title,
-	  .proof p {
-	    color: #ff4d63; // Whiskey
-	  }
+		h1.entry-title,
+		.proof p {
+			color: #ff4d63; // Whiskey
+		}
 	}
 	&.page-id-88 {
 		h1.entry-title,
-	  .proof p {
-	    color: #262362; // Moonshine
-	  }
+		.proof p {
+			color: #262362; // Moonshine
+		}
 	}
 } //end .page-template-page-spirits

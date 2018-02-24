@@ -21,7 +21,7 @@
 	<?php wp_head(); ?>
 	<script type="text/javascript" src="/wp-content/themes/twinspirits/bower_components/js-cookie/src/js.cookie.js"></script>
 	<script type="text/javascript" src="/wp-content/themes/twinspirits/js/ts-age-verify.js"></script>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Hind:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 </head>
 

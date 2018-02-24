@@ -13,29 +13,27 @@
 */
 
 /* Import Sass mixins, variables, Compass modules, etc. */
-@import "sass/_init";
-// @import "sass/base/_base";
+@import 'sass/base/_variables';
 
 /*
 Base Styles
 Normalized styles, typography and base-level page/element styling.
 */
 // @import "sass/base/_normalize";
-@import "sass/base/_base";
-@import "sass/base/_page";
-@import "sass/base/_footer";
-@import "sass/base/_header";
+@import 'sass/base/_page';
+@import 'sass/base/_footer';
+@import 'sass/base/_header';
 
 /* Layout rules */
 // @import "sass/layouts/_responsive";
 
 /* Component (SMACSS module) rules */
 /* Plugin Overrides */
-@import "sass/components/_splash";
-@import "sass/components/_plugins";
+@import 'sass/components/_splash';
+@import 'sass/components/_plugins';
 
 /* Weird stuff specific to certain pages or post type templates */
 // @import "sass/page-specific/_tours";
-@import "sass/page-specific/_spirits";
-@import "sass/page-specific/_archives";
-@import "sass/page-specific/_home";
+@import 'sass/page-specific/_spirits';
+@import 'sass/page-specific/_archives';
+@import 'sass/page-specific/_home';
