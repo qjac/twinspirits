@@ -99,13 +99,11 @@
   //end .main-navigation .primary-menu > li
 
   .main-navigation .primary-menu .sub-menu {
-    background: rgba(255, 255, 255, 0.75);
+    background: $gray-bg;
     margin: 0;
     border-bottom: 0;
 
     a {
-      color: $gray-bg;
-
       &:hover,
       &:focus {
         color: $red;
@@ -119,8 +117,7 @@
         color: $red;
       }
     }
-  }
-  //end .main-navigation .primary-menu .sub-menu
+  } //end .main-navigation .primary-menu .sub-menu
 
   .main-navigation .primary-menu > li:hover > ul,
   .main-navigation .primary-menu > li:focus > ul {

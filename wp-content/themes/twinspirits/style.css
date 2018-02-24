@@ -473,13 +473,9 @@ footer.site-footer p.copyright {
 }
 
 #site-header-menu .main-navigation .primary-menu .sub-menu {
-  background: rgba(255, 255, 255, 0.75);
+  background: #3c3c42;
   margin: 0;
   border-bottom: 0;
-}
-
-#site-header-menu .main-navigation .primary-menu .sub-menu a {
-  color: #3c3c42;
 }
 
 #site-header-menu .main-navigation .primary-menu .sub-menu a:hover,
