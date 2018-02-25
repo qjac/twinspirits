@@ -71,7 +71,7 @@ footer.site-footer {
     li {
       padding: 1rem 1em 1rem 0;
       @media screen and (min-width: $width-desktop) {
-        padding: 2rem 1em 1rem;
+        padding: 2rem 4em 1rem;
       }
     }
   } // end footer-widgets
@@ -100,6 +100,7 @@ footer.site-footer {
         background: none;
         border: 1px solid #ffffff;
       }
+			margin: 0 2em 0.4375em 0;
     }
     li a {
       border: 0;
@@ -117,4 +118,17 @@ footer.site-footer {
   p.copyright {
     margin-bottom: 0;
   }
+
+	.footer2 .bp-address,
+	.footer2 .bp-phone,
+	.footer2 .bp-directions {
+		margin-top: .25em;
+	}
+	.footer2 .bp-address {
+		margin-bottom: 0;
+	}
+	.footer2 .bp-directions {
+		margin-bottom: 1.5em;
+	}
+
 } //end footer styles
