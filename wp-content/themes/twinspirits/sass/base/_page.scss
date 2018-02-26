@@ -29,14 +29,15 @@ body:not(.custom-background-image):before {
 	overflow: hidden;
 }
 .site-inner {
-	max-width: 1800px;
-	margin: 0 auto;
+	max-width: 100%;
 }
 
 //
 // MAIN CONTENT SECTION
 //
 .site-content {
+	max-width: 1800px;
+	margin: 0 auto;
 	padding: 0;
 }
 .site-main {
