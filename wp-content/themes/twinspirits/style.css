@@ -941,16 +941,6 @@ h4.bp-title {
 /* col-left and col-right can be set
    in a post body using the WYSIWYG */
 
-.entry-content .col-left,
-.entry-content .col-right {
-  width: 45%;
-  float: left;
-}
-
-.entry-content .col-left {
-  margin-right: 60px;
-}
-
 @media screen and (min-width: 56.875em) {
   article.type-page .post-thumbnail img {
     margin: 0 auto 1.5rem;
@@ -1131,6 +1121,16 @@ h4.bp-title {
   .home div.home-block-two > .home-text-block > * {
     padding-left: 10%;
     padding-right: 1em;
+  }
+
+  .entry-content .col-left,
+  .entry-content .col-right {
+    width: 45%;
+    float: left;
+  }
+
+  .entry-content .col-left {
+    margin-right: 60px;
   }
 }
 
