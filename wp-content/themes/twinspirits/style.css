@@ -337,6 +337,7 @@ footer.site-footer .social-navigation li {
   border-radius: 50%;
   background: #d14f53;
   border: 1px solid #d14f53;
+  margin: 0 1em 0.4375em;
 }
 
 footer.site-footer .social-navigation li:hover,
@@ -360,6 +361,20 @@ footer.site-footer .social-navigation li a:focus::before {
 
 footer.site-footer p.copyright {
   margin-bottom: 0;
+}
+
+footer.site-footer .footer2 .bp-address,
+footer.site-footer .footer2 .bp-phone,
+footer.site-footer .footer2 .bp-directions {
+  margin-top: .25em;
+}
+
+footer.site-footer .footer2 .bp-address {
+  margin-bottom: 0;
+}
+
+footer.site-footer .footer2 .bp-directions {
+  margin-bottom: 1.5em;
 }
 
 .site-header {
@@ -629,7 +644,10 @@ h4.bp-title {
 }
 
 .page-template-page-spirits .proof > p {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 
 .page-template-page-spirits .spirits-nav {
@@ -925,6 +943,9 @@ h4.bp-title {
   padding: 0;
 }
 
+/* col-left and col-right can be set
+   in a post body using the WYSIWYG */
+
 @media screen and (min-width: 56.875em) {
   article.type-page .post-thumbnail img {
     margin: 0 auto 1.5rem;
@@ -975,7 +996,7 @@ h4.bp-title {
   }
 
   footer.site-footer .footer-navigation li {
-    padding: 2rem 1em 1rem;
+    padding: 2rem 4em 1rem;
   }
 
   #site-header-menu .main-navigation .primary-menu > li {
@@ -1105,6 +1126,16 @@ h4.bp-title {
   .home div.home-block-two > .home-text-block > * {
     padding-left: 10%;
     padding-right: 1em;
+  }
+
+  .entry-content .col-left,
+  .entry-content .col-right {
+    width: 45%;
+    float: left;
+  }
+
+  .entry-content .col-left {
+    margin-right: 60px;
   }
 }
 
