@@ -176,11 +176,12 @@ body:not(.custom-background-image):before {
 }
 
 .site-inner {
-  max-width: 1800px;
-  margin: 0 auto;
+  max-width: 100%;
 }
 
 .site-content {
+  max-width: 1800px;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -258,6 +259,8 @@ footer.site-footer {
 
 footer.site-footer .footer-top {
   width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -377,11 +380,13 @@ footer.site-footer .footer2 .bp-directions {
 .site-header {
   width: 100%;
   padding: 0;
+  background: #3c3c42;
 }
 
 .site-header-main {
-  background: #3c3c42;
+  max-width: 1800px;
   min-height: 130px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
